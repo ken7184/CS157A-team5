@@ -1,0 +1,104 @@
+07-Sep-2023 16:58:48.721 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/8.5.93
+07-Sep-2023 16:58:48.723 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Aug 23 2023 22:43:14 UTC
+07-Sep-2023 16:58:48.723 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 8.5.93.0
+07-Sep-2023 16:58:48.723 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+07-Sep-2023 16:58:48.723 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            13.2
+07-Sep-2023 16:58:48.723 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          aarch64
+07-Sep-2023 16:58:48.723 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/zulu-18.jdk/Contents/Home
+07-Sep-2023 16:58:48.723 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           18.0.2+9
+07-Sep-2023 16:58:48.723 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Azul Systems, Inc.
+07-Sep-2023 16:58:48.723 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/kimhyunkyunkim/Desktop/fall2023/CS157a/apache-tomcat-8.5.93
+07-Sep-2023 16:58:48.723 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/kimhyunkyunkim/Desktop/fall2023/CS157a/apache-tomcat-8.5.93
+07-Sep-2023 16:58:48.724 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+07-Sep-2023 16:58:48.724 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+07-Sep-2023 16:58:48.724 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+07-Sep-2023 16:58:48.724 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+07-Sep-2023 16:58:48.724 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+07-Sep-2023 16:58:48.724 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/apache-tomcat-8.5.93/conf/logging.properties
+07-Sep-2023 16:58:48.725 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+07-Sep-2023 16:58:48.725 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+07-Sep-2023 16:58:48.725 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+07-Sep-2023 16:58:48.725 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+07-Sep-2023 16:58:48.725 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+07-Sep-2023 16:58:48.725 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/apache-tomcat-8.5.93
+07-Sep-2023 16:58:48.725 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/apache-tomcat-8.5.93
+07-Sep-2023 16:58:48.725 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/apache-tomcat-8.5.93/temp
+07-Sep-2023 16:58:48.725 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/kimhyunkyunkim/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+07-Sep-2023 16:58:48.756 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+07-Sep-2023 16:58:48.790 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 363 ms
+07-Sep-2023 16:58:48.811 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+07-Sep-2023 16:58:48.811 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/8.5.93]
+07-Sep-2023 16:58:48.815 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/apache-tomcat-8.5.93/webapps/docs]
+07-Sep-2023 16:58:49.175 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+07-Sep-2023 16:58:49.197 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/apache-tomcat-8.5.93/webapps/docs] has finished in [382] ms
+07-Sep-2023 16:58:49.197 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/apache-tomcat-8.5.93/webapps/manager]
+07-Sep-2023 16:58:49.382 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+07-Sep-2023 16:58:49.386 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/apache-tomcat-8.5.93/webapps/manager] has finished in [189] ms
+07-Sep-2023 16:58:49.386 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/apache-tomcat-8.5.93/webapps/examples]
+07-Sep-2023 16:58:49.652 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+07-Sep-2023 16:58:49.661 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/apache-tomcat-8.5.93/webapps/examples] has finished in [275] ms
+07-Sep-2023 16:58:49.661 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/apache-tomcat-8.5.93/webapps/ROOT]
+07-Sep-2023 16:58:49.826 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+07-Sep-2023 16:58:49.827 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/apache-tomcat-8.5.93/webapps/ROOT] has finished in [166] ms
+07-Sep-2023 16:58:49.827 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/apache-tomcat-8.5.93/webapps/host-manager]
+07-Sep-2023 16:58:49.995 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+07-Sep-2023 16:58:49.997 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/apache-tomcat-8.5.93/webapps/host-manager] has finished in [169] ms
+07-Sep-2023 16:58:49.998 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+07-Sep-2023 16:58:50.006 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1215 ms
+07-Sep-2023 17:01:50.859 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+07-Sep-2023 17:01:50.860 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+07-Sep-2023 17:01:50.861 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+07-Sep-2023 17:01:50.884 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+07-Sep-2023 17:01:50.886 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+07-Sep-2023 17:02:04.851 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/8.5.93
+07-Sep-2023 17:02:04.853 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Aug 23 2023 22:43:14 UTC
+07-Sep-2023 17:02:04.853 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 8.5.93.0
+07-Sep-2023 17:02:04.853 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+07-Sep-2023 17:02:04.853 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            13.2
+07-Sep-2023 17:02:04.853 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          aarch64
+07-Sep-2023 17:02:04.853 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/zulu-18.jdk/Contents/Home
+07-Sep-2023 17:02:04.853 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           18.0.2+9
+07-Sep-2023 17:02:04.853 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Azul Systems, Inc.
+07-Sep-2023 17:02:04.853 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/kimhyunkyunkim/Desktop/fall2023/CS157a/apache-tomcat-8.5.93
+07-Sep-2023 17:02:04.853 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/kimhyunkyunkim/Desktop/fall2023/CS157a/apache-tomcat-8.5.93
+07-Sep-2023 17:02:04.854 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+07-Sep-2023 17:02:04.854 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+07-Sep-2023 17:02:04.854 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+07-Sep-2023 17:02:04.854 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+07-Sep-2023 17:02:04.854 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+07-Sep-2023 17:02:04.854 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/apache-tomcat-8.5.93/conf/logging.properties
+07-Sep-2023 17:02:04.854 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+07-Sep-2023 17:02:04.854 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+07-Sep-2023 17:02:04.854 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+07-Sep-2023 17:02:04.854 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+07-Sep-2023 17:02:04.854 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+07-Sep-2023 17:02:04.854 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/apache-tomcat-8.5.93
+07-Sep-2023 17:02:04.854 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/apache-tomcat-8.5.93
+07-Sep-2023 17:02:04.854 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/apache-tomcat-8.5.93/temp
+07-Sep-2023 17:02:04.854 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/Users/kimhyunkyunkim/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+07-Sep-2023 17:02:04.880 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+07-Sep-2023 17:02:04.897 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 272 ms
+07-Sep-2023 17:02:04.914 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+07-Sep-2023 17:02:04.914 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/8.5.93]
+07-Sep-2023 17:02:04.918 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/apache-tomcat-8.5.93/webapps/docs]
+07-Sep-2023 17:02:05.222 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+07-Sep-2023 17:02:05.241 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/apache-tomcat-8.5.93/webapps/docs] has finished in [323] ms
+07-Sep-2023 17:02:05.241 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/apache-tomcat-8.5.93/webapps/manager]
+07-Sep-2023 17:02:05.436 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+07-Sep-2023 17:02:05.441 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/apache-tomcat-8.5.93/webapps/manager] has finished in [200] ms
+07-Sep-2023 17:02:05.441 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/apache-tomcat-8.5.93/webapps/examples]
+07-Sep-2023 17:02:05.733 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+07-Sep-2023 17:02:05.741 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/apache-tomcat-8.5.93/webapps/examples] has finished in [299] ms
+07-Sep-2023 17:02:05.741 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/apache-tomcat-8.5.93/webapps/ROOT]
+07-Sep-2023 17:02:05.909 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+07-Sep-2023 17:02:05.918 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/apache-tomcat-8.5.93/webapps/ROOT] has finished in [177] ms
+07-Sep-2023 17:02:05.918 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/apache-tomcat-8.5.93/webapps/host-manager]
+07-Sep-2023 17:02:06.085 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+07-Sep-2023 17:02:06.086 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/apache-tomcat-8.5.93/webapps/host-manager] has finished in [168] ms
+07-Sep-2023 17:02:06.087 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+07-Sep-2023 17:02:06.093 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1195 ms
+07-Sep-2023 23:38:42.835 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+07-Sep-2023 23:38:42.837 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+07-Sep-2023 23:38:42.839 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+07-Sep-2023 23:38:42.861 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+07-Sep-2023 23:38:42.864 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
