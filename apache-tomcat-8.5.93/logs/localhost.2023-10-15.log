@@ -847,3 +847,3142 @@ Stacktrace:
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 		at java.base/java.lang.Thread.run(Thread.java:1583)
+15-Oct-2023 17:58:42.574 SEVERE [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [42] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "if", new expected
+39:     <%
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+
+
+An error occurred at line: [42] in the jsp file: [/createAccountPage.jsp]
+password.equals cannot be resolved to a type
+39:     <%
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+
+
+An error occurred at line: [43] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert "Identifier (" to complete MethodHeaderName
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+
+
+An error occurred at line: [43] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert ")" to complete MethodDeclaration
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+
+
+An error occurred at line: [43] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert ";" to complete MethodDeclaration
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+
+
+An error occurred at line: [43] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert "}" to complete ClassBody
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+
+
+An error occurred at line: [43] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert ";" to complete Statement
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+
+
+An error occurred at line: [43] in the jsp file: [/createAccountPage.jsp]
+Syntax error on tokens, delete these tokens
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+
+
+An error occurred at line: [46] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert ";" to complete BlockStatements
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+47:         }
+48:         
+49:     %>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [42] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "if", new expected
+39:     <%
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+
+
+An error occurred at line: [42] in the jsp file: [/createAccountPage.jsp]
+password.equals cannot be resolved to a type
+39:     <%
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+
+
+An error occurred at line: [43] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert "Identifier (" to complete MethodHeaderName
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+
+
+An error occurred at line: [43] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert ")" to complete MethodDeclaration
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+
+
+An error occurred at line: [43] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert ";" to complete MethodDeclaration
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+
+
+An error occurred at line: [43] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert "}" to complete ClassBody
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+
+
+An error occurred at line: [43] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert ";" to complete Statement
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+
+
+An error occurred at line: [43] in the jsp file: [/createAccountPage.jsp]
+Syntax error on tokens, delete these tokens
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+
+
+An error occurred at line: [46] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert ";" to complete BlockStatements
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+47:         }
+48:         
+49:     %>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+15-Oct-2023 17:59:01.105 SEVERE [http-nio-8080-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [42] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "if", new expected
+39:     <%
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+
+
+An error occurred at line: [42] in the jsp file: [/createAccountPage.jsp]
+password.equals cannot be resolved to a type
+39:     <%
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+
+
+An error occurred at line: [43] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert "Identifier (" to complete MethodHeaderName
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+
+
+An error occurred at line: [43] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert ")" to complete MethodDeclaration
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+
+
+An error occurred at line: [43] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert ";" to complete MethodDeclaration
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+
+
+An error occurred at line: [43] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert "}" to complete ClassBody
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+
+
+An error occurred at line: [43] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert ";" to complete Statement
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+
+
+An error occurred at line: [43] in the jsp file: [/createAccountPage.jsp]
+Syntax error on tokens, delete these tokens
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+
+
+An error occurred at line: [46] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert ";" to complete BlockStatements
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+47:         }
+48:         
+49:     %>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [42] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "if", new expected
+39:     <%
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+
+
+An error occurred at line: [42] in the jsp file: [/createAccountPage.jsp]
+password.equals cannot be resolved to a type
+39:     <%
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+
+
+An error occurred at line: [43] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert "Identifier (" to complete MethodHeaderName
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+
+
+An error occurred at line: [43] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert ")" to complete MethodDeclaration
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+
+
+An error occurred at line: [43] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert ";" to complete MethodDeclaration
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+
+
+An error occurred at line: [43] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert "}" to complete ClassBody
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+
+
+An error occurred at line: [43] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert ";" to complete Statement
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+
+
+An error occurred at line: [43] in the jsp file: [/createAccountPage.jsp]
+Syntax error on tokens, delete these tokens
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+
+
+An error occurred at line: [46] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert ";" to complete BlockStatements
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+47:         }
+48:         
+49:     %>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+15-Oct-2023 17:59:59.593 SEVERE [http-nio-8080-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [42] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "if", new expected
+39:     <%
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+
+
+An error occurred at line: [42] in the jsp file: [/createAccountPage.jsp]
+password.equals cannot be resolved to a type
+39:     <%
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+
+
+An error occurred at line: [43] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert "Identifier (" to complete MethodHeaderName
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+
+
+An error occurred at line: [43] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert ")" to complete MethodDeclaration
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+
+
+An error occurred at line: [43] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert ";" to complete MethodDeclaration
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+
+
+An error occurred at line: [43] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert "}" to complete ClassBody
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+
+
+An error occurred at line: [43] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert ";" to complete Statement
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+
+
+An error occurred at line: [43] in the jsp file: [/createAccountPage.jsp]
+Syntax error on tokens, delete these tokens
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+
+
+An error occurred at line: [46] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert ";" to complete BlockStatements
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+47:         }
+48:         
+49:     %>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [42] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "if", new expected
+39:     <%
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+
+
+An error occurred at line: [42] in the jsp file: [/createAccountPage.jsp]
+password.equals cannot be resolved to a type
+39:     <%
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+
+
+An error occurred at line: [43] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert "Identifier (" to complete MethodHeaderName
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+
+
+An error occurred at line: [43] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert ")" to complete MethodDeclaration
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+
+
+An error occurred at line: [43] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert ";" to complete MethodDeclaration
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+
+
+An error occurred at line: [43] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert "}" to complete ClassBody
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+
+
+An error occurred at line: [43] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert ";" to complete Statement
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+
+
+An error occurred at line: [43] in the jsp file: [/createAccountPage.jsp]
+Syntax error on tokens, delete these tokens
+40:         String password = request.getParameter("password");
+41:         String rePassword = request.getParameter("re_password");
+42:         if password.equals(rePassword) {
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+
+
+An error occurred at line: [46] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert ";" to complete BlockStatements
+43:             out.ln("Your account is created")
+44:         }
+45:         else {
+46:             out.ln("renter your password")
+47:         }
+48:         
+49:     %>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+15-Oct-2023 18:18:25.744 SEVERE [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [An exception occurred processing [/createAccountPage.jsp] at line [44]
+
+41:     <%
+42:         String password = request.getParameter("password");
+43:         String rePassword = request.getParameter("re_password");
+44:         if (password.equals(rePassword)) {
+45:     %>
+46:             <p>Your account is created</p>
+47:     <%
+
+
+Stacktrace:] with root cause
+	java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because "password" is null
+		at org.apache.jsp.createAccountPage_jsp._jspService(createAccountPage_jsp.java:155)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:465)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+15-Oct-2023 18:18:26.089 SEVERE [http-nio-8080-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [An exception occurred processing [/createAccountPage.jsp] at line [44]
+
+41:     <%
+42:         String password = request.getParameter("password");
+43:         String rePassword = request.getParameter("re_password");
+44:         if (password.equals(rePassword)) {
+45:     %>
+46:             <p>Your account is created</p>
+47:     <%
+
+
+Stacktrace:] with root cause
+	java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because "password" is null
+		at org.apache.jsp.createAccountPage_jsp._jspService(createAccountPage_jsp.java:155)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:465)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+15-Oct-2023 18:18:34.662 SEVERE [http-nio-8080-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [An exception occurred processing [/createAccountPage.jsp] at line [44]
+
+41:     <%
+42:         String password = request.getParameter("password");
+43:         String rePassword = request.getParameter("re_password");
+44:         if (password.equals(rePassword)) {
+45:     %>
+46:             <p>Your account is created</p>
+47:     <%
+
+
+Stacktrace:] with root cause
+	java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because "password" is null
+		at org.apache.jsp.createAccountPage_jsp._jspService(createAccountPage_jsp.java:155)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:465)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+15-Oct-2023 18:18:35.618 SEVERE [http-nio-8080-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [An exception occurred processing [/createAccountPage.jsp] at line [44]
+
+41:     <%
+42:         String password = request.getParameter("password");
+43:         String rePassword = request.getParameter("re_password");
+44:         if (password.equals(rePassword)) {
+45:     %>
+46:             <p>Your account is created</p>
+47:     <%
+
+
+Stacktrace:] with root cause
+	java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because "password" is null
+		at org.apache.jsp.createAccountPage_jsp._jspService(createAccountPage_jsp.java:155)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:465)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+15-Oct-2023 18:18:36.543 SEVERE [http-nio-8080-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [An exception occurred processing [/createAccountPage.jsp] at line [44]
+
+41:     <%
+42:         String password = request.getParameter("password");
+43:         String rePassword = request.getParameter("re_password");
+44:         if (password.equals(rePassword)) {
+45:     %>
+46:             <p>Your account is created</p>
+47:     <%
+
+
+Stacktrace:] with root cause
+	java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because "password" is null
+		at org.apache.jsp.createAccountPage_jsp._jspService(createAccountPage_jsp.java:155)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:465)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+15-Oct-2023 18:37:30.309 SEVERE [http-nio-8080-exec-4] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [46] in the jsp file: [/createAccountPage.jsp]
+INTEGER cannot be resolved
+43:         String password = request.getParameter("password");
+44:         String rePassword = request.getParameter("re_password");
+45:         String role = request.getParameter("role");
+46:         role = INTEGER.parseInt(role)l;
+47:         if (password != null && rePassword != null && password.equals(rePassword) && ) {
+48:     %>
+49:             <p>Your account is created</p>
+
+
+An error occurred at line: [46] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "l", delete this token
+43:         String password = request.getParameter("password");
+44:         String rePassword = request.getParameter("re_password");
+45:         String role = request.getParameter("role");
+46:         role = INTEGER.parseInt(role)l;
+47:         if (password != null && rePassword != null && password.equals(rePassword) && ) {
+48:     %>
+49:             <p>Your account is created</p>
+
+
+An error occurred at line: [47] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "&&", Expression expected after this token
+44:         String rePassword = request.getParameter("re_password");
+45:         String role = request.getParameter("role");
+46:         role = INTEGER.parseInt(role)l;
+47:         if (password != null && rePassword != null && password.equals(rePassword) && ) {
+48:     %>
+49:             <p>Your account is created</p>
+50:     <%
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [46] in the jsp file: [/createAccountPage.jsp]
+INTEGER cannot be resolved
+43:         String password = request.getParameter("password");
+44:         String rePassword = request.getParameter("re_password");
+45:         String role = request.getParameter("role");
+46:         role = INTEGER.parseInt(role)l;
+47:         if (password != null && rePassword != null && password.equals(rePassword) && ) {
+48:     %>
+49:             <p>Your account is created</p>
+
+
+An error occurred at line: [46] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "l", delete this token
+43:         String password = request.getParameter("password");
+44:         String rePassword = request.getParameter("re_password");
+45:         String role = request.getParameter("role");
+46:         role = INTEGER.parseInt(role)l;
+47:         if (password != null && rePassword != null && password.equals(rePassword) && ) {
+48:     %>
+49:             <p>Your account is created</p>
+
+
+An error occurred at line: [47] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "&&", Expression expected after this token
+44:         String rePassword = request.getParameter("re_password");
+45:         String role = request.getParameter("role");
+46:         role = INTEGER.parseInt(role)l;
+47:         if (password != null && rePassword != null && password.equals(rePassword) && ) {
+48:     %>
+49:             <p>Your account is created</p>
+50:     <%
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+15-Oct-2023 18:37:57.450 SEVERE [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [46] in the jsp file: [/createAccountPage.jsp]
+INTEGER cannot be resolved
+43:         String password = request.getParameter("password");
+44:         String rePassword = request.getParameter("re_password");
+45:         String role = request.getParameter("role");
+46:         role = INTEGER.parseInt(role)l;
+47:         if (password != null && rePassword != null && password.equals(rePassword) && role >= 1 and role <= 6) {
+48:     %>
+49:             <p>Your account is created</p>
+
+
+An error occurred at line: [46] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "l", delete this token
+43:         String password = request.getParameter("password");
+44:         String rePassword = request.getParameter("re_password");
+45:         String role = request.getParameter("role");
+46:         role = INTEGER.parseInt(role)l;
+47:         if (password != null && rePassword != null && password.equals(rePassword) && role >= 1 and role <= 6) {
+48:     %>
+49:             <p>Your account is created</p>
+
+
+An error occurred at line: [47] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "and", . expected
+44:         String rePassword = request.getParameter("re_password");
+45:         String role = request.getParameter("role");
+46:         role = INTEGER.parseInt(role)l;
+47:         if (password != null && rePassword != null && password.equals(rePassword) && role >= 1 and role <= 6) {
+48:     %>
+49:             <p>Your account is created</p>
+50:     <%
+
+
+An error occurred at line: [47] in the jsp file: [/createAccountPage.jsp]
+role cannot be resolved or is not a field
+44:         String rePassword = request.getParameter("re_password");
+45:         String role = request.getParameter("role");
+46:         role = INTEGER.parseInt(role)l;
+47:         if (password != null && rePassword != null && password.equals(rePassword) && role >= 1 and role <= 6) {
+48:     %>
+49:             <p>Your account is created</p>
+50:     <%
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [46] in the jsp file: [/createAccountPage.jsp]
+INTEGER cannot be resolved
+43:         String password = request.getParameter("password");
+44:         String rePassword = request.getParameter("re_password");
+45:         String role = request.getParameter("role");
+46:         role = INTEGER.parseInt(role)l;
+47:         if (password != null && rePassword != null && password.equals(rePassword) && role >= 1 and role <= 6) {
+48:     %>
+49:             <p>Your account is created</p>
+
+
+An error occurred at line: [46] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "l", delete this token
+43:         String password = request.getParameter("password");
+44:         String rePassword = request.getParameter("re_password");
+45:         String role = request.getParameter("role");
+46:         role = INTEGER.parseInt(role)l;
+47:         if (password != null && rePassword != null && password.equals(rePassword) && role >= 1 and role <= 6) {
+48:     %>
+49:             <p>Your account is created</p>
+
+
+An error occurred at line: [47] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "and", . expected
+44:         String rePassword = request.getParameter("re_password");
+45:         String role = request.getParameter("role");
+46:         role = INTEGER.parseInt(role)l;
+47:         if (password != null && rePassword != null && password.equals(rePassword) && role >= 1 and role <= 6) {
+48:     %>
+49:             <p>Your account is created</p>
+50:     <%
+
+
+An error occurred at line: [47] in the jsp file: [/createAccountPage.jsp]
+role cannot be resolved or is not a field
+44:         String rePassword = request.getParameter("re_password");
+45:         String role = request.getParameter("role");
+46:         role = INTEGER.parseInt(role)l;
+47:         if (password != null && rePassword != null && password.equals(rePassword) && role >= 1 and role <= 6) {
+48:     %>
+49:             <p>Your account is created</p>
+50:     <%
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+15-Oct-2023 18:40:07.834 SEVERE [http-nio-8080-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [46] in the jsp file: [/createAccountPage.jsp]
+INTEGER cannot be resolved
+43:         String password = request.getParameter("password");
+44:         String rePassword = request.getParameter("re_password");
+45:         String role = request.getParameter("role");
+46:         role = INTEGER.parseInt(role)l;
+47:         if (password != null && rePassword != null && password.equals(rePassword)) {
+48:             if(&& role >= 1 and role < 7) {
+49:     %>
+
+
+An error occurred at line: [46] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "l", delete this token
+43:         String password = request.getParameter("password");
+44:         String rePassword = request.getParameter("re_password");
+45:         String role = request.getParameter("role");
+46:         role = INTEGER.parseInt(role)l;
+47:         if (password != null && rePassword != null && password.equals(rePassword)) {
+48:             if(&& role >= 1 and role < 7) {
+49:     %>
+
+
+An error occurred at line: [48] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "&&", delete this token
+45:         String role = request.getParameter("role");
+46:         role = INTEGER.parseInt(role)l;
+47:         if (password != null && rePassword != null && password.equals(rePassword)) {
+48:             if(&& role >= 1 and role < 7) {
+49:     %>
+50:                 <p>Your account is created</p>
+51:     <%
+
+
+An error occurred at line: [48] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "and", . expected
+45:         String role = request.getParameter("role");
+46:         role = INTEGER.parseInt(role)l;
+47:         if (password != null && rePassword != null && password.equals(rePassword)) {
+48:             if(&& role >= 1 and role < 7) {
+49:     %>
+50:                 <p>Your account is created</p>
+51:     <%
+
+
+An error occurred at line: [48] in the jsp file: [/createAccountPage.jsp]
+role cannot be resolved or is not a field
+45:         String role = request.getParameter("role");
+46:         role = INTEGER.parseInt(role)l;
+47:         if (password != null && rePassword != null && password.equals(rePassword)) {
+48:             if(&& role >= 1 and role < 7) {
+49:     %>
+50:                 <p>Your account is created</p>
+51:     <%
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [46] in the jsp file: [/createAccountPage.jsp]
+INTEGER cannot be resolved
+43:         String password = request.getParameter("password");
+44:         String rePassword = request.getParameter("re_password");
+45:         String role = request.getParameter("role");
+46:         role = INTEGER.parseInt(role)l;
+47:         if (password != null && rePassword != null && password.equals(rePassword)) {
+48:             if(&& role >= 1 and role < 7) {
+49:     %>
+
+
+An error occurred at line: [46] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "l", delete this token
+43:         String password = request.getParameter("password");
+44:         String rePassword = request.getParameter("re_password");
+45:         String role = request.getParameter("role");
+46:         role = INTEGER.parseInt(role)l;
+47:         if (password != null && rePassword != null && password.equals(rePassword)) {
+48:             if(&& role >= 1 and role < 7) {
+49:     %>
+
+
+An error occurred at line: [48] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "&&", delete this token
+45:         String role = request.getParameter("role");
+46:         role = INTEGER.parseInt(role)l;
+47:         if (password != null && rePassword != null && password.equals(rePassword)) {
+48:             if(&& role >= 1 and role < 7) {
+49:     %>
+50:                 <p>Your account is created</p>
+51:     <%
+
+
+An error occurred at line: [48] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "and", . expected
+45:         String role = request.getParameter("role");
+46:         role = INTEGER.parseInt(role)l;
+47:         if (password != null && rePassword != null && password.equals(rePassword)) {
+48:             if(&& role >= 1 and role < 7) {
+49:     %>
+50:                 <p>Your account is created</p>
+51:     <%
+
+
+An error occurred at line: [48] in the jsp file: [/createAccountPage.jsp]
+role cannot be resolved or is not a field
+45:         String role = request.getParameter("role");
+46:         role = INTEGER.parseInt(role)l;
+47:         if (password != null && rePassword != null && password.equals(rePassword)) {
+48:             if(&& role >= 1 and role < 7) {
+49:     %>
+50:                 <p>Your account is created</p>
+51:     <%
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+15-Oct-2023 18:40:28.801 SEVERE [http-nio-8080-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [46] in the jsp file: [/createAccountPage.jsp]
+INTEGER cannot be resolved
+43:         String password = request.getParameter("password");
+44:         String rePassword = request.getParameter("re_password");
+45:         String role = request.getParameter("role");
+46:         role = INTEGER.parseInt(role);
+47:         if (password != null && rePassword != null && password.equals(rePassword)) {
+48:             if(&& role >= 1 and role < 7) {
+49:     %>
+
+
+An error occurred at line: [48] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "&&", delete this token
+45:         String role = request.getParameter("role");
+46:         role = INTEGER.parseInt(role);
+47:         if (password != null && rePassword != null && password.equals(rePassword)) {
+48:             if(&& role >= 1 and role < 7) {
+49:     %>
+50:                 <p>Your account is created</p>
+51:     <%
+
+
+An error occurred at line: [48] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "and", . expected
+45:         String role = request.getParameter("role");
+46:         role = INTEGER.parseInt(role);
+47:         if (password != null && rePassword != null && password.equals(rePassword)) {
+48:             if(&& role >= 1 and role < 7) {
+49:     %>
+50:                 <p>Your account is created</p>
+51:     <%
+
+
+An error occurred at line: [48] in the jsp file: [/createAccountPage.jsp]
+role cannot be resolved or is not a field
+45:         String role = request.getParameter("role");
+46:         role = INTEGER.parseInt(role);
+47:         if (password != null && rePassword != null && password.equals(rePassword)) {
+48:             if(&& role >= 1 and role < 7) {
+49:     %>
+50:                 <p>Your account is created</p>
+51:     <%
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [46] in the jsp file: [/createAccountPage.jsp]
+INTEGER cannot be resolved
+43:         String password = request.getParameter("password");
+44:         String rePassword = request.getParameter("re_password");
+45:         String role = request.getParameter("role");
+46:         role = INTEGER.parseInt(role);
+47:         if (password != null && rePassword != null && password.equals(rePassword)) {
+48:             if(&& role >= 1 and role < 7) {
+49:     %>
+
+
+An error occurred at line: [48] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "&&", delete this token
+45:         String role = request.getParameter("role");
+46:         role = INTEGER.parseInt(role);
+47:         if (password != null && rePassword != null && password.equals(rePassword)) {
+48:             if(&& role >= 1 and role < 7) {
+49:     %>
+50:                 <p>Your account is created</p>
+51:     <%
+
+
+An error occurred at line: [48] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "and", . expected
+45:         String role = request.getParameter("role");
+46:         role = INTEGER.parseInt(role);
+47:         if (password != null && rePassword != null && password.equals(rePassword)) {
+48:             if(&& role >= 1 and role < 7) {
+49:     %>
+50:                 <p>Your account is created</p>
+51:     <%
+
+
+An error occurred at line: [48] in the jsp file: [/createAccountPage.jsp]
+role cannot be resolved or is not a field
+45:         String role = request.getParameter("role");
+46:         role = INTEGER.parseInt(role);
+47:         if (password != null && rePassword != null && password.equals(rePassword)) {
+48:             if(&& role >= 1 and role < 7) {
+49:     %>
+50:                 <p>Your account is created</p>
+51:     <%
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+15-Oct-2023 18:41:37.721 SEVERE [http-nio-8080-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [46] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+43:         String password = request.getParameter("password");
+44:         String rePassword = request.getParameter("re_password");
+45:         String role = request.getParameter("role");
+46:         int roleN = Integer.parseInt(role)
+47:         if (password != null && rePassword != null && password.equals(rePassword)) {
+48:             if(&& roleN >= 1 and roleN < 7) {
+49:     %>
+
+
+An error occurred at line: [48] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "&&", delete this token
+45:         String role = request.getParameter("role");
+46:         int roleN = Integer.parseInt(role)
+47:         if (password != null && rePassword != null && password.equals(rePassword)) {
+48:             if(&& roleN >= 1 and roleN < 7) {
+49:     %>
+50:                 <p>Your account is created</p>
+51:     <%
+
+
+An error occurred at line: [48] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "and", . expected
+45:         String role = request.getParameter("role");
+46:         int roleN = Integer.parseInt(role)
+47:         if (password != null && rePassword != null && password.equals(rePassword)) {
+48:             if(&& roleN >= 1 and roleN < 7) {
+49:     %>
+50:                 <p>Your account is created</p>
+51:     <%
+
+
+An error occurred at line: [48] in the jsp file: [/createAccountPage.jsp]
+roleN cannot be resolved or is not a field
+45:         String role = request.getParameter("role");
+46:         int roleN = Integer.parseInt(role)
+47:         if (password != null && rePassword != null && password.equals(rePassword)) {
+48:             if(&& roleN >= 1 and roleN < 7) {
+49:     %>
+50:                 <p>Your account is created</p>
+51:     <%
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [46] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+43:         String password = request.getParameter("password");
+44:         String rePassword = request.getParameter("re_password");
+45:         String role = request.getParameter("role");
+46:         int roleN = Integer.parseInt(role)
+47:         if (password != null && rePassword != null && password.equals(rePassword)) {
+48:             if(&& roleN >= 1 and roleN < 7) {
+49:     %>
+
+
+An error occurred at line: [48] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "&&", delete this token
+45:         String role = request.getParameter("role");
+46:         int roleN = Integer.parseInt(role)
+47:         if (password != null && rePassword != null && password.equals(rePassword)) {
+48:             if(&& roleN >= 1 and roleN < 7) {
+49:     %>
+50:                 <p>Your account is created</p>
+51:     <%
+
+
+An error occurred at line: [48] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "and", . expected
+45:         String role = request.getParameter("role");
+46:         int roleN = Integer.parseInt(role)
+47:         if (password != null && rePassword != null && password.equals(rePassword)) {
+48:             if(&& roleN >= 1 and roleN < 7) {
+49:     %>
+50:                 <p>Your account is created</p>
+51:     <%
+
+
+An error occurred at line: [48] in the jsp file: [/createAccountPage.jsp]
+roleN cannot be resolved or is not a field
+45:         String role = request.getParameter("role");
+46:         int roleN = Integer.parseInt(role)
+47:         if (password != null && rePassword != null && password.equals(rePassword)) {
+48:             if(&& roleN >= 1 and roleN < 7) {
+49:     %>
+50:                 <p>Your account is created</p>
+51:     <%
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+15-Oct-2023 19:17:34.267 SEVERE [http-nio-8080-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [61] in the jsp file: [/createAccountPage.jsp]
+Type mismatch: cannot convert from String to int
+58:     </form>
+59:     <%
+60:     if ("POST".equalsIgnoreCase(request.getMethod())) {
+61:         int id = request.getParameter("employeeId");
+62:         String name = request.getParameter("name");
+63:         String userName = request.getParameter("userName");
+64:         String password = request.getParameter("password");
+
+
+An error occurred at line: [67] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+64:         String password = request.getParameter("password");
+65:         String rePassword = request.getParameter("re_password");
+66:         String role = request.getParameter("role");
+67:         String hotelLocation = request.getParameter("hotel_location")
+68:         String hotelName = request.getParameter("hotel_name");
+69: 
+70:         
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [61] in the jsp file: [/createAccountPage.jsp]
+Type mismatch: cannot convert from String to int
+58:     </form>
+59:     <%
+60:     if ("POST".equalsIgnoreCase(request.getMethod())) {
+61:         int id = request.getParameter("employeeId");
+62:         String name = request.getParameter("name");
+63:         String userName = request.getParameter("userName");
+64:         String password = request.getParameter("password");
+
+
+An error occurred at line: [67] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+64:         String password = request.getParameter("password");
+65:         String rePassword = request.getParameter("re_password");
+66:         String role = request.getParameter("role");
+67:         String hotelLocation = request.getParameter("hotel_location")
+68:         String hotelName = request.getParameter("hotel_name");
+69: 
+70:         
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+15-Oct-2023 19:18:19.132 SEVERE [http-nio-8080-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [68] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+65:         String password = request.getParameter("password");
+66:         String rePassword = request.getParameter("re_password");
+67:         String role = request.getParameter("role");
+68:         String hotelLocation = request.getParameter("hotel_location")
+69:         String hotelName = request.getParameter("hotel_name");
+70: 
+71:         
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [68] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+65:         String password = request.getParameter("password");
+66:         String rePassword = request.getParameter("re_password");
+67:         String role = request.getParameter("role");
+68:         String hotelLocation = request.getParameter("hotel_location")
+69:         String hotelName = request.getParameter("hotel_name");
+70: 
+71:         
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+15-Oct-2023 19:43:43.464 SEVERE [http-nio-8080-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [80] in the jsp file: [/createAccountPage.jsp]
+Duplicate local variable password
+77:     <% 
+78:             String user;
+79:             user = "root";
+80:             String password = "Ken30526296@";
+81:             try {
+82:         
+83:             java.sql.Connection con; 
+
+
+An error occurred at line: [88] in the jsp file: [/createAccountPage.jsp]
+preparedStatement cannot be resolved to a variable
+85:             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Project?autoReconnect=true&useSSL=false",user, password);
+86: 
+87:             String sql = "INSERT INTO Employee (ID, HotelLocation, HotelName, Name, Role, Username, Password) VALUES (?, ?, ?, ?, ?, ?, ?)";
+88:             preparedStatement = connection.prepareStatement(sql);
+89:             preparedStatement.setInteger(1, nId);
+90:             preparedStatement.setString(2, hotelLocation);
+91:             preparedStatement.setString(3, hotelName);
+
+
+An error occurred at line: [88] in the jsp file: [/createAccountPage.jsp]
+connection cannot be resolved
+85:             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Project?autoReconnect=true&useSSL=false",user, password);
+86: 
+87:             String sql = "INSERT INTO Employee (ID, HotelLocation, HotelName, Name, Role, Username, Password) VALUES (?, ?, ?, ?, ?, ?, ?)";
+88:             preparedStatement = connection.prepareStatement(sql);
+89:             preparedStatement.setInteger(1, nId);
+90:             preparedStatement.setString(2, hotelLocation);
+91:             preparedStatement.setString(3, hotelName);
+
+
+An error occurred at line: [89] in the jsp file: [/createAccountPage.jsp]
+preparedStatement cannot be resolved
+86: 
+87:             String sql = "INSERT INTO Employee (ID, HotelLocation, HotelName, Name, Role, Username, Password) VALUES (?, ?, ?, ?, ?, ?, ?)";
+88:             preparedStatement = connection.prepareStatement(sql);
+89:             preparedStatement.setInteger(1, nId);
+90:             preparedStatement.setString(2, hotelLocation);
+91:             preparedStatement.setString(3, hotelName);
+92:             preparedStatement.setString(4, name);
+
+
+An error occurred at line: [90] in the jsp file: [/createAccountPage.jsp]
+preparedStatement cannot be resolved
+87:             String sql = "INSERT INTO Employee (ID, HotelLocation, HotelName, Name, Role, Username, Password) VALUES (?, ?, ?, ?, ?, ?, ?)";
+88:             preparedStatement = connection.prepareStatement(sql);
+89:             preparedStatement.setInteger(1, nId);
+90:             preparedStatement.setString(2, hotelLocation);
+91:             preparedStatement.setString(3, hotelName);
+92:             preparedStatement.setString(4, name);
+93:             preparedStatement.setString(5, role);
+
+
+An error occurred at line: [91] in the jsp file: [/createAccountPage.jsp]
+preparedStatement cannot be resolved
+88:             preparedStatement = connection.prepareStatement(sql);
+89:             preparedStatement.setInteger(1, nId);
+90:             preparedStatement.setString(2, hotelLocation);
+91:             preparedStatement.setString(3, hotelName);
+92:             preparedStatement.setString(4, name);
+93:             preparedStatement.setString(5, role);
+94:             preparedStatement.setString(6, userName);    
+
+
+An error occurred at line: [92] in the jsp file: [/createAccountPage.jsp]
+preparedStatement cannot be resolved
+89:             preparedStatement.setInteger(1, nId);
+90:             preparedStatement.setString(2, hotelLocation);
+91:             preparedStatement.setString(3, hotelName);
+92:             preparedStatement.setString(4, name);
+93:             preparedStatement.setString(5, role);
+94:             preparedStatement.setString(6, userName);    
+95:             preparedStatement.setString(7, password);
+
+
+An error occurred at line: [93] in the jsp file: [/createAccountPage.jsp]
+preparedStatement cannot be resolved
+90:             preparedStatement.setString(2, hotelLocation);
+91:             preparedStatement.setString(3, hotelName);
+92:             preparedStatement.setString(4, name);
+93:             preparedStatement.setString(5, role);
+94:             preparedStatement.setString(6, userName);    
+95:             preparedStatement.setString(7, password);
+96: 
+
+
+An error occurred at line: [94] in the jsp file: [/createAccountPage.jsp]
+preparedStatement cannot be resolved
+91:             preparedStatement.setString(3, hotelName);
+92:             preparedStatement.setString(4, name);
+93:             preparedStatement.setString(5, role);
+94:             preparedStatement.setString(6, userName);    
+95:             preparedStatement.setString(7, password);
+96: 
+97: 
+
+
+An error occurred at line: [95] in the jsp file: [/createAccountPage.jsp]
+preparedStatement cannot be resolved
+92:             preparedStatement.setString(4, name);
+93:             preparedStatement.setString(5, role);
+94:             preparedStatement.setString(6, userName);    
+95:             preparedStatement.setString(7, password);
+96: 
+97: 
+98:         
+
+
+An error occurred at line: [102] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token(s), misplaced construct(s)
+99:             out.println("Initial entries in table \"Employee\": <br/>");
+100:             Statement stmt = con.createStatement();
+101:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+102:             while (rs.next()) {
+103:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+104:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+105:                 <br/><br/>");
+
+
+An error occurred at line: [103] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "" + "", [ expected
+100:             Statement stmt = con.createStatement();
+101:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+102:             while (rs.next()) {
+103:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+104:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+105:                 <br/><br/>");
+106:             }
+
+
+An error occurred at line: [104] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token ">", invalid Expression
+101:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+102:             while (rs.next()) {
+103:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+104:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+105:                 <br/><br/>");
+106:             }
+107:             rs.close();
+
+
+An error occurred at line: [104] in the jsp file: [/createAccountPage.jsp]
+Syntax error on tokens, delete these tokens
+101:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+102:             while (rs.next()) {
+103:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+104:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+105:                 <br/><br/>");
+106:             }
+107:             rs.close();
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [80] in the jsp file: [/createAccountPage.jsp]
+Duplicate local variable password
+77:     <% 
+78:             String user;
+79:             user = "root";
+80:             String password = "Ken30526296@";
+81:             try {
+82:         
+83:             java.sql.Connection con; 
+
+
+An error occurred at line: [88] in the jsp file: [/createAccountPage.jsp]
+preparedStatement cannot be resolved to a variable
+85:             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Project?autoReconnect=true&useSSL=false",user, password);
+86: 
+87:             String sql = "INSERT INTO Employee (ID, HotelLocation, HotelName, Name, Role, Username, Password) VALUES (?, ?, ?, ?, ?, ?, ?)";
+88:             preparedStatement = connection.prepareStatement(sql);
+89:             preparedStatement.setInteger(1, nId);
+90:             preparedStatement.setString(2, hotelLocation);
+91:             preparedStatement.setString(3, hotelName);
+
+
+An error occurred at line: [88] in the jsp file: [/createAccountPage.jsp]
+connection cannot be resolved
+85:             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Project?autoReconnect=true&useSSL=false",user, password);
+86: 
+87:             String sql = "INSERT INTO Employee (ID, HotelLocation, HotelName, Name, Role, Username, Password) VALUES (?, ?, ?, ?, ?, ?, ?)";
+88:             preparedStatement = connection.prepareStatement(sql);
+89:             preparedStatement.setInteger(1, nId);
+90:             preparedStatement.setString(2, hotelLocation);
+91:             preparedStatement.setString(3, hotelName);
+
+
+An error occurred at line: [89] in the jsp file: [/createAccountPage.jsp]
+preparedStatement cannot be resolved
+86: 
+87:             String sql = "INSERT INTO Employee (ID, HotelLocation, HotelName, Name, Role, Username, Password) VALUES (?, ?, ?, ?, ?, ?, ?)";
+88:             preparedStatement = connection.prepareStatement(sql);
+89:             preparedStatement.setInteger(1, nId);
+90:             preparedStatement.setString(2, hotelLocation);
+91:             preparedStatement.setString(3, hotelName);
+92:             preparedStatement.setString(4, name);
+
+
+An error occurred at line: [90] in the jsp file: [/createAccountPage.jsp]
+preparedStatement cannot be resolved
+87:             String sql = "INSERT INTO Employee (ID, HotelLocation, HotelName, Name, Role, Username, Password) VALUES (?, ?, ?, ?, ?, ?, ?)";
+88:             preparedStatement = connection.prepareStatement(sql);
+89:             preparedStatement.setInteger(1, nId);
+90:             preparedStatement.setString(2, hotelLocation);
+91:             preparedStatement.setString(3, hotelName);
+92:             preparedStatement.setString(4, name);
+93:             preparedStatement.setString(5, role);
+
+
+An error occurred at line: [91] in the jsp file: [/createAccountPage.jsp]
+preparedStatement cannot be resolved
+88:             preparedStatement = connection.prepareStatement(sql);
+89:             preparedStatement.setInteger(1, nId);
+90:             preparedStatement.setString(2, hotelLocation);
+91:             preparedStatement.setString(3, hotelName);
+92:             preparedStatement.setString(4, name);
+93:             preparedStatement.setString(5, role);
+94:             preparedStatement.setString(6, userName);    
+
+
+An error occurred at line: [92] in the jsp file: [/createAccountPage.jsp]
+preparedStatement cannot be resolved
+89:             preparedStatement.setInteger(1, nId);
+90:             preparedStatement.setString(2, hotelLocation);
+91:             preparedStatement.setString(3, hotelName);
+92:             preparedStatement.setString(4, name);
+93:             preparedStatement.setString(5, role);
+94:             preparedStatement.setString(6, userName);    
+95:             preparedStatement.setString(7, password);
+
+
+An error occurred at line: [93] in the jsp file: [/createAccountPage.jsp]
+preparedStatement cannot be resolved
+90:             preparedStatement.setString(2, hotelLocation);
+91:             preparedStatement.setString(3, hotelName);
+92:             preparedStatement.setString(4, name);
+93:             preparedStatement.setString(5, role);
+94:             preparedStatement.setString(6, userName);    
+95:             preparedStatement.setString(7, password);
+96: 
+
+
+An error occurred at line: [94] in the jsp file: [/createAccountPage.jsp]
+preparedStatement cannot be resolved
+91:             preparedStatement.setString(3, hotelName);
+92:             preparedStatement.setString(4, name);
+93:             preparedStatement.setString(5, role);
+94:             preparedStatement.setString(6, userName);    
+95:             preparedStatement.setString(7, password);
+96: 
+97: 
+
+
+An error occurred at line: [95] in the jsp file: [/createAccountPage.jsp]
+preparedStatement cannot be resolved
+92:             preparedStatement.setString(4, name);
+93:             preparedStatement.setString(5, role);
+94:             preparedStatement.setString(6, userName);    
+95:             preparedStatement.setString(7, password);
+96: 
+97: 
+98:         
+
+
+An error occurred at line: [102] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token(s), misplaced construct(s)
+99:             out.println("Initial entries in table \"Employee\": <br/>");
+100:             Statement stmt = con.createStatement();
+101:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+102:             while (rs.next()) {
+103:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+104:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+105:                 <br/><br/>");
+
+
+An error occurred at line: [103] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "" + "", [ expected
+100:             Statement stmt = con.createStatement();
+101:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+102:             while (rs.next()) {
+103:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+104:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+105:                 <br/><br/>");
+106:             }
+
+
+An error occurred at line: [104] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token ">", invalid Expression
+101:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+102:             while (rs.next()) {
+103:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+104:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+105:                 <br/><br/>");
+106:             }
+107:             rs.close();
+
+
+An error occurred at line: [104] in the jsp file: [/createAccountPage.jsp]
+Syntax error on tokens, delete these tokens
+101:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+102:             while (rs.next()) {
+103:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+104:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+105:                 <br/><br/>");
+106:             }
+107:             rs.close();
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+15-Oct-2023 19:44:56.446 SEVERE [http-nio-8080-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [88] in the jsp file: [/createAccountPage.jsp]
+preparedStatement cannot be resolved to a variable
+85:             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Project?autoReconnect=true&useSSL=false",user, password);
+86: 
+87:             String sql = "INSERT INTO Employee (ID, HotelLocation, HotelName, Name, Role, Username, Password) VALUES (?, ?, ?, ?, ?, ?, ?)";
+88:             preparedStatement = connection.prepareStatement(sql);
+89:             preparedStatement.setInteger(1, nId);
+90:             preparedStatement.setString(2, hotelLocation);
+91:             preparedStatement.setString(3, hotelName);
+
+
+An error occurred at line: [88] in the jsp file: [/createAccountPage.jsp]
+connection cannot be resolved
+85:             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Project?autoReconnect=true&useSSL=false",user, password);
+86: 
+87:             String sql = "INSERT INTO Employee (ID, HotelLocation, HotelName, Name, Role, Username, Password) VALUES (?, ?, ?, ?, ?, ?, ?)";
+88:             preparedStatement = connection.prepareStatement(sql);
+89:             preparedStatement.setInteger(1, nId);
+90:             preparedStatement.setString(2, hotelLocation);
+91:             preparedStatement.setString(3, hotelName);
+
+
+An error occurred at line: [89] in the jsp file: [/createAccountPage.jsp]
+preparedStatement cannot be resolved
+86: 
+87:             String sql = "INSERT INTO Employee (ID, HotelLocation, HotelName, Name, Role, Username, Password) VALUES (?, ?, ?, ?, ?, ?, ?)";
+88:             preparedStatement = connection.prepareStatement(sql);
+89:             preparedStatement.setInteger(1, nId);
+90:             preparedStatement.setString(2, hotelLocation);
+91:             preparedStatement.setString(3, hotelName);
+92:             preparedStatement.setString(4, name);
+
+
+An error occurred at line: [90] in the jsp file: [/createAccountPage.jsp]
+preparedStatement cannot be resolved
+87:             String sql = "INSERT INTO Employee (ID, HotelLocation, HotelName, Name, Role, Username, Password) VALUES (?, ?, ?, ?, ?, ?, ?)";
+88:             preparedStatement = connection.prepareStatement(sql);
+89:             preparedStatement.setInteger(1, nId);
+90:             preparedStatement.setString(2, hotelLocation);
+91:             preparedStatement.setString(3, hotelName);
+92:             preparedStatement.setString(4, name);
+93:             preparedStatement.setString(5, role);
+
+
+An error occurred at line: [91] in the jsp file: [/createAccountPage.jsp]
+preparedStatement cannot be resolved
+88:             preparedStatement = connection.prepareStatement(sql);
+89:             preparedStatement.setInteger(1, nId);
+90:             preparedStatement.setString(2, hotelLocation);
+91:             preparedStatement.setString(3, hotelName);
+92:             preparedStatement.setString(4, name);
+93:             preparedStatement.setString(5, role);
+94:             preparedStatement.setString(6, userName);    
+
+
+An error occurred at line: [92] in the jsp file: [/createAccountPage.jsp]
+preparedStatement cannot be resolved
+89:             preparedStatement.setInteger(1, nId);
+90:             preparedStatement.setString(2, hotelLocation);
+91:             preparedStatement.setString(3, hotelName);
+92:             preparedStatement.setString(4, name);
+93:             preparedStatement.setString(5, role);
+94:             preparedStatement.setString(6, userName);    
+95:             preparedStatement.setString(7, userpassword);
+
+
+An error occurred at line: [93] in the jsp file: [/createAccountPage.jsp]
+preparedStatement cannot be resolved
+90:             preparedStatement.setString(2, hotelLocation);
+91:             preparedStatement.setString(3, hotelName);
+92:             preparedStatement.setString(4, name);
+93:             preparedStatement.setString(5, role);
+94:             preparedStatement.setString(6, userName);    
+95:             preparedStatement.setString(7, userpassword);
+96: 
+
+
+An error occurred at line: [94] in the jsp file: [/createAccountPage.jsp]
+preparedStatement cannot be resolved
+91:             preparedStatement.setString(3, hotelName);
+92:             preparedStatement.setString(4, name);
+93:             preparedStatement.setString(5, role);
+94:             preparedStatement.setString(6, userName);    
+95:             preparedStatement.setString(7, userpassword);
+96: 
+97: 
+
+
+An error occurred at line: [95] in the jsp file: [/createAccountPage.jsp]
+preparedStatement cannot be resolved
+92:             preparedStatement.setString(4, name);
+93:             preparedStatement.setString(5, role);
+94:             preparedStatement.setString(6, userName);    
+95:             preparedStatement.setString(7, userpassword);
+96: 
+97: 
+98:         
+
+
+An error occurred at line: [95] in the jsp file: [/createAccountPage.jsp]
+userpassword cannot be resolved to a variable
+92:             preparedStatement.setString(4, name);
+93:             preparedStatement.setString(5, role);
+94:             preparedStatement.setString(6, userName);    
+95:             preparedStatement.setString(7, userpassword);
+96: 
+97: 
+98:         
+
+
+An error occurred at line: [102] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token(s), misplaced construct(s)
+99:             out.println("Initial entries in table \"Employee\": <br/>");
+100:             Statement stmt = con.createStatement();
+101:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+102:             while (rs.next()) {
+103:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+104:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+105:                 <br/><br/>");
+
+
+An error occurred at line: [103] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "" + "", [ expected
+100:             Statement stmt = con.createStatement();
+101:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+102:             while (rs.next()) {
+103:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+104:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+105:                 <br/><br/>");
+106:             }
+
+
+An error occurred at line: [104] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token ">", invalid Expression
+101:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+102:             while (rs.next()) {
+103:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+104:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+105:                 <br/><br/>");
+106:             }
+107:             rs.close();
+
+
+An error occurred at line: [104] in the jsp file: [/createAccountPage.jsp]
+Syntax error on tokens, delete these tokens
+101:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+102:             while (rs.next()) {
+103:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+104:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+105:                 <br/><br/>");
+106:             }
+107:             rs.close();
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [88] in the jsp file: [/createAccountPage.jsp]
+preparedStatement cannot be resolved to a variable
+85:             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Project?autoReconnect=true&useSSL=false",user, password);
+86: 
+87:             String sql = "INSERT INTO Employee (ID, HotelLocation, HotelName, Name, Role, Username, Password) VALUES (?, ?, ?, ?, ?, ?, ?)";
+88:             preparedStatement = connection.prepareStatement(sql);
+89:             preparedStatement.setInteger(1, nId);
+90:             preparedStatement.setString(2, hotelLocation);
+91:             preparedStatement.setString(3, hotelName);
+
+
+An error occurred at line: [88] in the jsp file: [/createAccountPage.jsp]
+connection cannot be resolved
+85:             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Project?autoReconnect=true&useSSL=false",user, password);
+86: 
+87:             String sql = "INSERT INTO Employee (ID, HotelLocation, HotelName, Name, Role, Username, Password) VALUES (?, ?, ?, ?, ?, ?, ?)";
+88:             preparedStatement = connection.prepareStatement(sql);
+89:             preparedStatement.setInteger(1, nId);
+90:             preparedStatement.setString(2, hotelLocation);
+91:             preparedStatement.setString(3, hotelName);
+
+
+An error occurred at line: [89] in the jsp file: [/createAccountPage.jsp]
+preparedStatement cannot be resolved
+86: 
+87:             String sql = "INSERT INTO Employee (ID, HotelLocation, HotelName, Name, Role, Username, Password) VALUES (?, ?, ?, ?, ?, ?, ?)";
+88:             preparedStatement = connection.prepareStatement(sql);
+89:             preparedStatement.setInteger(1, nId);
+90:             preparedStatement.setString(2, hotelLocation);
+91:             preparedStatement.setString(3, hotelName);
+92:             preparedStatement.setString(4, name);
+
+
+An error occurred at line: [90] in the jsp file: [/createAccountPage.jsp]
+preparedStatement cannot be resolved
+87:             String sql = "INSERT INTO Employee (ID, HotelLocation, HotelName, Name, Role, Username, Password) VALUES (?, ?, ?, ?, ?, ?, ?)";
+88:             preparedStatement = connection.prepareStatement(sql);
+89:             preparedStatement.setInteger(1, nId);
+90:             preparedStatement.setString(2, hotelLocation);
+91:             preparedStatement.setString(3, hotelName);
+92:             preparedStatement.setString(4, name);
+93:             preparedStatement.setString(5, role);
+
+
+An error occurred at line: [91] in the jsp file: [/createAccountPage.jsp]
+preparedStatement cannot be resolved
+88:             preparedStatement = connection.prepareStatement(sql);
+89:             preparedStatement.setInteger(1, nId);
+90:             preparedStatement.setString(2, hotelLocation);
+91:             preparedStatement.setString(3, hotelName);
+92:             preparedStatement.setString(4, name);
+93:             preparedStatement.setString(5, role);
+94:             preparedStatement.setString(6, userName);    
+
+
+An error occurred at line: [92] in the jsp file: [/createAccountPage.jsp]
+preparedStatement cannot be resolved
+89:             preparedStatement.setInteger(1, nId);
+90:             preparedStatement.setString(2, hotelLocation);
+91:             preparedStatement.setString(3, hotelName);
+92:             preparedStatement.setString(4, name);
+93:             preparedStatement.setString(5, role);
+94:             preparedStatement.setString(6, userName);    
+95:             preparedStatement.setString(7, userpassword);
+
+
+An error occurred at line: [93] in the jsp file: [/createAccountPage.jsp]
+preparedStatement cannot be resolved
+90:             preparedStatement.setString(2, hotelLocation);
+91:             preparedStatement.setString(3, hotelName);
+92:             preparedStatement.setString(4, name);
+93:             preparedStatement.setString(5, role);
+94:             preparedStatement.setString(6, userName);    
+95:             preparedStatement.setString(7, userpassword);
+96: 
+
+
+An error occurred at line: [94] in the jsp file: [/createAccountPage.jsp]
+preparedStatement cannot be resolved
+91:             preparedStatement.setString(3, hotelName);
+92:             preparedStatement.setString(4, name);
+93:             preparedStatement.setString(5, role);
+94:             preparedStatement.setString(6, userName);    
+95:             preparedStatement.setString(7, userpassword);
+96: 
+97: 
+
+
+An error occurred at line: [95] in the jsp file: [/createAccountPage.jsp]
+preparedStatement cannot be resolved
+92:             preparedStatement.setString(4, name);
+93:             preparedStatement.setString(5, role);
+94:             preparedStatement.setString(6, userName);    
+95:             preparedStatement.setString(7, userpassword);
+96: 
+97: 
+98:         
+
+
+An error occurred at line: [95] in the jsp file: [/createAccountPage.jsp]
+userpassword cannot be resolved to a variable
+92:             preparedStatement.setString(4, name);
+93:             preparedStatement.setString(5, role);
+94:             preparedStatement.setString(6, userName);    
+95:             preparedStatement.setString(7, userpassword);
+96: 
+97: 
+98:         
+
+
+An error occurred at line: [102] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token(s), misplaced construct(s)
+99:             out.println("Initial entries in table \"Employee\": <br/>");
+100:             Statement stmt = con.createStatement();
+101:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+102:             while (rs.next()) {
+103:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+104:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+105:                 <br/><br/>");
+
+
+An error occurred at line: [103] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "" + "", [ expected
+100:             Statement stmt = con.createStatement();
+101:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+102:             while (rs.next()) {
+103:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+104:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+105:                 <br/><br/>");
+106:             }
+
+
+An error occurred at line: [104] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token ">", invalid Expression
+101:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+102:             while (rs.next()) {
+103:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+104:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+105:                 <br/><br/>");
+106:             }
+107:             rs.close();
+
+
+An error occurred at line: [104] in the jsp file: [/createAccountPage.jsp]
+Syntax error on tokens, delete these tokens
+101:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+102:             while (rs.next()) {
+103:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+104:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+105:                 <br/><br/>");
+106:             }
+107:             rs.close();
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+15-Oct-2023 19:45:58.593 SEVERE [http-nio-8080-exec-4] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [89] in the jsp file: [/createAccountPage.jsp]
+connection cannot be resolved
+86:             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Project?autoReconnect=true&useSSL=false",user, password);
+87: 
+88:             String sql = "INSERT INTO Employee (ID, HotelLocation, HotelName, Name, Role, Username, Password) VALUES (?, ?, ?, ?, ?, ?, ?)";
+89:             preparedStatement = connection.prepareStatement(sql);
+90:             preparedStatement.setInteger(1, nId);
+91:             preparedStatement.setString(2, hotelLocation);
+92:             preparedStatement.setString(3, hotelName);
+
+
+An error occurred at line: [90] in the jsp file: [/createAccountPage.jsp]
+The method setInteger(int, int) is undefined for the type PreparedStatement
+87: 
+88:             String sql = "INSERT INTO Employee (ID, HotelLocation, HotelName, Name, Role, Username, Password) VALUES (?, ?, ?, ?, ?, ?, ?)";
+89:             preparedStatement = connection.prepareStatement(sql);
+90:             preparedStatement.setInteger(1, nId);
+91:             preparedStatement.setString(2, hotelLocation);
+92:             preparedStatement.setString(3, hotelName);
+93:             preparedStatement.setString(4, name);
+
+
+An error occurred at line: [96] in the jsp file: [/createAccountPage.jsp]
+userpassword cannot be resolved to a variable
+93:             preparedStatement.setString(4, name);
+94:             preparedStatement.setString(5, role);
+95:             preparedStatement.setString(6, userName);    
+96:             preparedStatement.setString(7, userpassword);
+97: 
+98: 
+99:         
+
+
+An error occurred at line: [103] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token(s), misplaced construct(s)
+100:             out.println("Initial entries in table \"Employee\": <br/>");
+101:             Statement stmt = con.createStatement();
+102:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+103:             while (rs.next()) {
+104:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+105:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+106:                 <br/><br/>");
+
+
+An error occurred at line: [104] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "" + "", [ expected
+101:             Statement stmt = con.createStatement();
+102:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+103:             while (rs.next()) {
+104:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+105:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+106:                 <br/><br/>");
+107:             }
+
+
+An error occurred at line: [105] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token ">", invalid Expression
+102:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+103:             while (rs.next()) {
+104:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+105:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+106:                 <br/><br/>");
+107:             }
+108:             rs.close();
+
+
+An error occurred at line: [105] in the jsp file: [/createAccountPage.jsp]
+Syntax error on tokens, delete these tokens
+102:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+103:             while (rs.next()) {
+104:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+105:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+106:                 <br/><br/>");
+107:             }
+108:             rs.close();
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [89] in the jsp file: [/createAccountPage.jsp]
+connection cannot be resolved
+86:             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Project?autoReconnect=true&useSSL=false",user, password);
+87: 
+88:             String sql = "INSERT INTO Employee (ID, HotelLocation, HotelName, Name, Role, Username, Password) VALUES (?, ?, ?, ?, ?, ?, ?)";
+89:             preparedStatement = connection.prepareStatement(sql);
+90:             preparedStatement.setInteger(1, nId);
+91:             preparedStatement.setString(2, hotelLocation);
+92:             preparedStatement.setString(3, hotelName);
+
+
+An error occurred at line: [90] in the jsp file: [/createAccountPage.jsp]
+The method setInteger(int, int) is undefined for the type PreparedStatement
+87: 
+88:             String sql = "INSERT INTO Employee (ID, HotelLocation, HotelName, Name, Role, Username, Password) VALUES (?, ?, ?, ?, ?, ?, ?)";
+89:             preparedStatement = connection.prepareStatement(sql);
+90:             preparedStatement.setInteger(1, nId);
+91:             preparedStatement.setString(2, hotelLocation);
+92:             preparedStatement.setString(3, hotelName);
+93:             preparedStatement.setString(4, name);
+
+
+An error occurred at line: [96] in the jsp file: [/createAccountPage.jsp]
+userpassword cannot be resolved to a variable
+93:             preparedStatement.setString(4, name);
+94:             preparedStatement.setString(5, role);
+95:             preparedStatement.setString(6, userName);    
+96:             preparedStatement.setString(7, userpassword);
+97: 
+98: 
+99:         
+
+
+An error occurred at line: [103] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token(s), misplaced construct(s)
+100:             out.println("Initial entries in table \"Employee\": <br/>");
+101:             Statement stmt = con.createStatement();
+102:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+103:             while (rs.next()) {
+104:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+105:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+106:                 <br/><br/>");
+
+
+An error occurred at line: [104] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "" + "", [ expected
+101:             Statement stmt = con.createStatement();
+102:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+103:             while (rs.next()) {
+104:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+105:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+106:                 <br/><br/>");
+107:             }
+
+
+An error occurred at line: [105] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token ">", invalid Expression
+102:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+103:             while (rs.next()) {
+104:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+105:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+106:                 <br/><br/>");
+107:             }
+108:             rs.close();
+
+
+An error occurred at line: [105] in the jsp file: [/createAccountPage.jsp]
+Syntax error on tokens, delete these tokens
+102:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+103:             while (rs.next()) {
+104:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+105:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+106:                 <br/><br/>");
+107:             }
+108:             rs.close();
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+15-Oct-2023 19:46:54.168 SEVERE [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [89] in the jsp file: [/createAccountPage.jsp]
+connection cannot be resolved
+86:             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Project?autoReconnect=true&useSSL=false",user, password);
+87: 
+88:             String sql = "INSERT INTO Employee (ID, HotelLocation, HotelName, Name, Role, Username, Password) VALUES (?, ?, ?, ?, ?, ?, ?)";
+89:             preparedStatement = connection.prepareStatement(sql);
+90:             preparedStatement.setInteger(1, nId);
+91:             preparedStatement.setString(2, hotelLocation);
+92:             preparedStatement.setString(3, hotelName);
+
+
+An error occurred at line: [90] in the jsp file: [/createAccountPage.jsp]
+The method setInteger(int, int) is undefined for the type PreparedStatement
+87: 
+88:             String sql = "INSERT INTO Employee (ID, HotelLocation, HotelName, Name, Role, Username, Password) VALUES (?, ?, ?, ?, ?, ?, ?)";
+89:             preparedStatement = connection.prepareStatement(sql);
+90:             preparedStatement.setInteger(1, nId);
+91:             preparedStatement.setString(2, hotelLocation);
+92:             preparedStatement.setString(3, hotelName);
+93:             preparedStatement.setString(4, name);
+
+
+An error occurred at line: [103] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token(s), misplaced construct(s)
+100:             out.println("Initial entries in table \"Employee\": <br/>");
+101:             Statement stmt = con.createStatement();
+102:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+103:             while (rs.next()) {
+104:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+105:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+106:                 <br/><br/>");
+
+
+An error occurred at line: [104] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "" + "", [ expected
+101:             Statement stmt = con.createStatement();
+102:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+103:             while (rs.next()) {
+104:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+105:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+106:                 <br/><br/>");
+107:             }
+
+
+An error occurred at line: [105] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token ">", invalid Expression
+102:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+103:             while (rs.next()) {
+104:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+105:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+106:                 <br/><br/>");
+107:             }
+108:             rs.close();
+
+
+An error occurred at line: [105] in the jsp file: [/createAccountPage.jsp]
+Syntax error on tokens, delete these tokens
+102:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+103:             while (rs.next()) {
+104:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+105:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+106:                 <br/><br/>");
+107:             }
+108:             rs.close();
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [89] in the jsp file: [/createAccountPage.jsp]
+connection cannot be resolved
+86:             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Project?autoReconnect=true&useSSL=false",user, password);
+87: 
+88:             String sql = "INSERT INTO Employee (ID, HotelLocation, HotelName, Name, Role, Username, Password) VALUES (?, ?, ?, ?, ?, ?, ?)";
+89:             preparedStatement = connection.prepareStatement(sql);
+90:             preparedStatement.setInteger(1, nId);
+91:             preparedStatement.setString(2, hotelLocation);
+92:             preparedStatement.setString(3, hotelName);
+
+
+An error occurred at line: [90] in the jsp file: [/createAccountPage.jsp]
+The method setInteger(int, int) is undefined for the type PreparedStatement
+87: 
+88:             String sql = "INSERT INTO Employee (ID, HotelLocation, HotelName, Name, Role, Username, Password) VALUES (?, ?, ?, ?, ?, ?, ?)";
+89:             preparedStatement = connection.prepareStatement(sql);
+90:             preparedStatement.setInteger(1, nId);
+91:             preparedStatement.setString(2, hotelLocation);
+92:             preparedStatement.setString(3, hotelName);
+93:             preparedStatement.setString(4, name);
+
+
+An error occurred at line: [103] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token(s), misplaced construct(s)
+100:             out.println("Initial entries in table \"Employee\": <br/>");
+101:             Statement stmt = con.createStatement();
+102:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+103:             while (rs.next()) {
+104:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+105:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+106:                 <br/><br/>");
+
+
+An error occurred at line: [104] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "" + "", [ expected
+101:             Statement stmt = con.createStatement();
+102:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+103:             while (rs.next()) {
+104:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+105:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+106:                 <br/><br/>");
+107:             }
+
+
+An error occurred at line: [105] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token ">", invalid Expression
+102:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+103:             while (rs.next()) {
+104:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+105:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+106:                 <br/><br/>");
+107:             }
+108:             rs.close();
+
+
+An error occurred at line: [105] in the jsp file: [/createAccountPage.jsp]
+Syntax error on tokens, delete these tokens
+102:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+103:             while (rs.next()) {
+104:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+105:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+106:                 <br/><br/>");
+107:             }
+108:             rs.close();
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+15-Oct-2023 19:48:14.034 SEVERE [http-nio-8080-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [91] in the jsp file: [/createAccountPage.jsp]
+The method setInteger(int, int) is undefined for the type PreparedStatement
+88: 
+89:             String sql = "INSERT INTO Employee (ID, HotelLocation, HotelName, Name, Role, Username, Password) VALUES (?, ?, ?, ?, ?, ?, ?)";
+90:             preparedStatement = connection.prepareStatement(sql);
+91:             preparedStatement.setInteger(1, nId);
+92:             preparedStatement.setString(2, hotelLocation);
+93:             preparedStatement.setString(3, hotelName);
+94:             preparedStatement.setString(4, name);
+
+
+An error occurred at line: [104] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token(s), misplaced construct(s)
+101:             out.println("Initial entries in table \"Employee\": <br/>");
+102:             Statement stmt = con.createStatement();
+103:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+104:             while (rs.next()) {
+105:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+106:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+107:                 <br/><br/>");
+
+
+An error occurred at line: [105] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "" + "", [ expected
+102:             Statement stmt = con.createStatement();
+103:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+104:             while (rs.next()) {
+105:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+106:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+107:                 <br/><br/>");
+108:             }
+
+
+An error occurred at line: [106] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token ">", invalid Expression
+103:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+104:             while (rs.next()) {
+105:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+106:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+107:                 <br/><br/>");
+108:             }
+109:             rs.close();
+
+
+An error occurred at line: [106] in the jsp file: [/createAccountPage.jsp]
+Syntax error on tokens, delete these tokens
+103:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+104:             while (rs.next()) {
+105:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+106:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+107:                 <br/><br/>");
+108:             }
+109:             rs.close();
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [91] in the jsp file: [/createAccountPage.jsp]
+The method setInteger(int, int) is undefined for the type PreparedStatement
+88: 
+89:             String sql = "INSERT INTO Employee (ID, HotelLocation, HotelName, Name, Role, Username, Password) VALUES (?, ?, ?, ?, ?, ?, ?)";
+90:             preparedStatement = connection.prepareStatement(sql);
+91:             preparedStatement.setInteger(1, nId);
+92:             preparedStatement.setString(2, hotelLocation);
+93:             preparedStatement.setString(3, hotelName);
+94:             preparedStatement.setString(4, name);
+
+
+An error occurred at line: [104] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token(s), misplaced construct(s)
+101:             out.println("Initial entries in table \"Employee\": <br/>");
+102:             Statement stmt = con.createStatement();
+103:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+104:             while (rs.next()) {
+105:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+106:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+107:                 <br/><br/>");
+
+
+An error occurred at line: [105] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "" + "", [ expected
+102:             Statement stmt = con.createStatement();
+103:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+104:             while (rs.next()) {
+105:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+106:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+107:                 <br/><br/>");
+108:             }
+
+
+An error occurred at line: [106] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token ">", invalid Expression
+103:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+104:             while (rs.next()) {
+105:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+106:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+107:                 <br/><br/>");
+108:             }
+109:             rs.close();
+
+
+An error occurred at line: [106] in the jsp file: [/createAccountPage.jsp]
+Syntax error on tokens, delete these tokens
+103:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+104:             while (rs.next()) {
+105:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+106:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+107:                 <br/><br/>");
+108:             }
+109:             rs.close();
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+15-Oct-2023 19:49:18.600 SEVERE [http-nio-8080-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [103] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token(s), misplaced construct(s)
+100:             out.println("Initial entries in table \"Employee\": <br/>");
+101:             Statement stmt = con.createStatement();
+102:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+103:             while (rs.next()) {
+104:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+105:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+106:                 <br/><br/>");
+
+
+An error occurred at line: [104] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "" + "", [ expected
+101:             Statement stmt = con.createStatement();
+102:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+103:             while (rs.next()) {
+104:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+105:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+106:                 <br/><br/>");
+107:             }
+
+
+An error occurred at line: [105] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token ">", invalid Expression
+102:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+103:             while (rs.next()) {
+104:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+105:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+106:                 <br/><br/>");
+107:             }
+108:             rs.close();
+
+
+An error occurred at line: [105] in the jsp file: [/createAccountPage.jsp]
+Syntax error on tokens, delete these tokens
+102:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+103:             while (rs.next()) {
+104:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+105:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+106:                 <br/><br/>");
+107:             }
+108:             rs.close();
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [103] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token(s), misplaced construct(s)
+100:             out.println("Initial entries in table \"Employee\": <br/>");
+101:             Statement stmt = con.createStatement();
+102:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+103:             while (rs.next()) {
+104:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+105:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+106:                 <br/><br/>");
+
+
+An error occurred at line: [104] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "" + "", [ expected
+101:             Statement stmt = con.createStatement();
+102:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+103:             while (rs.next()) {
+104:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+105:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+106:                 <br/><br/>");
+107:             }
+
+
+An error occurred at line: [105] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token ">", invalid Expression
+102:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+103:             while (rs.next()) {
+104:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+105:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+106:                 <br/><br/>");
+107:             }
+108:             rs.close();
+
+
+An error occurred at line: [105] in the jsp file: [/createAccountPage.jsp]
+Syntax error on tokens, delete these tokens
+102:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+103:             while (rs.next()) {
+104:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+105:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7)
+106:                 <br/><br/>");
+107:             }
+108:             rs.close();
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+15-Oct-2023 19:52:16.084 SEVERE [http-nio-8080-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [104] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "" + "", [ expected
+101:             Statement stmt = con.createStatement();
+102:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+103:             while (rs.next()) {
+104:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+105:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7) +
+106:                 "<br/><br/>");
+107:             }
+
+
+An error occurred at line: [104] in the jsp file: [/createAccountPage.jsp]
+String literal is not properly closed by a double-quote
+101:             Statement stmt = con.createStatement();
+102:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+103:             while (rs.next()) {
+104:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+105:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7) +
+106:                 "<br/><br/>");
+107:             }
+
+
+An error occurred at line: [105] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert "]" to complete Expression
+102:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+103:             while (rs.next()) {
+104:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+105:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7) +
+106:                 "<br/><br/>");
+107:             }
+108:             rs.close();
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [104] in the jsp file: [/createAccountPage.jsp]
+Syntax error on token "" + "", [ expected
+101:             Statement stmt = con.createStatement();
+102:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+103:             while (rs.next()) {
+104:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+105:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7) +
+106:                 "<br/><br/>");
+107:             }
+
+
+An error occurred at line: [104] in the jsp file: [/createAccountPage.jsp]
+String literal is not properly closed by a double-quote
+101:             Statement stmt = con.createStatement();
+102:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+103:             while (rs.next()) {
+104:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+105:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7) +
+106:                 "<br/><br/>");
+107:             }
+
+
+An error occurred at line: [105] in the jsp file: [/createAccountPage.jsp]
+Syntax error, insert "]" to complete Expression
+102:             ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
+103:             while (rs.next()) {
+104:                 out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4)" + "    " + 
+105:                 rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7) +
+106:                 "<br/><br/>");
+107:             }
+108:             rs.close();
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)

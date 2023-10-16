@@ -1,17 +1,11 @@
 <%@ page import="java.sql.*"%>
 <html>
   <head>
-    <title>Project Demo</title>
+    <title>Login Page</title>
   </head>
   <body>
-    <h1>JDBC Connection Example</h1>
+    <h1>Login Page</h1>
     
-    <table border="1">
-      <tr>
-        <td>SJSU ID</td>
-        <td>Name</td>
-        <td>Major</td>
-   </tr>
     <% 
      String db = "cs157a";
         String user; // assumes database name is the same as username

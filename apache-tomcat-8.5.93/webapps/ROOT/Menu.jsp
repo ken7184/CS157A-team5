@@ -21,7 +21,7 @@
         } else if (selectedOption.equals("Login")) {
             response.sendRedirect("loginPage.jsp"); 
         } else {
-            out.println("Invalid option selected."); // Handle invalid selections
+            out.println("Invalid option selected.");
         }
       }
     %>
