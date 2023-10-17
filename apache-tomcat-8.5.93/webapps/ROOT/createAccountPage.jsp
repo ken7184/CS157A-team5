@@ -32,7 +32,6 @@
             <td><input type = "text" name = "re_password" required/></td>
         </tr>
     
-        
         <tr><td>Enter your role: </td></tr>
         <tr><td>1. Hotel Manger</td></tr>
         <tr><td>2. Housekeeper</td></tr>

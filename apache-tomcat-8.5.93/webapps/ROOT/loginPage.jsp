@@ -2,24 +2,53 @@
 <html>
   <head>
     <title>Login Page</title>
+    <style>
+      .heading-text{
+        margin: 25px 30px 50px 30px;
+      }
+      .input-box {
+        display: flex;
+        width: 50%;
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: auto;
+        flex-direction: column;
+       
+        max-width: 20%;
+        gap: 20px;
+      }
+
+      .form{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .createAccount-link{
+        color: black;
+      }
+      .error-message{
+        color: red;
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
-    <h1>Login Page</h1>
-    <form method = "post">
-      <table style="width: 50%">
-          <tr>
-              <td>UserName:  </td>
-              <td><input type = "text" name = "user_name" required/></td>
-          </tr>
-  
-          <tr>
-              <td>Password: </td>
-              <td><input type = "text" name = "password" required/></td>
-          </tr>
+    <h1 class="heading-text">Welcome to MyHotel!</h1>
+    <div class="input-box">
+    <form class="form" method="post">
       
-      </table>
-      <input type="submit" value="Login" />
+        <label for="user_name">Username:</label>
+        <input type="text" name="user_name" required/>
+        <label for="password">Password:</label>
+        <input type="password" name="password" required/>
+        <input type="submit" value="Login" />
+      
     </form>
+     <a class="createAccount-link" href="createAccountPage.jsp">
+          <text>Create Account</text>
+        </a>
+      </div>
 
     <%
     if ("POST".equalsIgnoreCase(request.getMethod())) {
@@ -34,24 +63,31 @@
           Class.forName("com.mysql.jdbc.Driver");
           con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Project?autoReconnect=true&useSSL=false",user, password);
           Statement stmt = con.createStatement();
-          String query = "SELECT UserName, Password FROM Employee WHERE UserName = '" + userName + "'";
+          String query = "SELECT ID, UserName, Password FROM Employee WHERE UserName = '" + userName + "'";
           ResultSet rs = stmt.executeQuery(query);
           if (rs.next()) {
             String dbPassword = rs.getString("Password");
+            int employeeID = rs.getInt("ID");
             if(userPassword.equals(dbPassword)) {
-    %>          
-              <p>Correctly login</p>
+              %> 
+              <script>
+                localStorage.setItem("username", "<%= userName %>");
+                localStorage.setItem("password", "<%= userPassword %>");
+                localStorage.setItem("employeeID", "<%= employeeID %>");
+                
+                window.location.href = "./homePage.jsp";
+            </script>
     <%    
           }
             else {
     %>          
-              <p>Your passowrd is wrong</p>
+              <p class="error-message">Your password is wrong</p>
     <%
             }
           }
           else {
     %>
-            <p>Your User name is wrong</p>
+            <p class="error-message">Your User name is wrong</p>
     <%
           } 
       
@@ -67,4 +103,3 @@
     %>
   </body>
 </html>
-
