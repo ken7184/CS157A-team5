@@ -28,24 +28,31 @@
       if (userName != null && userPassword != null) {
         String user;
         user = "root";
-        String password = "Ken30526296@";
+        String password = "password";
         try {
           java.sql.Connection con; 
           Class.forName("com.mysql.jdbc.Driver");
           con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Project?autoReconnect=true&useSSL=false",user, password);
           Statement stmt = con.createStatement();
-          String query = "SELECT UserName, Password FROM Employee WHERE UserName = '" + userName + "'";
+          String query = "SELECT ID, UserName, Password FROM Employee WHERE UserName = '" + userName + "'";
           ResultSet rs = stmt.executeQuery(query);
           if (rs.next()) {
             String dbPassword = rs.getString("Password");
+            int employeeID = rs.getInt("ID");
             if(userPassword.equals(dbPassword)) {
-    %>          
-              <p>Correctly login</p>
+              %> 
+              <script>
+                localStorage.setItem("username", "<%= userName %>");
+                localStorage.setItem("password", "<%= userPassword %>");
+                localStorage.setItem("employeeID", "<%= employeeID %>");
+                
+                window.location.href = "./homePage.jsp";
+            </script>
     <%    
           }
             else {
     %>          
-              <p>Your passowrd is wrong</p>
+              <p>Your password is wrong</p>
     <%
             }
           }
