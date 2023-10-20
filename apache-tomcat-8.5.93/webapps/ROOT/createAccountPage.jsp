@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Create Employee Account</title>
+    <link href = "createAccountPage.css" rel = "stylesheet" />
   </head>
   <body>
     <h1>Create Employee Account</h1>
