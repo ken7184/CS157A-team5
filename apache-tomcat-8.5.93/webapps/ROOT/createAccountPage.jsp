@@ -5,57 +5,66 @@
     <link href = "createAccountPage.css" rel = "stylesheet" />
   </head>
   <body>
-    <h1>Create Employee Account</h1>
-    <form method = "post">
-    <table style="width: 50%">
-        <tr>
-            <td>EmployeeID </td>
-            <td><input type = "text" name = "employeeId" required/></td>
-        </tr>
+    <div class="page-wrap">
+        <img
+            class="bg"
+            src="createAccountBg.jpg"
+            alt=""
+        >
+        <div class="content">
+        <h1>Create Employee Account</h1>
+        <form method = "post">
+        <table style="width: 50%">
+            <tr>
+                <td>EmployeeID </td>
+                <td><input type = "text" name = "employeeId" required/></td>
+            </tr>
 
-        <tr>
-            <td>Name: </td>
-            <td><input type = "text" name = "name" required/></td>
-        </tr>
-    
-        <tr>
-            <td>UserName: </td>
-            <td><input type = "text" name = "user_name" required/></td>
-        </tr>
-    
-        <tr>
-            <td>Password: </td>
-            <td><input type = "text" name = "password" required/></td>
-        </tr>
+            <tr>
+                <td>Name: </td>
+                <td><input type = "text" name = "name" required/></td>
+            </tr>
+        
+            <tr>
+                <td>UserName: </td>
+                <td><input type = "text" name = "user_name" required/></td>
+            </tr>
+        
+            <tr>
+                <td>Password: </td>
+                <td><input type = "text" name = "password" required/></td>
+            </tr>
 
-        <tr>
-            <td>Re-Enter Password: </td>
-            <td><input type = "text" name = "re_password" required/></td>
-        </tr>
-    
-        <tr><td>Enter your role: </td></tr>
-        <tr><td>1. Hotel Manger</td></tr>
-        <tr><td>2. Housekeeper</td></tr>
-        <tr><td>3. Front Desk</td></tr>
-        <tr><td>4. Security</td></tr>
-        <tr><td>5. Maintenance & Bellhops</td></tr>
-        <tr><td>6. Others</td></tr>
-        <tr><td><input type = "text" name = "role" required></td></tr>
+            <tr>
+                <td>Re-Enter Password: </td>
+                <td><input type = "text" name = "re_password" required/></td>
+            </tr>
+        
+            <tr><td>Enter your role: </td></tr>
+            <tr><td>1. Hotel Manger</td></tr>
+            <tr><td>2. Housekeeper</td></tr>
+            <tr><td>3. Front Desk</td></tr>
+            <tr><td>4. Security</td></tr>
+            <tr><td>5. Maintenance & Bellhops</td></tr>
+            <tr><td>6. Others</td></tr>
+            <tr><td><input type = "text" name = "role" required></td></tr>
 
-        <tr>
-            <td>Hotel Location: </td>
-            <td><input type = "text" name = "hotel_location" required/></td>
-        </tr>
+            <tr>
+                <td>Hotel Location: </td>
+                <td><input type = "text" name = "hotel_location" required/></td>
+            </tr>
 
-        <tr>
-            <td>Hotel Name: </td>
-            <td><input type = "text" name = "hotel_name" required/></td>
-        </tr>
+            <tr>
+                <td>Hotel Name: </td>
+                <td><input type = "text" name = "hotel_name" required/></td>
+            </tr>
 
 
-    </table>
-    <input type="submit" value="Submit" />
-    </form>
+        </table>
+        <input type="submit" value="Submit" />
+        </form>
+        </div>
+    </div>
     <%
     if ("POST".equalsIgnoreCase(request.getMethod())) {
         String id = request.getParameter("employeeId");
