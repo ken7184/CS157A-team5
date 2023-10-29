@@ -71,6 +71,12 @@
             <button type="submit" name="submitBtn" value="text1">Go</button><br>
           </form>
 
+          <form action="makeReservation.jsp" method="post">
+            <label for="4. Reservation Info">4. Make Reservation </label>
+            <button type="submit" name="submitBtn" value="text1">Go</button><br>
+          </form>
+
+
       <%
         }
         else if(roleN.equals("3")) {
@@ -82,6 +88,10 @@
           </form>
           <form action="reservationInfo.jsp" method="post">
             <label for="2. Reservation Info">2. See Reservation info</label>
+            <button type="submit" name="submitBtn" value="text1">Go</button><br>
+          </form>
+          <form action="makeReservation.jsp" method="post">
+            <label for="3. Reservation Info">3. Make Reservation </label>
             <button type="submit" name="submitBtn" value="text1">Go</button><br>
           </form>
 

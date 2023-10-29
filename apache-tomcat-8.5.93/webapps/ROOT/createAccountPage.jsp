@@ -15,10 +15,6 @@
         <h1>Create Employee Account</h1>
         <form method = "post">
         <table style="width: 50%">
-            <tr>
-                <td>EmployeeID </td>
-                <td><input type = "text" name = "employeeId" required/></td>
-            </tr>
 
             <tr>
                 <td>Name: </td>
@@ -67,8 +63,6 @@
     </div>
     <%
     if ("POST".equalsIgnoreCase(request.getMethod())) {
-        String id = request.getParameter("employeeId");
-        int nId = Integer.parseInt(id);
         String name = request.getParameter("name");
         String userName = request.getParameter("user_name");
         String userPassword = request.getParameter("password");
@@ -94,15 +88,14 @@
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Project?autoReconnect=true&useSSL=false",user, password);
 
-            String sql = "INSERT INTO Employee (ID, HotelLocation, HotelName, Name, Role, Username, Password) VALUES (?, ?, ?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO Employee (HotelLocation, HotelName, Name, Role, Username, Password) VALUES (?, ?, ?, ?, ?, ?)";
             preparedStatement = con.prepareStatement(sql);
-            preparedStatement.setInt(1, nId);
-            preparedStatement.setString(2, hotelLocation);
-            preparedStatement.setString(3, hotelName);
-            preparedStatement.setString(4, name);
-            preparedStatement.setString(5, role);
-            preparedStatement.setString(6, userName);    
-            preparedStatement.setString(7, userPassword);
+            preparedStatement.setString(1, hotelLocation);
+            preparedStatement.setString(2, hotelName);
+            preparedStatement.setString(3, name);
+            preparedStatement.setString(4, role);
+            preparedStatement.setString(5, userName);    
+            preparedStatement.setString(6, userPassword);
 
             preparedStatement.executeUpdate();
         

@@ -1,0 +1,1806 @@
+29-Oct-2023 12:20:37.152 SEVERE [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [66] in the jsp file: [/createAccountPage.jsp]
+id cannot be resolved to a variable
+63:     </div>
+64:     <%
+65:     if ("POST".equalsIgnoreCase(request.getMethod())) {
+66:         int nId = Integer.parseInt(id);
+67:         String name = request.getParameter("name");
+68:         String userName = request.getParameter("user_name");
+69:         String userPassword = request.getParameter("password");
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [66] in the jsp file: [/createAccountPage.jsp]
+id cannot be resolved to a variable
+63:     </div>
+64:     <%
+65:     if ("POST".equalsIgnoreCase(request.getMethod())) {
+66:         int nId = Integer.parseInt(id);
+67:         String name = request.getParameter("name");
+68:         String userName = request.getParameter("user_name");
+69:         String userPassword = request.getParameter("password");
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+29-Oct-2023 12:59:47.238 SEVERE [http-nio-8080-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [72] in the jsp file: [/makeReservation.jsp]
+Type mismatch: cannot convert from String to Date
+69:         int guestId = Integer.parseInt(request.getParameter("guestId"));
+70:         String nRooms = request.getParameter("Nrooms");
+71:         String Nguests = request.getParameter("Nguests");
+72:         Date startDate= request.getParameter("startDate");
+73:         Date endDate= request.getParameter("endDate");
+74:         Date reserveDate= request.getParameter("reserveDate");
+75:         String specialRequest = request.getParameter("specialRequest");
+
+
+An error occurred at line: [73] in the jsp file: [/makeReservation.jsp]
+Type mismatch: cannot convert from String to Date
+70:         String nRooms = request.getParameter("Nrooms");
+71:         String Nguests = request.getParameter("Nguests");
+72:         Date startDate= request.getParameter("startDate");
+73:         Date endDate= request.getParameter("endDate");
+74:         Date reserveDate= request.getParameter("reserveDate");
+75:         String specialRequest = request.getParameter("specialRequest");
+76: 
+
+
+An error occurred at line: [74] in the jsp file: [/makeReservation.jsp]
+Type mismatch: cannot convert from String to Date
+71:         String Nguests = request.getParameter("Nguests");
+72:         Date startDate= request.getParameter("startDate");
+73:         Date endDate= request.getParameter("endDate");
+74:         Date reserveDate= request.getParameter("reserveDate");
+75:         String specialRequest = request.getParameter("specialRequest");
+76: 
+77:         String hotelName = request.getParameter("hotel_name");
+
+
+An error occurred at line: [99] in the jsp file: [/makeReservation.jsp]
+The method setTimestamp(int, Timestamp) in the type PreparedStatement is not applicable for the arguments (int, Date)
+96:             preparedStatement.setString(2, nRooms);
+97:             preparedStatement.setString(3, Nguests);
+98: 
+99:             preparedStatement.setTimestamp(4, startDate);
+100:             preparedStatement.setTimestamp(5, endDate);
+101:             preparedStatement.setTimestamp(6, reserveDate);    
+102:             preparedStatement.setString(7, specialRequest);
+
+
+An error occurred at line: [100] in the jsp file: [/makeReservation.jsp]
+The method setTimestamp(int, Timestamp) in the type PreparedStatement is not applicable for the arguments (int, Date)
+97:             preparedStatement.setString(3, Nguests);
+98: 
+99:             preparedStatement.setTimestamp(4, startDate);
+100:             preparedStatement.setTimestamp(5, endDate);
+101:             preparedStatement.setTimestamp(6, reserveDate);    
+102:             preparedStatement.setString(7, specialRequest);
+103: 
+
+
+An error occurred at line: [101] in the jsp file: [/makeReservation.jsp]
+The method setTimestamp(int, Timestamp) in the type PreparedStatement is not applicable for the arguments (int, Date)
+98: 
+99:             preparedStatement.setTimestamp(4, startDate);
+100:             preparedStatement.setTimestamp(5, endDate);
+101:             preparedStatement.setTimestamp(6, reserveDate);    
+102:             preparedStatement.setString(7, specialRequest);
+103: 
+104:             preparedStatement.executeUpdate();
+
+
+An error occurred at line: [106] in the jsp file: [/makeReservation.jsp]
+stmt cannot be resolved
+103: 
+104:             preparedStatement.executeUpdate();
+105: 
+106:             stmt.close();
+107: 
+108:             String sql2 = "INSERT INTO Project.Stay (HotelName, HotelLocation, RoomNumber) VALUES(?, ?, ?)";
+109:             preparedStatement2 = con.prepareStatement(sql2);
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [72] in the jsp file: [/makeReservation.jsp]
+Type mismatch: cannot convert from String to Date
+69:         int guestId = Integer.parseInt(request.getParameter("guestId"));
+70:         String nRooms = request.getParameter("Nrooms");
+71:         String Nguests = request.getParameter("Nguests");
+72:         Date startDate= request.getParameter("startDate");
+73:         Date endDate= request.getParameter("endDate");
+74:         Date reserveDate= request.getParameter("reserveDate");
+75:         String specialRequest = request.getParameter("specialRequest");
+
+
+An error occurred at line: [73] in the jsp file: [/makeReservation.jsp]
+Type mismatch: cannot convert from String to Date
+70:         String nRooms = request.getParameter("Nrooms");
+71:         String Nguests = request.getParameter("Nguests");
+72:         Date startDate= request.getParameter("startDate");
+73:         Date endDate= request.getParameter("endDate");
+74:         Date reserveDate= request.getParameter("reserveDate");
+75:         String specialRequest = request.getParameter("specialRequest");
+76: 
+
+
+An error occurred at line: [74] in the jsp file: [/makeReservation.jsp]
+Type mismatch: cannot convert from String to Date
+71:         String Nguests = request.getParameter("Nguests");
+72:         Date startDate= request.getParameter("startDate");
+73:         Date endDate= request.getParameter("endDate");
+74:         Date reserveDate= request.getParameter("reserveDate");
+75:         String specialRequest = request.getParameter("specialRequest");
+76: 
+77:         String hotelName = request.getParameter("hotel_name");
+
+
+An error occurred at line: [99] in the jsp file: [/makeReservation.jsp]
+The method setTimestamp(int, Timestamp) in the type PreparedStatement is not applicable for the arguments (int, Date)
+96:             preparedStatement.setString(2, nRooms);
+97:             preparedStatement.setString(3, Nguests);
+98: 
+99:             preparedStatement.setTimestamp(4, startDate);
+100:             preparedStatement.setTimestamp(5, endDate);
+101:             preparedStatement.setTimestamp(6, reserveDate);    
+102:             preparedStatement.setString(7, specialRequest);
+
+
+An error occurred at line: [100] in the jsp file: [/makeReservation.jsp]
+The method setTimestamp(int, Timestamp) in the type PreparedStatement is not applicable for the arguments (int, Date)
+97:             preparedStatement.setString(3, Nguests);
+98: 
+99:             preparedStatement.setTimestamp(4, startDate);
+100:             preparedStatement.setTimestamp(5, endDate);
+101:             preparedStatement.setTimestamp(6, reserveDate);    
+102:             preparedStatement.setString(7, specialRequest);
+103: 
+
+
+An error occurred at line: [101] in the jsp file: [/makeReservation.jsp]
+The method setTimestamp(int, Timestamp) in the type PreparedStatement is not applicable for the arguments (int, Date)
+98: 
+99:             preparedStatement.setTimestamp(4, startDate);
+100:             preparedStatement.setTimestamp(5, endDate);
+101:             preparedStatement.setTimestamp(6, reserveDate);    
+102:             preparedStatement.setString(7, specialRequest);
+103: 
+104:             preparedStatement.executeUpdate();
+
+
+An error occurred at line: [106] in the jsp file: [/makeReservation.jsp]
+stmt cannot be resolved
+103: 
+104:             preparedStatement.executeUpdate();
+105: 
+106:             stmt.close();
+107: 
+108:             String sql2 = "INSERT INTO Project.Stay (HotelName, HotelLocation, RoomNumber) VALUES(?, ?, ?)";
+109:             preparedStatement2 = con.prepareStatement(sql2);
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+29-Oct-2023 13:02:48.424 SEVERE [http-nio-8080-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [80] in the jsp file: [/makeReservation.jsp]
+SimpleDateFormat cannot be resolved to a type
+77:         String hotelLocation = request.getParameter("hotel_location");
+78:         String rNumber = request.getParameter("rNumber");
+79: 
+80:         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm");
+81:         Date startDate = dateFormat.parse(startDateStr);
+82:         Date endDate = dateFormat.parse(endDateStr);
+83:         Date reserveDate = dateFormat.parse(reserveDateStr);
+
+
+An error occurred at line: [80] in the jsp file: [/makeReservation.jsp]
+SimpleDateFormat cannot be resolved to a type
+77:         String hotelLocation = request.getParameter("hotel_location");
+78:         String rNumber = request.getParameter("rNumber");
+79: 
+80:         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm");
+81:         Date startDate = dateFormat.parse(startDateStr);
+82:         Date endDate = dateFormat.parse(endDateStr);
+83:         Date reserveDate = dateFormat.parse(reserveDateStr);
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [80] in the jsp file: [/makeReservation.jsp]
+SimpleDateFormat cannot be resolved to a type
+77:         String hotelLocation = request.getParameter("hotel_location");
+78:         String rNumber = request.getParameter("rNumber");
+79: 
+80:         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm");
+81:         Date startDate = dateFormat.parse(startDateStr);
+82:         Date endDate = dateFormat.parse(endDateStr);
+83:         Date reserveDate = dateFormat.parse(reserveDateStr);
+
+
+An error occurred at line: [80] in the jsp file: [/makeReservation.jsp]
+SimpleDateFormat cannot be resolved to a type
+77:         String hotelLocation = request.getParameter("hotel_location");
+78:         String rNumber = request.getParameter("rNumber");
+79: 
+80:         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm");
+81:         Date startDate = dateFormat.parse(startDateStr);
+82:         Date endDate = dateFormat.parse(endDateStr);
+83:         Date reserveDate = dateFormat.parse(reserveDateStr);
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+29-Oct-2023 13:09:50.350 SEVERE [http-nio-8080-exec-4] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [An exception occurred processing [/makeReservation.jsp] at line [69]
+
+66: 
+67:     <%
+68:     if ("POST".equalsIgnoreCase(request.getMethod())) {
+69:         int guestId = Integer.parseInt(request.getParameter("guestId"));
+70:         String nRooms = request.getParameter("Nrooms");
+71:         String Nguests = request.getParameter("Nguests");
+72:         String startDateStr = request.getParameter("startDate");
+
+
+Stacktrace:] with root cause
+	java.lang.NumberFormatException: Cannot parse null string
+		at java.base/java.lang.Integer.parseInt(Integer.java:623)
+		at java.base/java.lang.Integer.parseInt(Integer.java:777)
+		at org.apache.jsp.makeReservation_jsp._jspService(makeReservation_jsp.java:184)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:465)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+29-Oct-2023 13:10:09.537 SEVERE [http-nio-8080-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [An exception occurred processing [/makeReservation.jsp] at line [69]
+
+66: 
+67:     <%
+68:     if ("POST".equalsIgnoreCase(request.getMethod())) {
+69:         int guestId = Integer.parseInt(request.getParameter("guestId"));
+70:         String nRooms = request.getParameter("Nrooms");
+71:         String Nguests = request.getParameter("Nguests");
+72:         String startDateStr = request.getParameter("startDate");
+
+
+Stacktrace:] with root cause
+	java.lang.NumberFormatException: Cannot parse null string
+		at java.base/java.lang.Integer.parseInt(Integer.java:623)
+		at java.base/java.lang.Integer.parseInt(Integer.java:777)
+		at org.apache.jsp.makeReservation_jsp._jspService(makeReservation_jsp.java:184)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:465)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+29-Oct-2023 13:10:30.492 SEVERE [http-nio-8080-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [An exception occurred processing [/makeReservation.jsp] at line [69]
+
+66: 
+67:     <%
+68:     if ("POST".equalsIgnoreCase(request.getMethod())) {
+69:         int guestId = Integer.parseInt(request.getParameter("guestId"));
+70:         String nRooms = request.getParameter("Nrooms");
+71:         String Nguests = request.getParameter("Nguests");
+72:         String startDateStr = request.getParameter("startDate");
+
+
+Stacktrace:] with root cause
+	java.lang.NumberFormatException: Cannot parse null string
+		at java.base/java.lang.Integer.parseInt(Integer.java:623)
+		at java.base/java.lang.Integer.parseInt(Integer.java:777)
+		at org.apache.jsp.makeReservation_jsp._jspService(makeReservation_jsp.java:184)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:465)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+29-Oct-2023 13:13:02.251 SEVERE [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [70] in the jsp file: [/makeReservation.jsp]
+guestIdStr cannot be resolved to a variable
+67:     <%
+68:     if ("POST".equalsIgnoreCase(request.getMethod())) {
+69:         String guestId = request.getParameter("geustId");
+70:         if (guestIdStr != null && !guestIdStr.isEmpty()) {
+71:             try {
+72:                 int guestId = Integer.parseInt(guestId);
+73:             } catch (NumberFormatException e) {
+
+
+An error occurred at line: [70] in the jsp file: [/makeReservation.jsp]
+guestIdStr cannot be resolved
+67:     <%
+68:     if ("POST".equalsIgnoreCase(request.getMethod())) {
+69:         String guestId = request.getParameter("geustId");
+70:         if (guestIdStr != null && !guestIdStr.isEmpty()) {
+71:             try {
+72:                 int guestId = Integer.parseInt(guestId);
+73:             } catch (NumberFormatException e) {
+
+
+An error occurred at line: [72] in the jsp file: [/makeReservation.jsp]
+Duplicate local variable guestId
+69:         String guestId = request.getParameter("geustId");
+70:         if (guestIdStr != null && !guestIdStr.isEmpty()) {
+71:             try {
+72:                 int guestId = Integer.parseInt(guestId);
+73:             } catch (NumberFormatException e) {
+74:                 out.println("Invalid guestId format");
+75:             }
+
+
+An error occurred at line: [72] in the jsp file: [/makeReservation.jsp]
+The method parseInt(String) in the type Integer is not applicable for the arguments (int)
+69:         String guestId = request.getParameter("geustId");
+70:         if (guestIdStr != null && !guestIdStr.isEmpty()) {
+71:             try {
+72:                 int guestId = Integer.parseInt(guestId);
+73:             } catch (NumberFormatException e) {
+74:                 out.println("Invalid guestId format");
+75:             }
+
+
+An error occurred at line: [105] in the jsp file: [/makeReservation.jsp]
+The method setInt(int, int) in the type PreparedStatement is not applicable for the arguments (int, String)
+102: 
+103:             String sql = "INSERT INTO Project.ReservationInfo (GuestID, NumberOfRooms, NumberOfGuests, StartDate, EndDate, ReservationDate, SpecialRequest) VALUES (?, ?, ?, ?, ?, ?, ?)";
+104:             preparedStatement = con.prepareStatement(sql);
+105:             preparedStatement.setInt(1, guestId);
+106:             preparedStatement.setString(2, nRooms);
+107:             preparedStatement.setString(3, Nguests);
+108:             preparedStatement.setTimestamp(4, new Timestamp(startDate.getTime()));
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [70] in the jsp file: [/makeReservation.jsp]
+guestIdStr cannot be resolved to a variable
+67:     <%
+68:     if ("POST".equalsIgnoreCase(request.getMethod())) {
+69:         String guestId = request.getParameter("geustId");
+70:         if (guestIdStr != null && !guestIdStr.isEmpty()) {
+71:             try {
+72:                 int guestId = Integer.parseInt(guestId);
+73:             } catch (NumberFormatException e) {
+
+
+An error occurred at line: [70] in the jsp file: [/makeReservation.jsp]
+guestIdStr cannot be resolved
+67:     <%
+68:     if ("POST".equalsIgnoreCase(request.getMethod())) {
+69:         String guestId = request.getParameter("geustId");
+70:         if (guestIdStr != null && !guestIdStr.isEmpty()) {
+71:             try {
+72:                 int guestId = Integer.parseInt(guestId);
+73:             } catch (NumberFormatException e) {
+
+
+An error occurred at line: [72] in the jsp file: [/makeReservation.jsp]
+Duplicate local variable guestId
+69:         String guestId = request.getParameter("geustId");
+70:         if (guestIdStr != null && !guestIdStr.isEmpty()) {
+71:             try {
+72:                 int guestId = Integer.parseInt(guestId);
+73:             } catch (NumberFormatException e) {
+74:                 out.println("Invalid guestId format");
+75:             }
+
+
+An error occurred at line: [72] in the jsp file: [/makeReservation.jsp]
+The method parseInt(String) in the type Integer is not applicable for the arguments (int)
+69:         String guestId = request.getParameter("geustId");
+70:         if (guestIdStr != null && !guestIdStr.isEmpty()) {
+71:             try {
+72:                 int guestId = Integer.parseInt(guestId);
+73:             } catch (NumberFormatException e) {
+74:                 out.println("Invalid guestId format");
+75:             }
+
+
+An error occurred at line: [105] in the jsp file: [/makeReservation.jsp]
+The method setInt(int, int) in the type PreparedStatement is not applicable for the arguments (int, String)
+102: 
+103:             String sql = "INSERT INTO Project.ReservationInfo (GuestID, NumberOfRooms, NumberOfGuests, StartDate, EndDate, ReservationDate, SpecialRequest) VALUES (?, ?, ?, ?, ?, ?, ?)";
+104:             preparedStatement = con.prepareStatement(sql);
+105:             preparedStatement.setInt(1, guestId);
+106:             preparedStatement.setString(2, nRooms);
+107:             preparedStatement.setString(3, Nguests);
+108:             preparedStatement.setTimestamp(4, new Timestamp(startDate.getTime()));
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+29-Oct-2023 13:14:54.017 SEVERE [http-nio-8080-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [83] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+Syntax error, insert "}" to complete ClassBody
+
+An error occurred at line: [128] in the jsp file: [/makeReservation.jsp]
+Syntax error, insert "else Statement" to complete IfStatement
+125:                 if (con != null) {
+126:                     con.close();
+127:                 }
+128:             } catch (SQLException e) {
+129:                 out.println("SQLException caught: " + e.getMessage());
+130:             }
+131:         }
+
+
+An error occurred at line: [128] in the jsp file: [/makeReservation.jsp]
+Syntax error, insert "}" to complete Block
+125:                 if (con != null) {
+126:                     con.close();
+127:                 }
+128:             } catch (SQLException e) {
+129:                 out.println("SQLException caught: " + e.getMessage());
+130:             }
+131:         }
+
+
+An error occurred at line: [132] in the jsp file: [/makeReservation.jsp]
+Syntax error, insert "Finally" to complete BlockStatements
+129:                 out.println("SQLException caught: " + e.getMessage());
+130:             }
+131:         }
+132:     }
+133:     %>
+134: 
+135:   </body>
+
+
+An error occurred at line: [253] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+Syntax error, insert "else Statement" to complete IfStatement
+
+An error occurred at line: [253] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+Syntax error, insert "}" to complete Block
+
+An error occurred at line: [253] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+Syntax error, insert "else Statement" to complete IfStatement
+
+An error occurred at line: [253] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+Syntax error, insert "}" to complete Block
+
+An error occurred at line: [271] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+Syntax error on token "}", delete this token
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [83] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+Syntax error, insert "}" to complete ClassBody
+
+An error occurred at line: [128] in the jsp file: [/makeReservation.jsp]
+Syntax error, insert "else Statement" to complete IfStatement
+125:                 if (con != null) {
+126:                     con.close();
+127:                 }
+128:             } catch (SQLException e) {
+129:                 out.println("SQLException caught: " + e.getMessage());
+130:             }
+131:         }
+
+
+An error occurred at line: [128] in the jsp file: [/makeReservation.jsp]
+Syntax error, insert "}" to complete Block
+125:                 if (con != null) {
+126:                     con.close();
+127:                 }
+128:             } catch (SQLException e) {
+129:                 out.println("SQLException caught: " + e.getMessage());
+130:             }
+131:         }
+
+
+An error occurred at line: [132] in the jsp file: [/makeReservation.jsp]
+Syntax error, insert "Finally" to complete BlockStatements
+129:                 out.println("SQLException caught: " + e.getMessage());
+130:             }
+131:         }
+132:     }
+133:     %>
+134: 
+135:   </body>
+
+
+An error occurred at line: [253] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+Syntax error, insert "else Statement" to complete IfStatement
+
+An error occurred at line: [253] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+Syntax error, insert "}" to complete Block
+
+An error occurred at line: [253] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+Syntax error, insert "else Statement" to complete IfStatement
+
+An error occurred at line: [253] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+Syntax error, insert "}" to complete Block
+
+An error occurred at line: [271] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+Syntax error on token "}", delete this token
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+29-Oct-2023 13:16:49.177 SEVERE [http-nio-8080-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [67] in the jsp file: [/makeReservation.jsp]
+guestIdStr cannot be resolved to a variable
+64:         </form>
+65:     </div>
+66: <%
+67:     if (guestIdStr != null && !guestIdStr.isEmpty()) {
+68:         try {
+69:             int guestId = Integer.parseInt(guestIdStr);
+70: 
+
+
+An error occurred at line: [67] in the jsp file: [/makeReservation.jsp]
+guestIdStr cannot be resolved
+64:         </form>
+65:     </div>
+66: <%
+67:     if (guestIdStr != null && !guestIdStr.isEmpty()) {
+68:         try {
+69:             int guestId = Integer.parseInt(guestIdStr);
+70: 
+
+
+An error occurred at line: [69] in the jsp file: [/makeReservation.jsp]
+guestIdStr cannot be resolved to a variable
+66: <%
+67:     if (guestIdStr != null && !guestIdStr.isEmpty()) {
+68:         try {
+69:             int guestId = Integer.parseInt(guestIdStr);
+70: 
+71:             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+72:             Date startDate = dateFormat.parse(startDateStr);
+
+
+An error occurred at line: [72] in the jsp file: [/makeReservation.jsp]
+startDateStr cannot be resolved to a variable
+69:             int guestId = Integer.parseInt(guestIdStr);
+70: 
+71:             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+72:             Date startDate = dateFormat.parse(startDateStr);
+73:             Date endDate = dateFormat.parse(endDateStr);
+74:             Date reserveDate = dateFormat.parse(reserveDateStr);
+75: 
+
+
+An error occurred at line: [73] in the jsp file: [/makeReservation.jsp]
+endDateStr cannot be resolved to a variable
+70: 
+71:             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+72:             Date startDate = dateFormat.parse(startDateStr);
+73:             Date endDate = dateFormat.parse(endDateStr);
+74:             Date reserveDate = dateFormat.parse(reserveDateStr);
+75: 
+76:             String user = "root";
+
+
+An error occurred at line: [74] in the jsp file: [/makeReservation.jsp]
+reserveDateStr cannot be resolved to a variable
+71:             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+72:             Date startDate = dateFormat.parse(startDateStr);
+73:             Date endDate = dateFormat.parse(endDateStr);
+74:             Date reserveDate = dateFormat.parse(reserveDateStr);
+75: 
+76:             String user = "root";
+77:             String password = "Ken30526296@";
+
+
+An error occurred at line: [88] in the jsp file: [/makeReservation.jsp]
+nRooms cannot be resolved to a variable
+85:                 String sql = "INSERT INTO Project.ReservationInfo (GuestID, NumberOfRooms, NumberOfGuests, StartDate, EndDate, ReservationDate, SpecialRequest) VALUES (?, ?, ?, ?, ?, ?, ?)";
+86:                 preparedStatement = con.prepareStatement(sql);
+87:                 preparedStatement.setInt(1, guestId);
+88:                 preparedStatement.setString(2, nRooms);
+89:                 preparedStatement.setString(3, Nguests);
+90:                 preparedStatement.setTimestamp(4, new Timestamp(startDate.getTime()));
+91:                 preparedStatement.setTimestamp(5, new Timestamp(endDate.getTime()));
+
+
+An error occurred at line: [89] in the jsp file: [/makeReservation.jsp]
+Nguests cannot be resolved to a variable
+86:                 preparedStatement = con.prepareStatement(sql);
+87:                 preparedStatement.setInt(1, guestId);
+88:                 preparedStatement.setString(2, nRooms);
+89:                 preparedStatement.setString(3, Nguests);
+90:                 preparedStatement.setTimestamp(4, new Timestamp(startDate.getTime()));
+91:                 preparedStatement.setTimestamp(5, new Timestamp(endDate.getTime()));
+92:                 preparedStatement.setTimestamp(6, new Timestamp(reserveDate.getTime()));
+
+
+An error occurred at line: [93] in the jsp file: [/makeReservation.jsp]
+specialRequest cannot be resolved to a variable
+90:                 preparedStatement.setTimestamp(4, new Timestamp(startDate.getTime()));
+91:                 preparedStatement.setTimestamp(5, new Timestamp(endDate.getTime()));
+92:                 preparedStatement.setTimestamp(6, new Timestamp(reserveDate.getTime()));
+93:                 preparedStatement.setString(7, specialRequest);
+94:                 preparedStatement.executeUpdate();
+95: 
+96:                 String sql2 = "INSERT INTO Project.Stay (HotelName, HotelLocation, RoomNumber) VALUES (?, ?, ?)";
+
+
+An error occurred at line: [98] in the jsp file: [/makeReservation.jsp]
+hotelName cannot be resolved to a variable
+95: 
+96:                 String sql2 = "INSERT INTO Project.Stay (HotelName, HotelLocation, RoomNumber) VALUES (?, ?, ?)";
+97:                 preparedStatement = con.prepareStatement(sql2);
+98:                 preparedStatement.setString(1, hotelName);
+99:                 preparedStatement.setString(2, hotelLocation);
+100:                 preparedStatement.setString(3, rNumber);
+101:                 preparedStatement.executeUpdate();
+
+
+An error occurred at line: [99] in the jsp file: [/makeReservation.jsp]
+hotelLocation cannot be resolved to a variable
+96:                 String sql2 = "INSERT INTO Project.Stay (HotelName, HotelLocation, RoomNumber) VALUES (?, ?, ?)";
+97:                 preparedStatement = con.prepareStatement(sql2);
+98:                 preparedStatement.setString(1, hotelName);
+99:                 preparedStatement.setString(2, hotelLocation);
+100:                 preparedStatement.setString(3, rNumber);
+101:                 preparedStatement.executeUpdate();
+102: 
+
+
+An error occurred at line: [100] in the jsp file: [/makeReservation.jsp]
+rNumber cannot be resolved to a variable
+97:                 preparedStatement = con.prepareStatement(sql2);
+98:                 preparedStatement.setString(1, hotelName);
+99:                 preparedStatement.setString(2, hotelLocation);
+100:                 preparedStatement.setString(3, rNumber);
+101:                 preparedStatement.executeUpdate();
+102: 
+103:                 con.close();
+
+
+An error occurred at line: [124] in the jsp file: [/makeReservation.jsp]
+Syntax error, insert "Finally" to complete TryStatement
+121:     } else {
+122:         out.println("Guest ID is missing");
+123:     }
+124: }
+125: %>
+126: 
+127:   </body>
+
+
+An error occurred at line: [244] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+Syntax error on token "catch", Identifier expected
+
+An error occurred at line: [246] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [246] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+_jspx_out cannot be resolved to a variable
+
+An error occurred at line: [247] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [247] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [249] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+response cannot be resolved
+
+An error occurred at line: [250] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [252] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [255] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+An error occurred at line: [255] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+_jspx_page_context cannot be resolved
+
+An error occurred at line: [258] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+Syntax error on token "finally", { expected
+
+An error occurred at line: [259] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [67] in the jsp file: [/makeReservation.jsp]
+guestIdStr cannot be resolved to a variable
+64:         </form>
+65:     </div>
+66: <%
+67:     if (guestIdStr != null && !guestIdStr.isEmpty()) {
+68:         try {
+69:             int guestId = Integer.parseInt(guestIdStr);
+70: 
+
+
+An error occurred at line: [67] in the jsp file: [/makeReservation.jsp]
+guestIdStr cannot be resolved
+64:         </form>
+65:     </div>
+66: <%
+67:     if (guestIdStr != null && !guestIdStr.isEmpty()) {
+68:         try {
+69:             int guestId = Integer.parseInt(guestIdStr);
+70: 
+
+
+An error occurred at line: [69] in the jsp file: [/makeReservation.jsp]
+guestIdStr cannot be resolved to a variable
+66: <%
+67:     if (guestIdStr != null && !guestIdStr.isEmpty()) {
+68:         try {
+69:             int guestId = Integer.parseInt(guestIdStr);
+70: 
+71:             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+72:             Date startDate = dateFormat.parse(startDateStr);
+
+
+An error occurred at line: [72] in the jsp file: [/makeReservation.jsp]
+startDateStr cannot be resolved to a variable
+69:             int guestId = Integer.parseInt(guestIdStr);
+70: 
+71:             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+72:             Date startDate = dateFormat.parse(startDateStr);
+73:             Date endDate = dateFormat.parse(endDateStr);
+74:             Date reserveDate = dateFormat.parse(reserveDateStr);
+75: 
+
+
+An error occurred at line: [73] in the jsp file: [/makeReservation.jsp]
+endDateStr cannot be resolved to a variable
+70: 
+71:             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+72:             Date startDate = dateFormat.parse(startDateStr);
+73:             Date endDate = dateFormat.parse(endDateStr);
+74:             Date reserveDate = dateFormat.parse(reserveDateStr);
+75: 
+76:             String user = "root";
+
+
+An error occurred at line: [74] in the jsp file: [/makeReservation.jsp]
+reserveDateStr cannot be resolved to a variable
+71:             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+72:             Date startDate = dateFormat.parse(startDateStr);
+73:             Date endDate = dateFormat.parse(endDateStr);
+74:             Date reserveDate = dateFormat.parse(reserveDateStr);
+75: 
+76:             String user = "root";
+77:             String password = "Ken30526296@";
+
+
+An error occurred at line: [88] in the jsp file: [/makeReservation.jsp]
+nRooms cannot be resolved to a variable
+85:                 String sql = "INSERT INTO Project.ReservationInfo (GuestID, NumberOfRooms, NumberOfGuests, StartDate, EndDate, ReservationDate, SpecialRequest) VALUES (?, ?, ?, ?, ?, ?, ?)";
+86:                 preparedStatement = con.prepareStatement(sql);
+87:                 preparedStatement.setInt(1, guestId);
+88:                 preparedStatement.setString(2, nRooms);
+89:                 preparedStatement.setString(3, Nguests);
+90:                 preparedStatement.setTimestamp(4, new Timestamp(startDate.getTime()));
+91:                 preparedStatement.setTimestamp(5, new Timestamp(endDate.getTime()));
+
+
+An error occurred at line: [89] in the jsp file: [/makeReservation.jsp]
+Nguests cannot be resolved to a variable
+86:                 preparedStatement = con.prepareStatement(sql);
+87:                 preparedStatement.setInt(1, guestId);
+88:                 preparedStatement.setString(2, nRooms);
+89:                 preparedStatement.setString(3, Nguests);
+90:                 preparedStatement.setTimestamp(4, new Timestamp(startDate.getTime()));
+91:                 preparedStatement.setTimestamp(5, new Timestamp(endDate.getTime()));
+92:                 preparedStatement.setTimestamp(6, new Timestamp(reserveDate.getTime()));
+
+
+An error occurred at line: [93] in the jsp file: [/makeReservation.jsp]
+specialRequest cannot be resolved to a variable
+90:                 preparedStatement.setTimestamp(4, new Timestamp(startDate.getTime()));
+91:                 preparedStatement.setTimestamp(5, new Timestamp(endDate.getTime()));
+92:                 preparedStatement.setTimestamp(6, new Timestamp(reserveDate.getTime()));
+93:                 preparedStatement.setString(7, specialRequest);
+94:                 preparedStatement.executeUpdate();
+95: 
+96:                 String sql2 = "INSERT INTO Project.Stay (HotelName, HotelLocation, RoomNumber) VALUES (?, ?, ?)";
+
+
+An error occurred at line: [98] in the jsp file: [/makeReservation.jsp]
+hotelName cannot be resolved to a variable
+95: 
+96:                 String sql2 = "INSERT INTO Project.Stay (HotelName, HotelLocation, RoomNumber) VALUES (?, ?, ?)";
+97:                 preparedStatement = con.prepareStatement(sql2);
+98:                 preparedStatement.setString(1, hotelName);
+99:                 preparedStatement.setString(2, hotelLocation);
+100:                 preparedStatement.setString(3, rNumber);
+101:                 preparedStatement.executeUpdate();
+
+
+An error occurred at line: [99] in the jsp file: [/makeReservation.jsp]
+hotelLocation cannot be resolved to a variable
+96:                 String sql2 = "INSERT INTO Project.Stay (HotelName, HotelLocation, RoomNumber) VALUES (?, ?, ?)";
+97:                 preparedStatement = con.prepareStatement(sql2);
+98:                 preparedStatement.setString(1, hotelName);
+99:                 preparedStatement.setString(2, hotelLocation);
+100:                 preparedStatement.setString(3, rNumber);
+101:                 preparedStatement.executeUpdate();
+102: 
+
+
+An error occurred at line: [100] in the jsp file: [/makeReservation.jsp]
+rNumber cannot be resolved to a variable
+97:                 preparedStatement = con.prepareStatement(sql2);
+98:                 preparedStatement.setString(1, hotelName);
+99:                 preparedStatement.setString(2, hotelLocation);
+100:                 preparedStatement.setString(3, rNumber);
+101:                 preparedStatement.executeUpdate();
+102: 
+103:                 con.close();
+
+
+An error occurred at line: [124] in the jsp file: [/makeReservation.jsp]
+Syntax error, insert "Finally" to complete TryStatement
+121:     } else {
+122:         out.println("Guest ID is missing");
+123:     }
+124: }
+125: %>
+126: 
+127:   </body>
+
+
+An error occurred at line: [244] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+Syntax error on token "catch", Identifier expected
+
+An error occurred at line: [246] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [246] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+_jspx_out cannot be resolved to a variable
+
+An error occurred at line: [247] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [247] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [249] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+response cannot be resolved
+
+An error occurred at line: [250] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [252] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [255] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+An error occurred at line: [255] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+_jspx_page_context cannot be resolved
+
+An error occurred at line: [258] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+Syntax error on token "finally", { expected
+
+An error occurred at line: [259] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+29-Oct-2023 13:17:19.583 SEVERE [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [68] in the jsp file: [/makeReservation.jsp]
+guestIdStr cannot be resolved to a variable
+65:     </div>
+66: 
+67: 
+68: <%    if (guestIdStr != null && !guestIdStr.isEmpty()) {
+69:         try {
+70:             int guestId = Integer.parseInt(guestIdStr);
+71: 
+
+
+An error occurred at line: [68] in the jsp file: [/makeReservation.jsp]
+guestIdStr cannot be resolved
+65:     </div>
+66: 
+67: 
+68: <%    if (guestIdStr != null && !guestIdStr.isEmpty()) {
+69:         try {
+70:             int guestId = Integer.parseInt(guestIdStr);
+71: 
+
+
+An error occurred at line: [70] in the jsp file: [/makeReservation.jsp]
+guestIdStr cannot be resolved to a variable
+67: 
+68: <%    if (guestIdStr != null && !guestIdStr.isEmpty()) {
+69:         try {
+70:             int guestId = Integer.parseInt(guestIdStr);
+71: 
+72:             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+73:             Date startDate = dateFormat.parse(startDateStr);
+
+
+An error occurred at line: [73] in the jsp file: [/makeReservation.jsp]
+startDateStr cannot be resolved to a variable
+70:             int guestId = Integer.parseInt(guestIdStr);
+71: 
+72:             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+73:             Date startDate = dateFormat.parse(startDateStr);
+74:             Date endDate = dateFormat.parse(endDateStr);
+75:             Date reserveDate = dateFormat.parse(reserveDateStr);
+76: 
+
+
+An error occurred at line: [74] in the jsp file: [/makeReservation.jsp]
+endDateStr cannot be resolved to a variable
+71: 
+72:             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+73:             Date startDate = dateFormat.parse(startDateStr);
+74:             Date endDate = dateFormat.parse(endDateStr);
+75:             Date reserveDate = dateFormat.parse(reserveDateStr);
+76: 
+77:             String user = "root";
+
+
+An error occurred at line: [75] in the jsp file: [/makeReservation.jsp]
+reserveDateStr cannot be resolved to a variable
+72:             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+73:             Date startDate = dateFormat.parse(startDateStr);
+74:             Date endDate = dateFormat.parse(endDateStr);
+75:             Date reserveDate = dateFormat.parse(reserveDateStr);
+76: 
+77:             String user = "root";
+78:             String password = "Ken30526296@";
+
+
+An error occurred at line: [89] in the jsp file: [/makeReservation.jsp]
+nRooms cannot be resolved to a variable
+86:                 String sql = "INSERT INTO Project.ReservationInfo (GuestID, NumberOfRooms, NumberOfGuests, StartDate, EndDate, ReservationDate, SpecialRequest) VALUES (?, ?, ?, ?, ?, ?, ?)";
+87:                 preparedStatement = con.prepareStatement(sql);
+88:                 preparedStatement.setInt(1, guestId);
+89:                 preparedStatement.setString(2, nRooms);
+90:                 preparedStatement.setString(3, Nguests);
+91:                 preparedStatement.setTimestamp(4, new Timestamp(startDate.getTime()));
+92:                 preparedStatement.setTimestamp(5, new Timestamp(endDate.getTime()));
+
+
+An error occurred at line: [90] in the jsp file: [/makeReservation.jsp]
+Nguests cannot be resolved to a variable
+87:                 preparedStatement = con.prepareStatement(sql);
+88:                 preparedStatement.setInt(1, guestId);
+89:                 preparedStatement.setString(2, nRooms);
+90:                 preparedStatement.setString(3, Nguests);
+91:                 preparedStatement.setTimestamp(4, new Timestamp(startDate.getTime()));
+92:                 preparedStatement.setTimestamp(5, new Timestamp(endDate.getTime()));
+93:                 preparedStatement.setTimestamp(6, new Timestamp(reserveDate.getTime()));
+
+
+An error occurred at line: [94] in the jsp file: [/makeReservation.jsp]
+specialRequest cannot be resolved to a variable
+91:                 preparedStatement.setTimestamp(4, new Timestamp(startDate.getTime()));
+92:                 preparedStatement.setTimestamp(5, new Timestamp(endDate.getTime()));
+93:                 preparedStatement.setTimestamp(6, new Timestamp(reserveDate.getTime()));
+94:                 preparedStatement.setString(7, specialRequest);
+95:                 preparedStatement.executeUpdate();
+96: 
+97:                 String sql2 = "INSERT INTO Project.Stay (HotelName, HotelLocation, RoomNumber) VALUES (?, ?, ?)";
+
+
+An error occurred at line: [99] in the jsp file: [/makeReservation.jsp]
+hotelName cannot be resolved to a variable
+96: 
+97:                 String sql2 = "INSERT INTO Project.Stay (HotelName, HotelLocation, RoomNumber) VALUES (?, ?, ?)";
+98:                 preparedStatement = con.prepareStatement(sql2);
+99:                 preparedStatement.setString(1, hotelName);
+100:                 preparedStatement.setString(2, hotelLocation);
+101:                 preparedStatement.setString(3, rNumber);
+102:                 preparedStatement.executeUpdate();
+
+
+An error occurred at line: [100] in the jsp file: [/makeReservation.jsp]
+hotelLocation cannot be resolved to a variable
+97:                 String sql2 = "INSERT INTO Project.Stay (HotelName, HotelLocation, RoomNumber) VALUES (?, ?, ?)";
+98:                 preparedStatement = con.prepareStatement(sql2);
+99:                 preparedStatement.setString(1, hotelName);
+100:                 preparedStatement.setString(2, hotelLocation);
+101:                 preparedStatement.setString(3, rNumber);
+102:                 preparedStatement.executeUpdate();
+103: 
+
+
+An error occurred at line: [101] in the jsp file: [/makeReservation.jsp]
+rNumber cannot be resolved to a variable
+98:                 preparedStatement = con.prepareStatement(sql2);
+99:                 preparedStatement.setString(1, hotelName);
+100:                 preparedStatement.setString(2, hotelLocation);
+101:                 preparedStatement.setString(3, rNumber);
+102:                 preparedStatement.executeUpdate();
+103: 
+104:                 con.close();
+
+
+An error occurred at line: [125] in the jsp file: [/makeReservation.jsp]
+Syntax error, insert "Finally" to complete TryStatement
+122:     } else {
+123:         out.println("Guest ID is missing");
+124:     }
+125: }
+126: %>
+127: 
+128:   </body>
+
+
+An error occurred at line: [245] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+Syntax error on token "catch", Identifier expected
+
+An error occurred at line: [247] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [247] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+_jspx_out cannot be resolved to a variable
+
+An error occurred at line: [248] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [248] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [250] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+response cannot be resolved
+
+An error occurred at line: [251] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [253] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [256] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+An error occurred at line: [256] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+_jspx_page_context cannot be resolved
+
+An error occurred at line: [259] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+Syntax error on token "finally", { expected
+
+An error occurred at line: [260] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [68] in the jsp file: [/makeReservation.jsp]
+guestIdStr cannot be resolved to a variable
+65:     </div>
+66: 
+67: 
+68: <%    if (guestIdStr != null && !guestIdStr.isEmpty()) {
+69:         try {
+70:             int guestId = Integer.parseInt(guestIdStr);
+71: 
+
+
+An error occurred at line: [68] in the jsp file: [/makeReservation.jsp]
+guestIdStr cannot be resolved
+65:     </div>
+66: 
+67: 
+68: <%    if (guestIdStr != null && !guestIdStr.isEmpty()) {
+69:         try {
+70:             int guestId = Integer.parseInt(guestIdStr);
+71: 
+
+
+An error occurred at line: [70] in the jsp file: [/makeReservation.jsp]
+guestIdStr cannot be resolved to a variable
+67: 
+68: <%    if (guestIdStr != null && !guestIdStr.isEmpty()) {
+69:         try {
+70:             int guestId = Integer.parseInt(guestIdStr);
+71: 
+72:             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+73:             Date startDate = dateFormat.parse(startDateStr);
+
+
+An error occurred at line: [73] in the jsp file: [/makeReservation.jsp]
+startDateStr cannot be resolved to a variable
+70:             int guestId = Integer.parseInt(guestIdStr);
+71: 
+72:             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+73:             Date startDate = dateFormat.parse(startDateStr);
+74:             Date endDate = dateFormat.parse(endDateStr);
+75:             Date reserveDate = dateFormat.parse(reserveDateStr);
+76: 
+
+
+An error occurred at line: [74] in the jsp file: [/makeReservation.jsp]
+endDateStr cannot be resolved to a variable
+71: 
+72:             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+73:             Date startDate = dateFormat.parse(startDateStr);
+74:             Date endDate = dateFormat.parse(endDateStr);
+75:             Date reserveDate = dateFormat.parse(reserveDateStr);
+76: 
+77:             String user = "root";
+
+
+An error occurred at line: [75] in the jsp file: [/makeReservation.jsp]
+reserveDateStr cannot be resolved to a variable
+72:             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+73:             Date startDate = dateFormat.parse(startDateStr);
+74:             Date endDate = dateFormat.parse(endDateStr);
+75:             Date reserveDate = dateFormat.parse(reserveDateStr);
+76: 
+77:             String user = "root";
+78:             String password = "Ken30526296@";
+
+
+An error occurred at line: [89] in the jsp file: [/makeReservation.jsp]
+nRooms cannot be resolved to a variable
+86:                 String sql = "INSERT INTO Project.ReservationInfo (GuestID, NumberOfRooms, NumberOfGuests, StartDate, EndDate, ReservationDate, SpecialRequest) VALUES (?, ?, ?, ?, ?, ?, ?)";
+87:                 preparedStatement = con.prepareStatement(sql);
+88:                 preparedStatement.setInt(1, guestId);
+89:                 preparedStatement.setString(2, nRooms);
+90:                 preparedStatement.setString(3, Nguests);
+91:                 preparedStatement.setTimestamp(4, new Timestamp(startDate.getTime()));
+92:                 preparedStatement.setTimestamp(5, new Timestamp(endDate.getTime()));
+
+
+An error occurred at line: [90] in the jsp file: [/makeReservation.jsp]
+Nguests cannot be resolved to a variable
+87:                 preparedStatement = con.prepareStatement(sql);
+88:                 preparedStatement.setInt(1, guestId);
+89:                 preparedStatement.setString(2, nRooms);
+90:                 preparedStatement.setString(3, Nguests);
+91:                 preparedStatement.setTimestamp(4, new Timestamp(startDate.getTime()));
+92:                 preparedStatement.setTimestamp(5, new Timestamp(endDate.getTime()));
+93:                 preparedStatement.setTimestamp(6, new Timestamp(reserveDate.getTime()));
+
+
+An error occurred at line: [94] in the jsp file: [/makeReservation.jsp]
+specialRequest cannot be resolved to a variable
+91:                 preparedStatement.setTimestamp(4, new Timestamp(startDate.getTime()));
+92:                 preparedStatement.setTimestamp(5, new Timestamp(endDate.getTime()));
+93:                 preparedStatement.setTimestamp(6, new Timestamp(reserveDate.getTime()));
+94:                 preparedStatement.setString(7, specialRequest);
+95:                 preparedStatement.executeUpdate();
+96: 
+97:                 String sql2 = "INSERT INTO Project.Stay (HotelName, HotelLocation, RoomNumber) VALUES (?, ?, ?)";
+
+
+An error occurred at line: [99] in the jsp file: [/makeReservation.jsp]
+hotelName cannot be resolved to a variable
+96: 
+97:                 String sql2 = "INSERT INTO Project.Stay (HotelName, HotelLocation, RoomNumber) VALUES (?, ?, ?)";
+98:                 preparedStatement = con.prepareStatement(sql2);
+99:                 preparedStatement.setString(1, hotelName);
+100:                 preparedStatement.setString(2, hotelLocation);
+101:                 preparedStatement.setString(3, rNumber);
+102:                 preparedStatement.executeUpdate();
+
+
+An error occurred at line: [100] in the jsp file: [/makeReservation.jsp]
+hotelLocation cannot be resolved to a variable
+97:                 String sql2 = "INSERT INTO Project.Stay (HotelName, HotelLocation, RoomNumber) VALUES (?, ?, ?)";
+98:                 preparedStatement = con.prepareStatement(sql2);
+99:                 preparedStatement.setString(1, hotelName);
+100:                 preparedStatement.setString(2, hotelLocation);
+101:                 preparedStatement.setString(3, rNumber);
+102:                 preparedStatement.executeUpdate();
+103: 
+
+
+An error occurred at line: [101] in the jsp file: [/makeReservation.jsp]
+rNumber cannot be resolved to a variable
+98:                 preparedStatement = con.prepareStatement(sql2);
+99:                 preparedStatement.setString(1, hotelName);
+100:                 preparedStatement.setString(2, hotelLocation);
+101:                 preparedStatement.setString(3, rNumber);
+102:                 preparedStatement.executeUpdate();
+103: 
+104:                 con.close();
+
+
+An error occurred at line: [125] in the jsp file: [/makeReservation.jsp]
+Syntax error, insert "Finally" to complete TryStatement
+122:     } else {
+123:         out.println("Guest ID is missing");
+124:     }
+125: }
+126: %>
+127: 
+128:   </body>
+
+
+An error occurred at line: [245] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+Syntax error on token "catch", Identifier expected
+
+An error occurred at line: [247] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [247] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+_jspx_out cannot be resolved to a variable
+
+An error occurred at line: [248] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+out cannot be resolved to a variable
+
+An error occurred at line: [248] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [250] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+response cannot be resolved
+
+An error occurred at line: [251] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [253] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+out cannot be resolved
+
+An error occurred at line: [256] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+An error occurred at line: [256] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+_jspx_page_context cannot be resolved
+
+An error occurred at line: [259] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+Syntax error on token "finally", { expected
+
+An error occurred at line: [260] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/makeReservation_jsp.java]
+_jspx_page_context cannot be resolved to a variable
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+29-Oct-2023 13:18:22.811 SEVERE [http-nio-8080-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [An exception occurred processing [/makeReservation.jsp] at line [73]
+
+70:         String guestIdStr = request.getParameter("guestId");
+71:         String nRooms = request.getParameter("Nrooms");
+72:         String Nguests = request.getParameter("Nguests");
+73:         String startDateStr = request.getParameter("startDate").replace("T", " ");
+74:         String endDateStr = request.getParameter("endDate").replace("T", " ");
+75:         String reserveDateStr = request.getParameter("reserveDate").replace("T", " ");
+76:         String specialRequest = request.getParameter("specialRequest");
+
+
+Stacktrace:] with root cause
+	java.lang.NullPointerException: Cannot invoke "String.replace(java.lang.CharSequence, java.lang.CharSequence)" because the return value of "javax.servlet.http.HttpServletRequest.getParameter(String)" is null
+		at org.apache.jsp.makeReservation_jsp._jspService(makeReservation_jsp.java:188)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:465)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+29-Oct-2023 13:22:32.207 SEVERE [http-nio-8080-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [An exception occurred processing [/makeReservation.jsp] at line [86]
+
+83:                 int guestId = Integer.parseInt(guestIdStr);
+84: 
+85:                 SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+86:                 Date startDate = dateFormat.parse(startDateStr);
+87:                 Date endDate = dateFormat.parse(endDateStr);
+88:                 Date reserveDate = dateFormat.parse(reserveDateStr);
+89: 
+
+
+Stacktrace:] with root cause
+	java.text.ParseException: Unparseable date: "2023-10-30T11:00"
+		at java.base/java.text.DateFormat.parse(DateFormat.java:399)
+		at org.apache.jsp.makeReservation_jsp._jspService(makeReservation_jsp.java:201)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:465)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+29-Oct-2023 13:25:28.389 SEVERE [http-nio-8080-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [80] in the jsp file: [/makeReservation.jsp]
+Syntax error on tokens, delete these tokens
+77:     String hotelName = request.getParameter("hotel_name");
+78:     String hotelLocation = request.getParameter("hotel_location");
+79:     String rNumber = request.getParameter("rNumber");
+80: <%
+81:     if (guestIdStr != null && !guestIdStr.isEmpty() && nRooms != null && !nRooms.isEmpty() &&
+82:             Nguests != null && !Nguests.isEmpty() && startDateStr != null && !startDateStr.isEmpty() &&
+83:             endDateStr != null && !endDateStr.isEmpty() && reserveDateStr != null && !reserveDateStr.isEmpty() &&
+
+
+An error occurred at line: [123] in the jsp file: [/makeReservation.jsp]
+ParseException cannot be resolved to a type
+120:             }
+121:         } catch (NumberFormatException e) {
+122:             out.println("Invalid guestId format");
+123:         } catch (ParseException e) {
+124:             out.println("Error parsing date: " + e.getMessage());
+125:         }
+126:     } else {
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [80] in the jsp file: [/makeReservation.jsp]
+Syntax error on tokens, delete these tokens
+77:     String hotelName = request.getParameter("hotel_name");
+78:     String hotelLocation = request.getParameter("hotel_location");
+79:     String rNumber = request.getParameter("rNumber");
+80: <%
+81:     if (guestIdStr != null && !guestIdStr.isEmpty() && nRooms != null && !nRooms.isEmpty() &&
+82:             Nguests != null && !Nguests.isEmpty() && startDateStr != null && !startDateStr.isEmpty() &&
+83:             endDateStr != null && !endDateStr.isEmpty() && reserveDateStr != null && !reserveDateStr.isEmpty() &&
+
+
+An error occurred at line: [123] in the jsp file: [/makeReservation.jsp]
+ParseException cannot be resolved to a type
+120:             }
+121:         } catch (NumberFormatException e) {
+122:             out.println("Invalid guestId format");
+123:         } catch (ParseException e) {
+124:             out.println("Error parsing date: " + e.getMessage());
+125:         }
+126:     } else {
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+29-Oct-2023 13:28:58.267 SEVERE [http-nio-8080-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [An exception occurred processing [/makeReservation.jsp] at line [86]
+
+83:                 int guestId = Integer.parseInt(guestIdStr);
+84: 
+85:                 SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+86:                 Date startDate = dateFormat.parse(startDateStr);
+87:                 Date endDate = dateFormat.parse(endDateStr);
+88:                 Date reserveDate = dateFormat.parse(reserveDateStr);
+89: 
+
+
+Stacktrace:] with root cause
+	java.text.ParseException: Unparseable date: "2023-11-01T13:28"
+		at java.base/java.text.DateFormat.parse(DateFormat.java:399)
+		at org.apache.jsp.makeReservation_jsp._jspService(makeReservation_jsp.java:201)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:465)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+29-Oct-2023 13:30:47.029 SEVERE [http-nio-8080-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [An exception occurred processing [/makeReservation.jsp] at line [73]
+
+70:         String guestIdStr = request.getParameter("guestId");
+71:         String nRooms = request.getParameter("Nrooms");
+72:         String Nguests = request.getParameter("Nguests");
+73:         String startDateStr = request.getParameter("startDate").replace("T", " ");
+74:         String endDateStr = request.getParameter("endDate").replace("T", " ");
+75:         String reserveDateStr = request.getParameter("reserveDate").replace("T", " ");
+76:         String specialRequest = request.getParameter("specialRequest");
+
+
+Stacktrace:] with root cause
+	java.lang.NullPointerException: Cannot invoke "String.replace(java.lang.CharSequence, java.lang.CharSequence)" because the return value of "javax.servlet.http.HttpServletRequest.getParameter(String)" is null
+		at org.apache.jsp.makeReservation_jsp._jspService(makeReservation_jsp.java:188)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:465)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
