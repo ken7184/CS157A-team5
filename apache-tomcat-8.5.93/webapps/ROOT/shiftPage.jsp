@@ -71,7 +71,7 @@
         ps.close();
         con.close();
         } catch (NumberFormatException e) {
-        out.println("Invalid employee ID format");
+        out.println("Click the See Task Button");
         }
         catch(SQLException e) {
         out.println("SQLException caught: " + e.getMessage());
