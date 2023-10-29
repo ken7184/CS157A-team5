@@ -1,0 +1,359 @@
+28-Oct-2023 18:03:57.000 SEVERE [http-nio-8080-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [26] in the jsp file: [/Menu.jsp]
+String cannot be resolved to a variable
+23:   </script>
+24: 
+25:         <%
+26:         String = Ronle N
+27:         if ("post".equalsIgnoreCase(request.getMethod())) {
+28:           String employeeIDStr = request.getParameter("employeeIDon");
+29:           String user = "root";
+
+
+An error occurred at line: [26] in the jsp file: [/Menu.jsp]
+Ronle cannot be resolved to a variable
+23:   </script>
+24: 
+25:         <%
+26:         String = Ronle N
+27:         if ("post".equalsIgnoreCase(request.getMethod())) {
+28:           String employeeIDStr = request.getParameter("employeeIDon");
+29:           String user = "root";
+
+
+An error occurred at line: [26] in the jsp file: [/Menu.jsp]
+Syntax error on token "N", ; expected
+23:   </script>
+24: 
+25:         <%
+26:         String = Ronle N
+27:         if ("post".equalsIgnoreCase(request.getMethod())) {
+28:           String employeeIDStr = request.getParameter("employeeIDon");
+29:           String user = "root";
+
+
+An error occurred at line: [41] in the jsp file: [/Menu.jsp]
+roleN cannot be resolved to a variable
+38:             PreparedStatement ps = con.prepareStatement(query);
+39:             ps.setInt(1, employeeID2);
+40:             ResultSet rs = ps.executeQuery();
+41:             roleN = rs.getString("Role");
+42:             rs.close();
+43:             ps.close();
+44:             con.close();
+
+
+An error occurred at line: [54] in the jsp file: [/Menu.jsp]
+roleN cannot be resolved
+51:           }
+52:         } 
+53: 
+54:         if(roleN.equals("1")) {
+55:       %>
+56:           <h1>Manager Menu</h1>
+57:           <form action="shiftPage.jsp" method="post">
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [26] in the jsp file: [/Menu.jsp]
+String cannot be resolved to a variable
+23:   </script>
+24: 
+25:         <%
+26:         String = Ronle N
+27:         if ("post".equalsIgnoreCase(request.getMethod())) {
+28:           String employeeIDStr = request.getParameter("employeeIDon");
+29:           String user = "root";
+
+
+An error occurred at line: [26] in the jsp file: [/Menu.jsp]
+Ronle cannot be resolved to a variable
+23:   </script>
+24: 
+25:         <%
+26:         String = Ronle N
+27:         if ("post".equalsIgnoreCase(request.getMethod())) {
+28:           String employeeIDStr = request.getParameter("employeeIDon");
+29:           String user = "root";
+
+
+An error occurred at line: [26] in the jsp file: [/Menu.jsp]
+Syntax error on token "N", ; expected
+23:   </script>
+24: 
+25:         <%
+26:         String = Ronle N
+27:         if ("post".equalsIgnoreCase(request.getMethod())) {
+28:           String employeeIDStr = request.getParameter("employeeIDon");
+29:           String user = "root";
+
+
+An error occurred at line: [41] in the jsp file: [/Menu.jsp]
+roleN cannot be resolved to a variable
+38:             PreparedStatement ps = con.prepareStatement(query);
+39:             ps.setInt(1, employeeID2);
+40:             ResultSet rs = ps.executeQuery();
+41:             roleN = rs.getString("Role");
+42:             rs.close();
+43:             ps.close();
+44:             con.close();
+
+
+An error occurred at line: [54] in the jsp file: [/Menu.jsp]
+roleN cannot be resolved
+51:           }
+52:         } 
+53: 
+54:         if(roleN.equals("1")) {
+55:       %>
+56:           <h1>Manager Menu</h1>
+57:           <form action="shiftPage.jsp" method="post">
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+28-Oct-2023 18:04:22.035 SEVERE [http-nio-8080-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [26] in the jsp file: [/Menu.jsp]
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+23:   </script>
+24: 
+25:         <%
+26:         String Ronle N = ""
+27:         if ("post".equalsIgnoreCase(request.getMethod())) {
+28:           String employeeIDStr = request.getParameter("employeeIDon");
+29:           String user = "root";
+
+
+An error occurred at line: [26] in the jsp file: [/Menu.jsp]
+N cannot be resolved to a variable
+23:   </script>
+24: 
+25:         <%
+26:         String Ronle N = ""
+27:         if ("post".equalsIgnoreCase(request.getMethod())) {
+28:           String employeeIDStr = request.getParameter("employeeIDon");
+29:           String user = "root";
+
+
+An error occurred at line: [26] in the jsp file: [/Menu.jsp]
+Syntax error, insert ";" to complete Statement
+23:   </script>
+24: 
+25:         <%
+26:         String Ronle N = ""
+27:         if ("post".equalsIgnoreCase(request.getMethod())) {
+28:           String employeeIDStr = request.getParameter("employeeIDon");
+29:           String user = "root";
+
+
+An error occurred at line: [41] in the jsp file: [/Menu.jsp]
+roleN cannot be resolved to a variable
+38:             PreparedStatement ps = con.prepareStatement(query);
+39:             ps.setInt(1, employeeID2);
+40:             ResultSet rs = ps.executeQuery();
+41:             roleN = rs.getString("Role");
+42:             rs.close();
+43:             ps.close();
+44:             con.close();
+
+
+An error occurred at line: [54] in the jsp file: [/Menu.jsp]
+roleN cannot be resolved
+51:           }
+52:         } 
+53: 
+54:         if(roleN.equals("1")) {
+55:       %>
+56:           <h1>Manager Menu</h1>
+57:           <form action="shiftPage.jsp" method="post">
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [26] in the jsp file: [/Menu.jsp]
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+23:   </script>
+24: 
+25:         <%
+26:         String Ronle N = ""
+27:         if ("post".equalsIgnoreCase(request.getMethod())) {
+28:           String employeeIDStr = request.getParameter("employeeIDon");
+29:           String user = "root";
+
+
+An error occurred at line: [26] in the jsp file: [/Menu.jsp]
+N cannot be resolved to a variable
+23:   </script>
+24: 
+25:         <%
+26:         String Ronle N = ""
+27:         if ("post".equalsIgnoreCase(request.getMethod())) {
+28:           String employeeIDStr = request.getParameter("employeeIDon");
+29:           String user = "root";
+
+
+An error occurred at line: [26] in the jsp file: [/Menu.jsp]
+Syntax error, insert ";" to complete Statement
+23:   </script>
+24: 
+25:         <%
+26:         String Ronle N = ""
+27:         if ("post".equalsIgnoreCase(request.getMethod())) {
+28:           String employeeIDStr = request.getParameter("employeeIDon");
+29:           String user = "root";
+
+
+An error occurred at line: [41] in the jsp file: [/Menu.jsp]
+roleN cannot be resolved to a variable
+38:             PreparedStatement ps = con.prepareStatement(query);
+39:             ps.setInt(1, employeeID2);
+40:             ResultSet rs = ps.executeQuery();
+41:             roleN = rs.getString("Role");
+42:             rs.close();
+43:             ps.close();
+44:             con.close();
+
+
+An error occurred at line: [54] in the jsp file: [/Menu.jsp]
+roleN cannot be resolved
+51:           }
+52:         } 
+53: 
+54:         if(roleN.equals("1")) {
+55:       %>
+56:           <h1>Manager Menu</h1>
+57:           <form action="shiftPage.jsp" method="post">
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+28-Oct-2023 20:15:09.996 SEVERE [http-nio-8080-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [23] in the jsp file: [/reservationInfo.jsp]
+String literal is not properly closed by a double-quote
+20: 
+21: 
+22:     if ("Show by ReservationNumber".equalsIgnoreCase(buttonClicked) && reservatioNumberInput != null && !reservatioNumberInput.isEmpty()) {
+23:         query = "SELECT *
+24:         FROM Project.ReservationInfo r
+25:         JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber
+26:         WHERE r.BookingNumber = ?;";
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [23] in the jsp file: [/reservationInfo.jsp]
+String literal is not properly closed by a double-quote
+20: 
+21: 
+22:     if ("Show by ReservationNumber".equalsIgnoreCase(buttonClicked) && reservatioNumberInput != null && !reservatioNumberInput.isEmpty()) {
+23:         query = "SELECT *
+24:         FROM Project.ReservationInfo r
+25:         JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber
+26:         WHERE r.BookingNumber = ?;";
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)

@@ -57,7 +57,7 @@
       if (userName != null && userPassword != null) {
         String user;
         user = "root";
-        String password = "password";
+        String password = "Ken30526296@";
         try {
           java.sql.Connection con; 
           Class.forName("com.mysql.jdbc.Driver");
@@ -69,14 +69,15 @@
             String dbPassword = rs.getString("Password");
             int employeeID = rs.getInt("ID");
             if(userPassword.equals(dbPassword)) {
-              %> 
+              session.setAttribute("eId", employeeID);
+               
+      %> 
               <script>
                 localStorage.setItem("username", "<%= userName %>");
                 localStorage.setItem("password", "<%= userPassword %>");
                 localStorage.setItem("employeeID", "<%= employeeID %>");
-                
-                window.location.href = "./homePage.jsp";
-            </script>
+                window.location.href = "./Menu.jsp";
+              </script>
     <%    
           }
             else {
