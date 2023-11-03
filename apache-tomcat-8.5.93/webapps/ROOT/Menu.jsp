@@ -9,25 +9,29 @@
     <form method="post" >
       <input type="hidden" id="employeeIDField" name="employeeIDon" value="">
       <input type="submit" value="Start" />
+      <input type="button" onClick="logOut()" value="Log Out" />
     </form>
   
   <script>
       var employeeIDon = localStorage.getItem("employeeID");
       var usernameOn = localStorage.getItem("username");
-      var passwordOn = localStorage.getItem("password");
       console.log("employeeIDon: " + employeeIDon);
       console.log("usernameOn: " + usernameOn);
-      console.log("passwordOn: " + passwordOn);
-
       document.getElementById("employeeIDField").value = employeeIDon;
+
+      function logOut(){
+        localStorage.removeItem("employeeID");
+        localStorage.removeItem("username");
+        window.location.href="loginPage.jsp"
+      }
   </script>
 
         <%
-        String roleN = "0";
+        String roleN = "0"; 
         if ("post".equalsIgnoreCase(request.getMethod())) {
           String employeeIDStr = request.getParameter("employeeIDon");
           String user = "root";
-          String pass = "Ken30526296@";
+          String pass = "password";
           try {
             int employeeID2 = Integer.parseInt(employeeIDStr);
             out.println("Employee ID: " + employeeID2);
