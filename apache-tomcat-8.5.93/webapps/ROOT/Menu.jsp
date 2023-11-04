@@ -31,7 +31,7 @@
         if ("post".equalsIgnoreCase(request.getMethod())) {
           String employeeIDStr = request.getParameter("employeeIDon");
           String user = "root";
-          String pass = "password";
+          String pass = "Ken30526296@";
           try {
             int employeeID2 = Integer.parseInt(employeeIDStr);
             out.println("Employee ID: " + employeeID2);
@@ -80,6 +80,12 @@
             <button type="submit" name="submitBtn" value="text1">Go</button><br>
           </form>
 
+          <form action="billingInfo.jsp" method="post">
+            <label for="5. Check Billing">5. Check Billing </label>
+            <button type="submit" name="submitBtn" value="text1">Go</button><br>
+          </form>
+
+
 
       <%
         }
@@ -96,6 +102,10 @@
           </form>
           <form action="makeReservation.jsp" method="post">
             <label for="3. Reservation Info">3. Make Reservation </label>
+            <button type="submit" name="submitBtn" value="text1">Go</button><br>
+          </form>
+          <form action="billingInfo.jsp" method="post">
+            <label for="4. Check Billing">4. Check Billing </label>
             <button type="submit" name="submitBtn" value="text1">Go</button><br>
           </form>
 
