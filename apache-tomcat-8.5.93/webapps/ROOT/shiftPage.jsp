@@ -12,9 +12,11 @@
   
     <script>
       window.onload = function() {
-          var employeeIDon = localStorage.getItem("employeeID");
-          if (employeeIDon) {
-              window.location.href = window.location.pathname + "?employeeIDon=" + encodeURIComponent(employeeIDon);
+          const employeeIDon = localStorage.getItem("employeeID");
+          const queryParams = "?employeeIDon=" + encodeURIComponent(employeeIDon);
+          const targetURL = window.location.pathname + queryParams;
+          if (window.location.search != queryParams) {
+              window.location.href = targetURL;
           }
       };
   </script>
