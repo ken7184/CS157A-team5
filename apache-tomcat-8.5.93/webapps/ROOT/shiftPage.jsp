@@ -1,34 +1,28 @@
 <%@ page import="java.sql.*"%>
 <html>
   <head>
-    <title>Home Page</title>
+    <title>Shift Page</title>
   </head>
   <body>
-    <h1>Home Page</h1>
+    <h1>Employee Shift</h1>
 
-    <form method="post" >
+    <form method="get" >
       <input type="hidden" id="employeeIDField" name="employeeIDon" value="">
-      <input type="submit" value="See Task" />
     </form>
   
-  <script>
-      var employeeIDon = localStorage.getItem("employeeID");
-      var usernameOn = localStorage.getItem("username");
-      var passwordOn = localStorage.getItem("password");
-      console.log("employeeIDon: " + employeeIDon);
-      console.log("usernameOn: " + usernameOn);
-      console.log("passwordOn: " + passwordOn);
-
-      document.getElementById("employeeIDField").value = employeeIDon;
+    <script>
+      window.onload = function() {
+          var employeeIDon = localStorage.getItem("employeeID");
+          if (employeeIDon) {
+              window.location.href = window.location.pathname + "?employeeIDon=" + encodeURIComponent(employeeIDon);
+          }
+      };
   </script>
-  
-
-
     <%
-    if ("POST".equalsIgnoreCase(request.getMethod())) {
-      String employeeIDStr = request.getParameter("employeeIDon");
+    String employeeIDStr = request.getParameter("employeeIDon");
+    if (employeeIDStr != null && !employeeIDStr.trim().isEmpty()) {
       String user = "root";
-      String pass = "Ken30526296@";
+      String pass = "password";
       try {
         int employeeID2 = Integer.parseInt(employeeIDStr);
         out.println("Employee ID: " + employeeID2 );
