@@ -3,47 +3,101 @@
 <html>
   <head>
     <title>Home Page</title>
-  </head>
-  <body>
-    <h1>My Menu</h1>
-    <form method="post" >
-      <input type="hidden" id="employeeIDField" name="employeeIDon" value="">
-      <input type="submit" value="Start" />
-      <input type="button" onClick="logOut()" value="Log Out" />
-    </form>
-  
-  <script>
-      var employeeIDon = localStorage.getItem("employeeID");
-      var usernameOn = localStorage.getItem("username");
-      console.log("employeeIDon: " + employeeIDon);
-      console.log("usernameOn: " + usernameOn);
-      document.getElementById("employeeIDField").value = employeeIDon;
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 
-      function logOut(){
-        localStorage.removeItem("employeeID");
-        localStorage.removeItem("username");
-        window.location.href="loginPage.jsp"
+    <style>
+      .navbar{
+        background-color: darkblue;
+        align-items: center;
       }
-  </script>
+      .navbar-item{
+        color: white;
+      }
 
+      .icon-text{
+        color: white;
+      }
+
+      .welcome-message{
+        font-size: 100px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <script>
+    window.onload = function() {
+        const employeeIDon = localStorage.getItem("employeeID");
+        const employeeRoleon = localStorage.getItem("employeeRole");
+        const queryParams = "?employeeIDon=" + encodeURIComponent(employeeIDon) + "&employeeRoleon=" + encodeURIComponent(employeeRoleon);
+        const targetURL = window.location.pathname + queryParams;
+        if (window.location.search != queryParams) {
+            window.location.href = targetURL;
+        }
+    };
+
+    function logOut(){
+      localStorage.removeItem("employeeID");
+      localStorage.removeItem("username");
+      window.location.href="loginPage.jsp"
+    }
+</script>
+  <body>
+    <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="Menu.jsp">
+            <span class="icon-text">
+              <span class="icon">
+                <i class="fas fa-home"></i>
+              </span>
+              <span>Home</span>
+            </span>
+          </a>
+          
+
+        </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="navbar-item" href="shiftPage.jsp">
+                Shift
+              </a>
+              <a class="navbar-item" >
+                Account
+              </a>
+              <a class="button is-light" onclick="logOut()">
+                Log Out
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  
+  
         <%
+        String employeeIDStr = request.getParameter("employeeIDon");
+        String testRole = request.getParameter("employeeRoleon");
         String roleN = "0"; 
-        if ("post".equalsIgnoreCase(request.getMethod())) {
-          String employeeIDStr = request.getParameter("employeeIDon");
+        if (employeeIDStr != null && !employeeIDStr.trim().isEmpty()) {
           String user = "root";
-          String pass = "Ken30526296@";
+          String pass = "password";
           try {
             int employeeID2 = Integer.parseInt(employeeIDStr);
-            out.println("Employee ID: " + employeeID2);
             java.sql.Connection con;
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Project?autoReconnect=true&useSSL=false", user, pass);
-            String query = "SELECT Role FROM Employee WHERE ID = ?";
+            String query = "SELECT Name, Role FROM Employee WHERE ID = ?";
             PreparedStatement ps = con.prepareStatement(query);
             ps.setInt(1, employeeID2);
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
               roleN = rs.getString("Role");
+              String name = rs.getString("Name");
+              if (!name.isEmpty()) {
+                out.println("<h1 class='welcome-message'>Welcome, " + name + "!</h1>"); 
+              }
             }
             rs.close();
             ps.close();
@@ -56,7 +110,6 @@
             out.println("ClassNotFoundException: " + e.getMessage());
           }
         } 
-
         if(roleN.equals("1")) {
       %>
           <h1>Manager Menu</h1>

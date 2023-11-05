@@ -6,10 +6,6 @@
   <body>
     <h1>Employee Shift</h1>
 
-    <form method="get" >
-      <input type="hidden" id="employeeIDField" name="employeeIDon" value="">
-    </form>
-  
     <script>
       window.onload = function() {
           const employeeIDon = localStorage.getItem("employeeID");
