@@ -17,6 +17,9 @@
             text-align: start;
             padding-bottom: 16px;
         }
+        .table{
+            width: 100%;
+        }
     </style>
   </head>
   <body>
