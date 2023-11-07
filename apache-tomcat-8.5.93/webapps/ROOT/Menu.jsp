@@ -5,19 +5,8 @@
     <title>Home Page</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-
+    <link rel="stylesheet" href="navbar.css"/>
     <style>
-      .navbar{
-        background-color: darkblue;
-        align-items: center;
-      }
-      .navbar-item{
-        color: white;
-      }
-
-      .icon-text{
-        color: white;
-      }
 
       .welcome-message{
         font-size: 100px;
@@ -43,39 +32,7 @@
     }
 </script>
   <body>
-    <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
-      <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-          <a class="navbar-item" href="Menu.jsp">
-            <span class="icon-text">
-              <span class="icon">
-                <i class="fas fa-home"></i>
-              </span>
-              <span>Home</span>
-            </span>
-          </a>
-          
-
-        </div>
-        <div class="navbar-end">
-          <div class="navbar-item">
-            <div class="buttons">
-              <a class="navbar-item" href="shiftPage.jsp">
-                Shift
-              </a>
-              <a class="navbar-item" >
-                Account
-              </a>
-              <a class="button is-light" onclick="logOut()">
-                Log Out
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-  
-  
+    <%@ include file="navbar.jspf" %>
         <%
         String employeeIDStr = request.getParameter("employeeIDon");
         String testRole = request.getParameter("employeeRoleon");

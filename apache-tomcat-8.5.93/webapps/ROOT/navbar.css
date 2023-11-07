@@ -1,0 +1,11 @@
+.navbar{
+    background-color: darkblue;
+    align-items: center;
+  }
+  .navbar-item{
+    color: white;
+  }
+
+  .icon-text{
+    color: white;
+  }
