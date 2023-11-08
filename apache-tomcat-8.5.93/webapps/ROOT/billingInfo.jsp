@@ -18,7 +18,7 @@
     String user = "root";
     String pass = "Ken30526296@";
 
-    String query = "SELECT b.BookingNumber, b.price + COALESCE(s.sum_price, 0) AS 'TotalPrice', b.price AS 'RoomPrice', COALESCE(s.sum_price, 0) AS 'ServicePrice' " +
+    String query = "SELECT b.BookingNumber, b.price + b.CleaningFee + COALESCE(s.sum_price, 0) AS 'TotalPrice', b.price AS 'RoomPrice', b.CleaningFee AS 'CleaningFee', COALESCE(s.sum_price, 0) AS 'ServicePrice' " +
     "FROM Project.Billing b " +
     "LEFT JOIN ( " +
     "    SELECT BookingNumber, SUM(PRICE) AS 'sum_price' " +
@@ -34,7 +34,7 @@
         PreparedStatement ps = con.prepareStatement(query);
         
         if ("Show by ReservationNumber".equalsIgnoreCase(buttonClicked) && reservationNumberInput != null && !reservationNumberInput.isEmpty()) {
-          query = "SELECT b.BookingNumber, b.price + COALESCE(s.sum_price, 0) AS 'TotalPrice', b.price AS 'RoomPrice', COALESCE(s.sum_price, 0) AS 'ServicePrice' " +
+          query = "SELECT b.BookingNumber, b.price + b.CleaningFee + COALESCE(s.sum_price, 0) AS 'TotalPrice', b.price AS 'RoomPrice', b.CleaningFee AS 'CleaningFee', COALESCE(s.sum_price, 0) AS 'ServicePrice' " +
           "FROM Project.Billing b " +
           "LEFT JOIN ( " +
           "    SELECT BookingNumber, SUM(PRICE) AS 'sum_price' " +
@@ -54,6 +54,7 @@
           <td>Booking Number</td>
           <td>Total Price</td>
           <td>Room Price</td>
+          <td>Cleaning Fee</td>
           <td>Service Price</td>
         </tr>
       </thead>
@@ -63,6 +64,7 @@
           <td><%= rs.getInt("BookingNumber") %></td>
           <td><%= rs.getInt("TotalPrice") %></td>
           <td><%= rs.getInt("RoomPrice") %></td>
+          <td><%= rs.getInt("CleaningFee")%></td>
           <td><%= rs.getInt("ServicePrice") %></td>
         </tr>
         <% } %>
