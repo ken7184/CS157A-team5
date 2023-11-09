@@ -51,9 +51,9 @@
         <tr>
         <td><%= rs.getString("HotelLocation") %></td>
         <td><%= rs.getString("HotelName") %></td>
-        <td><%= rs.getString("HotelName") %></td>
         <td><%= rs.getString("Date") %></td>
         <td><%= rs.getString("StartTime") %></td>
+        <td><%= rs.getString("EndTime") %></td>
         <td><%= rs.getString("Task") %></td>
         <td><%= rs.getString("AssignedRoom") %></td>
         </tr>
