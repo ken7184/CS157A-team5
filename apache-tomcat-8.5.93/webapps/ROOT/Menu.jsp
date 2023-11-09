@@ -95,6 +95,18 @@
             <button type="submit" name="submitBtn" value="text1">Go</button><br>
           </form>
 
+          <form action="roomResponsibility.jsp" method="post">
+            <label for="6. Check who was assigned to room">6. Check who was assigned to room </label>
+            <button type="submit" name="submitBtn" value="text1">Go</button><br>
+          </form>
+          <form action="roomInventory.jsp" method="post">
+            <label for="7.Room Inventory">7. Check room inventory </label>
+            <button type="submit" name="submitBtn" value="text1">Go</button><br>
+          </form>
+
+
+
+
 
 
       <%
@@ -118,10 +130,19 @@
             <label for="4. Check Billing">4. Check Billing </label>
             <button type="submit" name="submitBtn" value="text1">Go</button><br>
           </form>
+          <form action="roomResponsibility.jsp" method="post">
+            <label for="5. Check who was assigned to room">5. Check who was assigned to room </label>
+            <button type="submit" name="submitBtn" value="text1">Go</button><br>
+          </form>
+          <form action="roomInventory.jsp" method="post">
+            <label for="6.Room Inventory">6. Check room inventory </label>
+            <button type="submit" name="submitBtn" value="text1">Go</button><br>
+          </form>
+
 
       <%
         }
-        else if(roleN.equals("2") || roleN.equals("4") || roleN.equals("5") || roleN.equals("6")){
+        else if(roleN.equals("2") || roleN.equals("4") || roleN.equals("5")){
       %>
           <h1>Employee Menu</h1>
           <form action="shiftPage.jsp" method="post">
@@ -130,7 +151,22 @@
           </form>
       <%
         }
+        else if(roleN.equals("6")) {
       %>
+        <h1>Employee Menu</h1>
+        <form action="shiftPage.jsp" method="post">
+        <label for="1. See my Shift">1. See my Shift</label>
+        <button type="submit" name="submitBtn" value="text1">Go</button><br>
+        </form>
+        <form action="roomInventory.jsp" method="post">
+          <label for="2.Room Inventory">2. Check room inventory </label>
+          <button type="submit" name="submitBtn" value="text1">Go</button><br>
+        </form>
+       <% 
+        }
+      %>
+
+
 
   </body>
 </html>
