@@ -79,28 +79,33 @@
           <label for="2. See Employees' Shift">2. See Employees' Shift</label>
           <button type="submit" name="submitBtn" value="text1">Go</button><br>
           </form>
+
+          <form action="makeShift.jsp" method="post">
+            <label for="3. Create Shift">3. Create Shift</label>
+            <button type="submit" name="submitBtn" value="text1">Go</button><br>
+            </form>
           
           <form action="reservationInfo.jsp" method="post">
-            <label for="3. Reservation Info">3. See Reservation info</label>
+            <label for="4. Reservation Info">4. See Reservation info</label>
             <button type="submit" name="submitBtn" value="text1">Go</button><br>
           </form>
 
           <form action="makeReservation.jsp" method="post">
-            <label for="4. Reservation Info">4. Make Reservation </label>
+            <label for="5. Reservation Info">5. Make Reservation </label>
             <button type="submit" name="submitBtn" value="text1">Go</button><br>
           </form>
 
           <form action="billingInfo.jsp" method="post">
-            <label for="5. Check Billing">5. Check Billing </label>
+            <label for="6. Check Billing">6. Check Billing </label>
             <button type="submit" name="submitBtn" value="text1">Go</button><br>
           </form>
 
           <form action="roomResponsibility.jsp" method="post">
-            <label for="6. Check who was assigned to room">6. Check who was assigned to room </label>
+            <label for="7. Check who was assigned to room">7. Check who was assigned to room </label>
             <button type="submit" name="submitBtn" value="text1">Go</button><br>
           </form>
           <form action="roomInventory.jsp" method="post">
-            <label for="7.Room Inventory">7. Check room inventory </label>
+            <label for="8.Room Inventory">8. Check room inventory </label>
             <button type="submit" name="submitBtn" value="text1">Go</button><br>
           </form>
 

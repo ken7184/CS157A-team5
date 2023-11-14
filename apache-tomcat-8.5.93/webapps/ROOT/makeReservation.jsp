@@ -1,7 +1,7 @@
 <%@ page import="java.sql.*, java.text.SimpleDateFormat, java.util.Date"%>
 <html>
   <head>
-    <title>Create Employee Account</title>
+    <title>Create Reservation</title>
     <link href="createAccountPage.css" rel="stylesheet" />
   </head>
   <body>
