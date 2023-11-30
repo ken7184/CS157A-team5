@@ -114,7 +114,7 @@
         String roleN = "0"; 
         if (employeeIDStr != null && !employeeIDStr.trim().isEmpty()) {
           String user = "root";
-          String pass = "password";
+          String pass = "Ken30526296@";
           try {
             int employeeID2 = Integer.parseInt(employeeIDStr);
             java.sql.Connection con;

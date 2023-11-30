@@ -102,7 +102,7 @@
             try {
                 int guestId = Integer.parseInt(guestIdStr);
 
-                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
                 Date startDate = dateFormat.parse(startDateStr);
                 Date endDate = dateFormat.parse(endDateStr);
                 Date reserveDate = dateFormat.parse(reserveDateStr);
@@ -135,6 +135,7 @@
                     preparedStatement.executeUpdate();
 
                     con.close();
+                    out.println("New Reservation is successfully saved.");
                 } catch (Exception e) {
                     out.println("Exception caught: " + e.getMessage());
                 } finally {

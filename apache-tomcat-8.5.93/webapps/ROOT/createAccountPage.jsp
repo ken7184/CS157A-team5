@@ -59,6 +59,9 @@
         </table>
         <input type="submit" value="Submit" />
         </form>
+        <form action="loginPage.jsp" method="post">
+            <button type="submit" name="submitBtn" value="text1">Go back to login</button><br>
+        </form>
         </div>
     </div>
     <%
@@ -110,6 +113,7 @@
             rs.close();
             stmt.close();
             con.close();
+            out.println("New Account is successfully created.");
         } 
         catch(SQLException e) { 
             out.println("SQLException caught: " + e.getMessage()); 
@@ -130,8 +134,6 @@
         }
     }
     %>
-
-    
   </body>
 </html>
 

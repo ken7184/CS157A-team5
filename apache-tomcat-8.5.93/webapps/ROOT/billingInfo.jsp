@@ -4,7 +4,7 @@
     <title>Home Page</title>
   </head>
   <body>
-    <h1>Reservation check page</h1>
+    <h1>Manage Billing</h1>
 
     <form method="post" action="">
       <input type="text" name="RN" placeholder="Enter Reservation Number">
