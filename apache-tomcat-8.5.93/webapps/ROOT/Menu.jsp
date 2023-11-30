@@ -114,7 +114,7 @@
         String roleN = "0"; 
         if (employeeIDStr != null && !employeeIDStr.trim().isEmpty()) {
           String user = "root";
-          String pass = "password";
+          String pass = "Ken30526296@";
           try {
             int employeeID2 = Integer.parseInt(employeeIDStr);
             java.sql.Connection con;
@@ -404,7 +404,11 @@
             <a class="button is-light" href="managerShift.jsp" style="margin-top: 2px;">
               Employee Shift
             </a>
+            <a class="button is-light" href="makeShift.jsp" style="margin-top: 2px;">
+              Create Shift
+            </a>
           </div>
+
       <%
         }
         if(roleN.equals("1") || roleN.equals("2") || roleN.equals("6")) {

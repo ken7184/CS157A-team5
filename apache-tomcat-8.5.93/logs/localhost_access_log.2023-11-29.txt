@@ -84,3 +84,16 @@
 0:0:0:0:0:0:0:1 - - [29/Nov/2023:17:19:25 -0800] "POST /loginPage.jsp HTTP/1.1" 200 1173
 0:0:0:0:0:0:0:1 - - [29/Nov/2023:17:20:07 -0800] "GET /createAccountPage.jsp HTTP/1.1" 200 2029
 0:0:0:0:0:0:0:1 - - [29/Nov/2023:17:20:09 -0800] "POST /loginPage.jsp HTTP/1.1" 200 1173
+0:0:0:0:0:0:0:1 - - [29/Nov/2023:22:00:39 -0800] "POST /loginPage.jsp HTTP/1.1" 200 1461
+0:0:0:0:0:0:0:1 - - [29/Nov/2023:22:00:39 -0800] "GET /Menu.jsp HTTP/1.1" 200 3167
+0:0:0:0:0:0:0:1 - - [29/Nov/2023:22:00:43 -0800] "GET /Menu.jsp?employeeIDon=1&employeeRoleon=null HTTP/1.1" 200 3276
+0:0:0:0:0:0:0:1 - - [29/Nov/2023:22:01:42 -0800] "GET /loginPage.jsp HTTP/1.1" 200 1173
+0:0:0:0:0:0:0:1 - - [29/Nov/2023:22:01:47 -0800] "POST /loginPage.jsp HTTP/1.1" 200 1461
+0:0:0:0:0:0:0:1 - - [29/Nov/2023:22:01:47 -0800] "GET /Menu.jsp HTTP/1.1" 200 3167
+0:0:0:0:0:0:0:1 - - [29/Nov/2023:22:01:47 -0800] "GET /Menu.jsp?employeeIDon=1&employeeRoleon=null HTTP/1.1" 200 17358
+0:0:0:0:0:0:0:1 - - [29/Nov/2023:22:02:00 -0800] "GET /makeReservation.jsp HTTP/1.1" 200 1982
+0:0:0:0:0:0:0:1 - - [29/Nov/2023:22:02:03 -0800] "GET /managerShift.jsp HTTP/1.1" 200 3560
+0:0:0:0:0:0:0:1 - - [29/Nov/2023:22:02:07 -0800] "GET /roomInventory.jsp HTTP/1.1" 200 2328
+0:0:0:0:0:0:0:1 - - [29/Nov/2023:22:02:10 -0800] "GET /roomResponsibility.jsp HTTP/1.1" 200 2289
+0:0:0:0:0:0:0:1 - - [29/Nov/2023:22:02:19 -0800] "POST /roomResponsibility.jsp HTTP/1.1" 200 1045
+0:0:0:0:0:0:0:1 - - [29/Nov/2023:22:02:22 -0800] "GET /roomResponsibility.jsp HTTP/1.1" 200 2289
