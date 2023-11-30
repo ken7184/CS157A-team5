@@ -114,7 +114,7 @@
         String roleN = "0"; 
         if (employeeIDStr != null && !employeeIDStr.trim().isEmpty()) {
           String user = "root";
-          String pass = "Ken30526296@";
+          String pass = "password";
           try {
             int employeeID2 = Integer.parseInt(employeeIDStr);
             java.sql.Connection con;
@@ -420,7 +420,7 @@
           </a>
         </div>
        <% 
-      }else {
+      }else if(!roleN.equals("3")) {
         %>
         <h1>Employee Menu</h1>
           <form action="shiftPage.jsp" method="post">
