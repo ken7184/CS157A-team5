@@ -1,16 +1,35 @@
 <%@ page import="java.sql.*"%>
 <html>
   <head>
-    <title>Home Page</title>
+    <title>Check room assigned page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="navbar.css"/>
+    <style>
+        .header-text{
+            background-color: lightblue;
+            font-size: 100px;
+            text-align: center;
+          }
+
+        .hotel-location-text{
+            font-size: 24px;
+            text-align: start;
+            padding-bottom: 16px;
+        }
+        .table{
+            width: 100%;
+        }
+    </style>
   </head>
   <body>
-    <h1>Check employee assigned room</h1>
-
+  
+    <%@ include file="navbar.jspf" %>
+    <h1 class="header-text">Check Assigned Room</h1>
     <form method="post" action="">
       <input type="text" name="roomNumberInput" placeholder="Enter Room Number">
       <input type="submit" name="roomNumber" value="Show by room number">
     </form>
-  
     <%
     String buttonClicked = request.getParameter("roomNumber");
     String roomNumberInput = request.getParameter("roomNumberInput");
@@ -36,7 +55,7 @@
 
         ResultSet rs = ps.executeQuery();
     %>
-    <table border="1">
+    <table class = 'table'>
       <thead>
         <tr>
           <td>Employee Id</td>

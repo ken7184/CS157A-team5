@@ -2,15 +2,12 @@
 <html>
   <head>
     <title>Create Employee Account</title>
-    <link href = "createAccountPage.css" rel = "stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+      <link rel="stylesheet" href="navbar.css"/>
   </head>
   <body>
     <div class="page-wrap">
-        <img
-            class="bg"
-            src="createAccountBg.jpg"
-            alt=""
-        >
         <div class="content">
         <h1>Create Employee Account</h1>
         <form method = "post">

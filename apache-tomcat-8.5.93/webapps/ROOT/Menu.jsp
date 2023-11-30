@@ -411,7 +411,7 @@
 
       <%
         }
-        if(roleN.equals("1") || roleN.equals("2") || roleN.equals("6")) {
+        else if(roleN.equals("1") || roleN.equals("2") || roleN.equals("6")) {
       %>
         <div class="manage-reservation">
           <h2 class="reservation-title">Hotels</h2>

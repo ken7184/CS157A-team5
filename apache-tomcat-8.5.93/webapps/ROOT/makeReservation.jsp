@@ -2,7 +2,9 @@
 <html>
   <head>
     <title>Create Reservation</title>
-    <link href="createAccountPage.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="navbar.css"/>
   </head>
   <body>
     <div class="content">

@@ -1,16 +1,34 @@
 <%@ page import="java.sql.*"%>
 <html>
-  <head>
-    <title>Home Page</title>
-  </head>
-  <body>
-    <h1>Reservation check page</h1>
-
-    <form method="post" action="">
-      <input type="text" name="RN" placeholder="Enter Reservation Number">
-      <input type="submit" name="ReservationNumber" value="Show by ReservationNumber">
-    </form>
+    <head>
+      <title>check reservation</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+      <link rel="stylesheet" href="navbar.css"/>
+      <style>
+          .header-text{
+              background-color: lightblue;
+              font-size: 100px;
+              text-align: center;
+            }
   
+          .hotel-location-text{
+              font-size: 24px;
+              text-align: start;
+              padding-bottom: 16px;
+          }
+          .table{
+              width: 100%;
+          }
+      </style>
+    </head>
+    <body>
+      <%@ include file="navbar.jspf" %>
+      <h1 class="header-text">Check Reservation</h1>
+      <form method="post" action="">
+        <input type="text" name="RN" placeholder="Enter Reservation Number">
+        <input type="submit" name="ReservationNumber" value="Show by ReservationNumber">
+      </form>
     <%
     String buttonClicked = request.getParameter("ReservationNumber");
     String reservationNumberInput = request.getParameter("RN");
@@ -30,7 +48,7 @@
             ps.setInt(1, rn);
             ResultSet rs = ps.executeQuery();
     %>
-    <table border="1">
+    <table class = 'table'>
       <thead>
         <tr>
           <td>Booking Number</td>

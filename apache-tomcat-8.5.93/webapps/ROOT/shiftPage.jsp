@@ -1,10 +1,32 @@
 <%@ page import="java.sql.*"%>
 <html>
-  <head>
-    <title>Shift Page</title>
-  </head>
-  <body>
-    <h1>Employee Shift</h1>
+    <head>
+      <title>My shift page</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+      <link rel="stylesheet" href="navbar.css"/>
+      <style>
+          .header-text{
+              background-color: lightblue;
+              font-size: 100px;
+              text-align: center;
+            }
+  
+          .hotel-location-text{
+              font-size: 24px;
+              text-align: start;
+              padding-bottom: 16px;
+          }
+          .table{
+              width: 100%;
+          }
+      </style>
+    </head>
+    <body>
+    
+      <%@ include file="navbar.jspf" %>
+      <h1 class="header-text">Check My Shift</h1>
+  
 
     <script>
       window.onload = function() {
@@ -32,7 +54,7 @@
         ps.setInt(1, employeeID2);
         ResultSet rs = ps.executeQuery();
       %>
-        <table border="1">
+        <table class = 'table'>
           <thead>
             <tr>
               <td>Hotel Location</td>
