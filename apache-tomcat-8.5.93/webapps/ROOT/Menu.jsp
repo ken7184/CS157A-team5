@@ -114,7 +114,7 @@
         String roleN = "0"; 
         if (employeeIDStr != null && !employeeIDStr.trim().isEmpty()) {
           String user = "root";
-          String pass = "Ken30526296@";
+          String pass = "password";
           try {
             int employeeID2 = Integer.parseInt(employeeIDStr);
             java.sql.Connection con;
@@ -376,6 +376,14 @@
           </a>
           <a class="button is-light" href="checkInOut.jsp" style="margin-top: 2px;">
             Check In & Check Out
+          </a>
+        </div>
+
+        <div class="manage-reservation">
+          <h2 class="reservation-title">Rooms</h2>
+          <hr class="solid" style="border-top: 1px solid; opacity: 0.2;">
+          <a class="button is-light" href="AvailableRooms.jsp" style="margin-top: 2px;">
+            Available Rooms
           </a>
         </div>
 
