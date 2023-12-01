@@ -1,0 +1,1325 @@
+30-Nov-2023 16:52:42.952 SEVERE [http-nio-8080-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [51] in the jsp file: [/checkInOut.jsp]
+Duplicate local variable BookingNumber
+48:     <%
+49:     if("POST".equalsIgnoreCase(request.getMethod())) {
+50:       String BookingNumber = request.getParameter("BN");
+51:       int BookingNumber = Integer.parseInt(BookingNumber)
+52:       String CheckIn = request.getParameter("CheckIn");
+53:       String CheckOut = request.getParameter("CheckOut") 
+54: 
+
+
+An error occurred at line: [51] in the jsp file: [/checkInOut.jsp]
+The method parseInt(String) in the type Integer is not applicable for the arguments (int)
+48:     <%
+49:     if("POST".equalsIgnoreCase(request.getMethod())) {
+50:       String BookingNumber = request.getParameter("BN");
+51:       int BookingNumber = Integer.parseInt(BookingNumber)
+52:       String CheckIn = request.getParameter("CheckIn");
+53:       String CheckOut = request.getParameter("CheckOut") 
+54: 
+
+
+An error occurred at line: [51] in the jsp file: [/checkInOut.jsp]
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+48:     <%
+49:     if("POST".equalsIgnoreCase(request.getMethod())) {
+50:       String BookingNumber = request.getParameter("BN");
+51:       int BookingNumber = Integer.parseInt(BookingNumber)
+52:       String CheckIn = request.getParameter("CheckIn");
+53:       String CheckOut = request.getParameter("CheckOut") 
+54: 
+
+
+An error occurred at line: [53] in the jsp file: [/checkInOut.jsp]
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+50:       String BookingNumber = request.getParameter("BN");
+51:       int BookingNumber = Integer.parseInt(BookingNumber)
+52:       String CheckIn = request.getParameter("CheckIn");
+53:       String CheckOut = request.getParameter("CheckOut") 
+54: 
+55:       String user = "root";
+56:       String pass = "Ken30526296@";
+
+
+An error occurred at line: [66] in the jsp file: [/checkInOut.jsp]
+Syntax error, insert ";" to complete Statement
+63:         
+64:       
+65:         PreparedStatement ps = con.prepareStatement(query);
+66:         ps.setString(1, CheckIn)
+67:         ps.setString(2, CheckOut)
+68:         ps.setInt(3, rn);
+69:         ResultSet rs = ps.executeQuery();
+
+
+An error occurred at line: [67] in the jsp file: [/checkInOut.jsp]
+Syntax error, insert ";" to complete Statement
+64:       
+65:         PreparedStatement ps = con.prepareStatement(query);
+66:         ps.setString(1, CheckIn)
+67:         ps.setString(2, CheckOut)
+68:         ps.setInt(3, rn);
+69:         ResultSet rs = ps.executeQuery();
+70: 
+
+
+An error occurred at line: [68] in the jsp file: [/checkInOut.jsp]
+rn cannot be resolved to a variable
+65:         PreparedStatement ps = con.prepareStatement(query);
+66:         ps.setString(1, CheckIn)
+67:         ps.setString(2, CheckOut)
+68:         ps.setInt(3, rn);
+69:         ResultSet rs = ps.executeQuery();
+70: 
+71:             rs.close();
+
+
+An error occurred at line: [73] in the jsp file: [/checkInOut.jsp]
+Syntax error, insert "Finally" to complete TryStatement
+70: 
+71:             rs.close();
+72:             ps.close();
+73:       }
+74:         con.close();
+75:       catch (SQLException | ClassNotFoundException e) {
+76:         out.println("Exception caught: " + e.getMessage());
+
+
+An error occurred at line: [74] in the jsp file: [/checkInOut.jsp]
+con cannot be resolved
+71:             rs.close();
+72:             ps.close();
+73:       }
+74:         con.close();
+75:       catch (SQLException | ClassNotFoundException e) {
+76:         out.println("Exception caught: " + e.getMessage());
+77:       }
+
+
+An error occurred at line: [74] in the jsp file: [/checkInOut.jsp]
+Syntax error, insert "}" to complete Block
+71:             rs.close();
+72:             ps.close();
+73:       }
+74:         con.close();
+75:       catch (SQLException | ClassNotFoundException e) {
+76:         out.println("Exception caught: " + e.getMessage());
+77:       }
+
+
+An error occurred at line: [74] in the jsp file: [/checkInOut.jsp]
+Syntax error, insert "else Statement" to complete IfStatement
+71:             rs.close();
+72:             ps.close();
+73:       }
+74:         con.close();
+75:       catch (SQLException | ClassNotFoundException e) {
+76:         out.println("Exception caught: " + e.getMessage());
+77:       }
+
+
+An error occurred at line: [74] in the jsp file: [/checkInOut.jsp]
+Syntax error, insert "}" to complete Block
+71:             rs.close();
+72:             ps.close();
+73:       }
+74:         con.close();
+75:       catch (SQLException | ClassNotFoundException e) {
+76:         out.println("Exception caught: " + e.getMessage());
+77:       }
+
+
+An error occurred at line: [77] in the jsp file: [/checkInOut.jsp]
+Syntax error on token "}", { expected
+74:         con.close();
+75:       catch (SQLException | ClassNotFoundException e) {
+76:         out.println("Exception caught: " + e.getMessage());
+77:       }
+78:     }
+79:     
+80:     %>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [51] in the jsp file: [/checkInOut.jsp]
+Duplicate local variable BookingNumber
+48:     <%
+49:     if("POST".equalsIgnoreCase(request.getMethod())) {
+50:       String BookingNumber = request.getParameter("BN");
+51:       int BookingNumber = Integer.parseInt(BookingNumber)
+52:       String CheckIn = request.getParameter("CheckIn");
+53:       String CheckOut = request.getParameter("CheckOut") 
+54: 
+
+
+An error occurred at line: [51] in the jsp file: [/checkInOut.jsp]
+The method parseInt(String) in the type Integer is not applicable for the arguments (int)
+48:     <%
+49:     if("POST".equalsIgnoreCase(request.getMethod())) {
+50:       String BookingNumber = request.getParameter("BN");
+51:       int BookingNumber = Integer.parseInt(BookingNumber)
+52:       String CheckIn = request.getParameter("CheckIn");
+53:       String CheckOut = request.getParameter("CheckOut") 
+54: 
+
+
+An error occurred at line: [51] in the jsp file: [/checkInOut.jsp]
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+48:     <%
+49:     if("POST".equalsIgnoreCase(request.getMethod())) {
+50:       String BookingNumber = request.getParameter("BN");
+51:       int BookingNumber = Integer.parseInt(BookingNumber)
+52:       String CheckIn = request.getParameter("CheckIn");
+53:       String CheckOut = request.getParameter("CheckOut") 
+54: 
+
+
+An error occurred at line: [53] in the jsp file: [/checkInOut.jsp]
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+50:       String BookingNumber = request.getParameter("BN");
+51:       int BookingNumber = Integer.parseInt(BookingNumber)
+52:       String CheckIn = request.getParameter("CheckIn");
+53:       String CheckOut = request.getParameter("CheckOut") 
+54: 
+55:       String user = "root";
+56:       String pass = "Ken30526296@";
+
+
+An error occurred at line: [66] in the jsp file: [/checkInOut.jsp]
+Syntax error, insert ";" to complete Statement
+63:         
+64:       
+65:         PreparedStatement ps = con.prepareStatement(query);
+66:         ps.setString(1, CheckIn)
+67:         ps.setString(2, CheckOut)
+68:         ps.setInt(3, rn);
+69:         ResultSet rs = ps.executeQuery();
+
+
+An error occurred at line: [67] in the jsp file: [/checkInOut.jsp]
+Syntax error, insert ";" to complete Statement
+64:       
+65:         PreparedStatement ps = con.prepareStatement(query);
+66:         ps.setString(1, CheckIn)
+67:         ps.setString(2, CheckOut)
+68:         ps.setInt(3, rn);
+69:         ResultSet rs = ps.executeQuery();
+70: 
+
+
+An error occurred at line: [68] in the jsp file: [/checkInOut.jsp]
+rn cannot be resolved to a variable
+65:         PreparedStatement ps = con.prepareStatement(query);
+66:         ps.setString(1, CheckIn)
+67:         ps.setString(2, CheckOut)
+68:         ps.setInt(3, rn);
+69:         ResultSet rs = ps.executeQuery();
+70: 
+71:             rs.close();
+
+
+An error occurred at line: [73] in the jsp file: [/checkInOut.jsp]
+Syntax error, insert "Finally" to complete TryStatement
+70: 
+71:             rs.close();
+72:             ps.close();
+73:       }
+74:         con.close();
+75:       catch (SQLException | ClassNotFoundException e) {
+76:         out.println("Exception caught: " + e.getMessage());
+
+
+An error occurred at line: [74] in the jsp file: [/checkInOut.jsp]
+con cannot be resolved
+71:             rs.close();
+72:             ps.close();
+73:       }
+74:         con.close();
+75:       catch (SQLException | ClassNotFoundException e) {
+76:         out.println("Exception caught: " + e.getMessage());
+77:       }
+
+
+An error occurred at line: [74] in the jsp file: [/checkInOut.jsp]
+Syntax error, insert "}" to complete Block
+71:             rs.close();
+72:             ps.close();
+73:       }
+74:         con.close();
+75:       catch (SQLException | ClassNotFoundException e) {
+76:         out.println("Exception caught: " + e.getMessage());
+77:       }
+
+
+An error occurred at line: [74] in the jsp file: [/checkInOut.jsp]
+Syntax error, insert "else Statement" to complete IfStatement
+71:             rs.close();
+72:             ps.close();
+73:       }
+74:         con.close();
+75:       catch (SQLException | ClassNotFoundException e) {
+76:         out.println("Exception caught: " + e.getMessage());
+77:       }
+
+
+An error occurred at line: [74] in the jsp file: [/checkInOut.jsp]
+Syntax error, insert "}" to complete Block
+71:             rs.close();
+72:             ps.close();
+73:       }
+74:         con.close();
+75:       catch (SQLException | ClassNotFoundException e) {
+76:         out.println("Exception caught: " + e.getMessage());
+77:       }
+
+
+An error occurred at line: [77] in the jsp file: [/checkInOut.jsp]
+Syntax error on token "}", { expected
+74:         con.close();
+75:       catch (SQLException | ClassNotFoundException e) {
+76:         out.println("Exception caught: " + e.getMessage());
+77:       }
+78:     }
+79:     
+80:     %>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+30-Nov-2023 16:56:05.486 SEVERE [http-nio-8080-exec-12] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [51] in the jsp file: [/checkInOut.jsp]
+Duplicate local variable BookingNumber
+48:     <%
+49:     if("POST".equalsIgnoreCase(request.getMethod())) {
+50:       String BookingNumber = request.getParameter("BN");
+51:       int BookingNumber = Integer.parseInt(BookingNumber);
+52:       String CheckIn = request.getParameter("CheckIn");
+53:       String CheckOut = request.getParameter("CheckOut") 
+54: 
+
+
+An error occurred at line: [51] in the jsp file: [/checkInOut.jsp]
+The method parseInt(String) in the type Integer is not applicable for the arguments (int)
+48:     <%
+49:     if("POST".equalsIgnoreCase(request.getMethod())) {
+50:       String BookingNumber = request.getParameter("BN");
+51:       int BookingNumber = Integer.parseInt(BookingNumber);
+52:       String CheckIn = request.getParameter("CheckIn");
+53:       String CheckOut = request.getParameter("CheckOut") 
+54: 
+
+
+An error occurred at line: [53] in the jsp file: [/checkInOut.jsp]
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+50:       String BookingNumber = request.getParameter("BN");
+51:       int BookingNumber = Integer.parseInt(BookingNumber);
+52:       String CheckIn = request.getParameter("CheckIn");
+53:       String CheckOut = request.getParameter("CheckOut") 
+54: 
+55:       String user = "root";
+56:       String pass = "Ken30526296@";
+
+
+An error occurred at line: [68] in the jsp file: [/checkInOut.jsp]
+rn cannot be resolved to a variable
+65:         PreparedStatement ps = con.prepareStatement(query);
+66:         ps.setString(1, CheckIn);
+67:         ps.setString(2, CheckOut);
+68:         ps.setInt(3, rn);
+69:         ResultSet rs = ps.executeQuery();
+70: 
+71:             rs.close();
+
+
+An error occurred at line: [73] in the jsp file: [/checkInOut.jsp]
+Syntax error, insert "Finally" to complete TryStatement
+70: 
+71:             rs.close();
+72:             ps.close();
+73:       }
+74:         con.close();
+75:       catch (SQLException | ClassNotFoundException e) {
+76:         out.println("Exception caught: " + e.getMessage());
+
+
+An error occurred at line: [74] in the jsp file: [/checkInOut.jsp]
+con cannot be resolved
+71:             rs.close();
+72:             ps.close();
+73:       }
+74:         con.close();
+75:       catch (SQLException | ClassNotFoundException e) {
+76:         out.println("Exception caught: " + e.getMessage());
+77:       }
+
+
+An error occurred at line: [74] in the jsp file: [/checkInOut.jsp]
+Syntax error, insert "}" to complete Block
+71:             rs.close();
+72:             ps.close();
+73:       }
+74:         con.close();
+75:       catch (SQLException | ClassNotFoundException e) {
+76:         out.println("Exception caught: " + e.getMessage());
+77:       }
+
+
+An error occurred at line: [74] in the jsp file: [/checkInOut.jsp]
+Syntax error, insert "else Statement" to complete IfStatement
+71:             rs.close();
+72:             ps.close();
+73:       }
+74:         con.close();
+75:       catch (SQLException | ClassNotFoundException e) {
+76:         out.println("Exception caught: " + e.getMessage());
+77:       }
+
+
+An error occurred at line: [74] in the jsp file: [/checkInOut.jsp]
+Syntax error, insert "}" to complete Block
+71:             rs.close();
+72:             ps.close();
+73:       }
+74:         con.close();
+75:       catch (SQLException | ClassNotFoundException e) {
+76:         out.println("Exception caught: " + e.getMessage());
+77:       }
+
+
+An error occurred at line: [77] in the jsp file: [/checkInOut.jsp]
+Syntax error on token "}", { expected
+74:         con.close();
+75:       catch (SQLException | ClassNotFoundException e) {
+76:         out.println("Exception caught: " + e.getMessage());
+77:       }
+78:     }
+79: 
+80:     %>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [51] in the jsp file: [/checkInOut.jsp]
+Duplicate local variable BookingNumber
+48:     <%
+49:     if("POST".equalsIgnoreCase(request.getMethod())) {
+50:       String BookingNumber = request.getParameter("BN");
+51:       int BookingNumber = Integer.parseInt(BookingNumber);
+52:       String CheckIn = request.getParameter("CheckIn");
+53:       String CheckOut = request.getParameter("CheckOut") 
+54: 
+
+
+An error occurred at line: [51] in the jsp file: [/checkInOut.jsp]
+The method parseInt(String) in the type Integer is not applicable for the arguments (int)
+48:     <%
+49:     if("POST".equalsIgnoreCase(request.getMethod())) {
+50:       String BookingNumber = request.getParameter("BN");
+51:       int BookingNumber = Integer.parseInt(BookingNumber);
+52:       String CheckIn = request.getParameter("CheckIn");
+53:       String CheckOut = request.getParameter("CheckOut") 
+54: 
+
+
+An error occurred at line: [53] in the jsp file: [/checkInOut.jsp]
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+50:       String BookingNumber = request.getParameter("BN");
+51:       int BookingNumber = Integer.parseInt(BookingNumber);
+52:       String CheckIn = request.getParameter("CheckIn");
+53:       String CheckOut = request.getParameter("CheckOut") 
+54: 
+55:       String user = "root";
+56:       String pass = "Ken30526296@";
+
+
+An error occurred at line: [68] in the jsp file: [/checkInOut.jsp]
+rn cannot be resolved to a variable
+65:         PreparedStatement ps = con.prepareStatement(query);
+66:         ps.setString(1, CheckIn);
+67:         ps.setString(2, CheckOut);
+68:         ps.setInt(3, rn);
+69:         ResultSet rs = ps.executeQuery();
+70: 
+71:             rs.close();
+
+
+An error occurred at line: [73] in the jsp file: [/checkInOut.jsp]
+Syntax error, insert "Finally" to complete TryStatement
+70: 
+71:             rs.close();
+72:             ps.close();
+73:       }
+74:         con.close();
+75:       catch (SQLException | ClassNotFoundException e) {
+76:         out.println("Exception caught: " + e.getMessage());
+
+
+An error occurred at line: [74] in the jsp file: [/checkInOut.jsp]
+con cannot be resolved
+71:             rs.close();
+72:             ps.close();
+73:       }
+74:         con.close();
+75:       catch (SQLException | ClassNotFoundException e) {
+76:         out.println("Exception caught: " + e.getMessage());
+77:       }
+
+
+An error occurred at line: [74] in the jsp file: [/checkInOut.jsp]
+Syntax error, insert "}" to complete Block
+71:             rs.close();
+72:             ps.close();
+73:       }
+74:         con.close();
+75:       catch (SQLException | ClassNotFoundException e) {
+76:         out.println("Exception caught: " + e.getMessage());
+77:       }
+
+
+An error occurred at line: [74] in the jsp file: [/checkInOut.jsp]
+Syntax error, insert "else Statement" to complete IfStatement
+71:             rs.close();
+72:             ps.close();
+73:       }
+74:         con.close();
+75:       catch (SQLException | ClassNotFoundException e) {
+76:         out.println("Exception caught: " + e.getMessage());
+77:       }
+
+
+An error occurred at line: [74] in the jsp file: [/checkInOut.jsp]
+Syntax error, insert "}" to complete Block
+71:             rs.close();
+72:             ps.close();
+73:       }
+74:         con.close();
+75:       catch (SQLException | ClassNotFoundException e) {
+76:         out.println("Exception caught: " + e.getMessage());
+77:       }
+
+
+An error occurred at line: [77] in the jsp file: [/checkInOut.jsp]
+Syntax error on token "}", { expected
+74:         con.close();
+75:       catch (SQLException | ClassNotFoundException e) {
+76:         out.println("Exception caught: " + e.getMessage());
+77:       }
+78:     }
+79: 
+80:     %>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+30-Nov-2023 16:57:42.888 SEVERE [http-nio-8080-exec-15] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [51] in the jsp file: [/checkInOut.jsp]
+Duplicate local variable BookingNumber
+48:     <%
+49:     if("POST".equalsIgnoreCase(request.getMethod())) {
+50:       String BookingNumber = request.getParameter("BN");
+51:       int BookingNumber = Integer.parseInt(BookingNumber);
+52:       String CheckIn = request.getParameter("CheckIn");
+53:       String CheckOut = request.getParameter("CheckOut"); 
+54: 
+
+
+An error occurred at line: [51] in the jsp file: [/checkInOut.jsp]
+The method parseInt(String) in the type Integer is not applicable for the arguments (int)
+48:     <%
+49:     if("POST".equalsIgnoreCase(request.getMethod())) {
+50:       String BookingNumber = request.getParameter("BN");
+51:       int BookingNumber = Integer.parseInt(BookingNumber);
+52:       String CheckIn = request.getParameter("CheckIn");
+53:       String CheckOut = request.getParameter("CheckOut"); 
+54: 
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [51] in the jsp file: [/checkInOut.jsp]
+Duplicate local variable BookingNumber
+48:     <%
+49:     if("POST".equalsIgnoreCase(request.getMethod())) {
+50:       String BookingNumber = request.getParameter("BN");
+51:       int BookingNumber = Integer.parseInt(BookingNumber);
+52:       String CheckIn = request.getParameter("CheckIn");
+53:       String CheckOut = request.getParameter("CheckOut"); 
+54: 
+
+
+An error occurred at line: [51] in the jsp file: [/checkInOut.jsp]
+The method parseInt(String) in the type Integer is not applicable for the arguments (int)
+48:     <%
+49:     if("POST".equalsIgnoreCase(request.getMethod())) {
+50:       String BookingNumber = request.getParameter("BN");
+51:       int BookingNumber = Integer.parseInt(BookingNumber);
+52:       String CheckIn = request.getParameter("CheckIn");
+53:       String CheckOut = request.getParameter("CheckOut"); 
+54: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+30-Nov-2023 16:58:31.212 SEVERE [http-nio-8080-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [An exception occurred processing [/checkInOut.jsp] at line [51]
+
+48:     <%
+49:     if("POST".equalsIgnoreCase(request.getMethod())) {
+50:       String BookingNumber = request.getParameter("BN");
+51:       int BookingN = Integer.parseInt(BookingNumber);
+52:       String CheckIn = request.getParameter("CheckIn");
+53:       String CheckOut = request.getParameter("CheckOut"); 
+54: 
+
+
+Stacktrace:] with root cause
+	java.lang.NumberFormatException: Cannot parse null string
+		at java.base/java.lang.Integer.parseInt(Integer.java:623)
+		at java.base/java.lang.Integer.parseInt(Integer.java:777)
+		at org.apache.jsp.checkInOut_jsp._jspService(checkInOut_jsp.java:200)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:465)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+30-Nov-2023 17:03:40.360 SEVERE [http-nio-8080-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [An exception occurred processing [/checkInOut.jsp] at line [51]
+
+48:     <%
+49:     if("POST".equalsIgnoreCase(request.getMethod())) {
+50:       String BookingNumber = request.getParameter("BN");
+51:       int BookingN = Integer.parseInt(BookingNumber);
+52:       String CheckIn = request.getParameter("CheckIn");
+53:       String CheckOut = request.getParameter("CheckOut"); 
+54: 
+
+
+Stacktrace:] with root cause
+	java.lang.NumberFormatException: Cannot parse null string
+		at java.base/java.lang.Integer.parseInt(Integer.java:623)
+		at java.base/java.lang.Integer.parseInt(Integer.java:777)
+		at org.apache.jsp.checkInOut_jsp._jspService(checkInOut_jsp.java:200)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:465)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+30-Nov-2023 17:05:05.055 SEVERE [http-nio-8080-exec-12] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [49] in the jsp file: [/checkInOut.jsp]
+Syntax error on token "&&", delete this token
+46:     <input type="submit" value="Submit" />
+47:     </form>
+48:     <%
+49:     if("POST".equalsIgnoreCase(request.getMethod()) & && BN != null && !BN.isEmpty()) {
+50:       String BookingNumber = request.getParameter("BN");
+51:       int BookingN = Integer.parseInt(BookingNumber);
+52:       String CheckIn = request.getParameter("CheckIn");
+
+
+An error occurred at line: [49] in the jsp file: [/checkInOut.jsp]
+BN cannot be resolved to a variable
+46:     <input type="submit" value="Submit" />
+47:     </form>
+48:     <%
+49:     if("POST".equalsIgnoreCase(request.getMethod()) & && BN != null && !BN.isEmpty()) {
+50:       String BookingNumber = request.getParameter("BN");
+51:       int BookingN = Integer.parseInt(BookingNumber);
+52:       String CheckIn = request.getParameter("CheckIn");
+
+
+An error occurred at line: [49] in the jsp file: [/checkInOut.jsp]
+BN cannot be resolved
+46:     <input type="submit" value="Submit" />
+47:     </form>
+48:     <%
+49:     if("POST".equalsIgnoreCase(request.getMethod()) & && BN != null && !BN.isEmpty()) {
+50:       String BookingNumber = request.getParameter("BN");
+51:       int BookingN = Integer.parseInt(BookingNumber);
+52:       String CheckIn = request.getParameter("CheckIn");
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [49] in the jsp file: [/checkInOut.jsp]
+Syntax error on token "&&", delete this token
+46:     <input type="submit" value="Submit" />
+47:     </form>
+48:     <%
+49:     if("POST".equalsIgnoreCase(request.getMethod()) & && BN != null && !BN.isEmpty()) {
+50:       String BookingNumber = request.getParameter("BN");
+51:       int BookingN = Integer.parseInt(BookingNumber);
+52:       String CheckIn = request.getParameter("CheckIn");
+
+
+An error occurred at line: [49] in the jsp file: [/checkInOut.jsp]
+BN cannot be resolved to a variable
+46:     <input type="submit" value="Submit" />
+47:     </form>
+48:     <%
+49:     if("POST".equalsIgnoreCase(request.getMethod()) & && BN != null && !BN.isEmpty()) {
+50:       String BookingNumber = request.getParameter("BN");
+51:       int BookingN = Integer.parseInt(BookingNumber);
+52:       String CheckIn = request.getParameter("CheckIn");
+
+
+An error occurred at line: [49] in the jsp file: [/checkInOut.jsp]
+BN cannot be resolved
+46:     <input type="submit" value="Submit" />
+47:     </form>
+48:     <%
+49:     if("POST".equalsIgnoreCase(request.getMethod()) & && BN != null && !BN.isEmpty()) {
+50:       String BookingNumber = request.getParameter("BN");
+51:       int BookingN = Integer.parseInt(BookingNumber);
+52:       String CheckIn = request.getParameter("CheckIn");
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+30-Nov-2023 17:05:38.037 SEVERE [http-nio-8080-exec-15] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [49] in the jsp file: [/checkInOut.jsp]
+BN cannot be resolved to a variable
+46:     <input type="submit" value="Submit" />
+47:     </form>
+48:     <%
+49:     if("POST".equalsIgnoreCase(request.getMethod()) && BN != null && !BN.isEmpty()) {
+50:       String BookingNumber = request.getParameter("BN");
+51:       int BookingN = Integer.parseInt(BookingNumber);
+52:       String CheckIn = request.getParameter("CheckIn");
+
+
+An error occurred at line: [49] in the jsp file: [/checkInOut.jsp]
+BN cannot be resolved
+46:     <input type="submit" value="Submit" />
+47:     </form>
+48:     <%
+49:     if("POST".equalsIgnoreCase(request.getMethod()) && BN != null && !BN.isEmpty()) {
+50:       String BookingNumber = request.getParameter("BN");
+51:       int BookingN = Integer.parseInt(BookingNumber);
+52:       String CheckIn = request.getParameter("CheckIn");
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [49] in the jsp file: [/checkInOut.jsp]
+BN cannot be resolved to a variable
+46:     <input type="submit" value="Submit" />
+47:     </form>
+48:     <%
+49:     if("POST".equalsIgnoreCase(request.getMethod()) && BN != null && !BN.isEmpty()) {
+50:       String BookingNumber = request.getParameter("BN");
+51:       int BookingN = Integer.parseInt(BookingNumber);
+52:       String CheckIn = request.getParameter("CheckIn");
+
+
+An error occurred at line: [49] in the jsp file: [/checkInOut.jsp]
+BN cannot be resolved
+46:     <input type="submit" value="Submit" />
+47:     </form>
+48:     <%
+49:     if("POST".equalsIgnoreCase(request.getMethod()) && BN != null && !BN.isEmpty()) {
+50:       String BookingNumber = request.getParameter("BN");
+51:       int BookingN = Integer.parseInt(BookingNumber);
+52:       String CheckIn = request.getParameter("CheckIn");
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+30-Nov-2023 17:07:14.044 SEVERE [http-nio-8080-exec-13] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [49] in the jsp file: [/checkInOut.jsp]
+BN cannot be resolved to a variable
+46:     <input type="submit" value="Submit" />
+47:     </form>
+48:     <%
+49:     if("POST".equalsIgnoreCase(request.getMethod()) && BN != null && !BN.isEmpty()) {
+50:       String BookingNumber = request.getParameter("BN");
+51:       int BookingN = Integer.parseInt(BookingNumber);
+52:       String CheckIn = request.getParameter("CheckIn");
+
+
+An error occurred at line: [49] in the jsp file: [/checkInOut.jsp]
+BN cannot be resolved
+46:     <input type="submit" value="Submit" />
+47:     </form>
+48:     <%
+49:     if("POST".equalsIgnoreCase(request.getMethod()) && BN != null && !BN.isEmpty()) {
+50:       String BookingNumber = request.getParameter("BN");
+51:       int BookingN = Integer.parseInt(BookingNumber);
+52:       String CheckIn = request.getParameter("CheckIn");
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [49] in the jsp file: [/checkInOut.jsp]
+BN cannot be resolved to a variable
+46:     <input type="submit" value="Submit" />
+47:     </form>
+48:     <%
+49:     if("POST".equalsIgnoreCase(request.getMethod()) && BN != null && !BN.isEmpty()) {
+50:       String BookingNumber = request.getParameter("BN");
+51:       int BookingN = Integer.parseInt(BookingNumber);
+52:       String CheckIn = request.getParameter("CheckIn");
+
+
+An error occurred at line: [49] in the jsp file: [/checkInOut.jsp]
+BN cannot be resolved
+46:     <input type="submit" value="Submit" />
+47:     </form>
+48:     <%
+49:     if("POST".equalsIgnoreCase(request.getMethod()) && BN != null && !BN.isEmpty()) {
+50:       String BookingNumber = request.getParameter("BN");
+51:       int BookingN = Integer.parseInt(BookingNumber);
+52:       String CheckIn = request.getParameter("CheckIn");
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+30-Nov-2023 17:24:25.977 SEVERE [http-nio-8080-exec-15] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [An exception occurred processing [/reservationInfo.jsp] at line [46]
+
+43:         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Project?autoReconnect=true&useSSL=false", user, pass);
+44:         
+45:         if ("Show by ReservationNumber".equalsIgnoreCase(buttonClicked) && reservationNumberInput != null && !reservationNumberInput.isEmpty()) {
+46:             int rn = Integer.parseInt(reservationNumberInput);
+47:             PreparedStatement ps = con.prepareStatement(query);
+48:             ps.setInt(1, rn);
+49:             ResultSet rs = ps.executeQuery();
+
+
+Stacktrace:] with root cause
+	java.lang.NumberFormatException: For input string: "e"
+		at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+		at java.base/java.lang.Integer.parseInt(Integer.java:661)
+		at java.base/java.lang.Integer.parseInt(Integer.java:777)
+		at org.apache.jsp.reservationInfo_jsp._jspService(reservationInfo_jsp.java:195)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:465)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+30-Nov-2023 17:24:58.838 SEVERE [http-nio-8080-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [49] in the jsp file: [/checkInOut.jsp]
+BN cannot be resolved to a variable
+46:     <input type="submit" value="Submit" />
+47:     </form>
+48:     <%
+49:     if("POST".equalsIgnoreCase(request.getMethod()) && BN != null && !BN.isEmpty()) {
+50:       String BookingNumber = request.getParameter("BN");
+51:       int BookingN = Integer.parseInt(BookingNumber);
+52:       String CheckIn = request.getParameter("CheckIn");
+
+
+An error occurred at line: [49] in the jsp file: [/checkInOut.jsp]
+BN cannot be resolved
+46:     <input type="submit" value="Submit" />
+47:     </form>
+48:     <%
+49:     if("POST".equalsIgnoreCase(request.getMethod()) && BN != null && !BN.isEmpty()) {
+50:       String BookingNumber = request.getParameter("BN");
+51:       int BookingN = Integer.parseInt(BookingNumber);
+52:       String CheckIn = request.getParameter("CheckIn");
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [49] in the jsp file: [/checkInOut.jsp]
+BN cannot be resolved to a variable
+46:     <input type="submit" value="Submit" />
+47:     </form>
+48:     <%
+49:     if("POST".equalsIgnoreCase(request.getMethod()) && BN != null && !BN.isEmpty()) {
+50:       String BookingNumber = request.getParameter("BN");
+51:       int BookingN = Integer.parseInt(BookingNumber);
+52:       String CheckIn = request.getParameter("CheckIn");
+
+
+An error occurred at line: [49] in the jsp file: [/checkInOut.jsp]
+BN cannot be resolved
+46:     <input type="submit" value="Submit" />
+47:     </form>
+48:     <%
+49:     if("POST".equalsIgnoreCase(request.getMethod()) && BN != null && !BN.isEmpty()) {
+50:       String BookingNumber = request.getParameter("BN");
+51:       int BookingN = Integer.parseInt(BookingNumber);
+52:       String CheckIn = request.getParameter("CheckIn");
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+30-Nov-2023 20:56:10.382 SEVERE [http-nio-8080-exec-15] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [An exception occurred processing [/checkInOut.jsp] at line [49]
+
+46:     <%
+47:     if("POST".equalsIgnoreCase(request.getMethod())) {
+48:       String BookingNumber = request.getParameter("BN");
+49:       int BookingN = Integer.parseInt(BookingNumber);
+50:       String CheckIn = request.getParameter("CheckIn");
+51:       String CheckOut = request.getParameter("CheckOut");
+52: 
+
+
+Stacktrace:] with root cause
+	java.lang.NumberFormatException: Cannot parse null string
+		at java.base/java.lang.Integer.parseInt(Integer.java:623)
+		at java.base/java.lang.Integer.parseInt(Integer.java:777)
+		at org.apache.jsp.checkInOut_jsp._jspService(checkInOut_jsp.java:200)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:465)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+30-Nov-2023 21:06:16.565 SEVERE [http-nio-8080-exec-12] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [66] in the jsp file: [/checkInOut.jsp]
+System.out cannot be resolved to a type
+63:         ps.setString(1, CheckIn);
+64:         ps.setString(2, CheckOut);
+65:         ps.setInt(3, BookingN);
+66:         System.out.println("BookingN: " + BookingN);
+67:         System.out.println("CheckIn: " + CheckIn);
+68:         System.out.println("CheckOut: " + CheckOut);
+69:         System.out.println("Query: " + query);
+
+
+An error occurred at line: [67] in the jsp file: [/checkInOut.jsp]
+System.out cannot be resolved to a type
+64:         ps.setString(2, CheckOut);
+65:         ps.setInt(3, BookingN);
+66:         System.out.println("BookingN: " + BookingN);
+67:         System.out.println("CheckIn: " + CheckIn);
+68:         System.out.println("CheckOut: " + CheckOut);
+69:         System.out.println("Query: " + query);
+70:         int rowsAffected = ps.executeUpdate();
+
+
+An error occurred at line: [68] in the jsp file: [/checkInOut.jsp]
+System.out cannot be resolved to a type
+65:         ps.setInt(3, BookingN);
+66:         System.out.println("BookingN: " + BookingN);
+67:         System.out.println("CheckIn: " + CheckIn);
+68:         System.out.println("CheckOut: " + CheckOut);
+69:         System.out.println("Query: " + query);
+70:         int rowsAffected = ps.executeUpdate();
+71: 
+
+
+An error occurred at line: [69] in the jsp file: [/checkInOut.jsp]
+System.out cannot be resolved to a type
+66:         System.out.println("BookingN: " + BookingN);
+67:         System.out.println("CheckIn: " + CheckIn);
+68:         System.out.println("CheckOut: " + CheckOut);
+69:         System.out.println("Query: " + query);
+70:         int rowsAffected = ps.executeUpdate();
+71: 
+72:         if (rowsAffected > 0) {
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [66] in the jsp file: [/checkInOut.jsp]
+System.out cannot be resolved to a type
+63:         ps.setString(1, CheckIn);
+64:         ps.setString(2, CheckOut);
+65:         ps.setInt(3, BookingN);
+66:         System.out.println("BookingN: " + BookingN);
+67:         System.out.println("CheckIn: " + CheckIn);
+68:         System.out.println("CheckOut: " + CheckOut);
+69:         System.out.println("Query: " + query);
+
+
+An error occurred at line: [67] in the jsp file: [/checkInOut.jsp]
+System.out cannot be resolved to a type
+64:         ps.setString(2, CheckOut);
+65:         ps.setInt(3, BookingN);
+66:         System.out.println("BookingN: " + BookingN);
+67:         System.out.println("CheckIn: " + CheckIn);
+68:         System.out.println("CheckOut: " + CheckOut);
+69:         System.out.println("Query: " + query);
+70:         int rowsAffected = ps.executeUpdate();
+
+
+An error occurred at line: [68] in the jsp file: [/checkInOut.jsp]
+System.out cannot be resolved to a type
+65:         ps.setInt(3, BookingN);
+66:         System.out.println("BookingN: " + BookingN);
+67:         System.out.println("CheckIn: " + CheckIn);
+68:         System.out.println("CheckOut: " + CheckOut);
+69:         System.out.println("Query: " + query);
+70:         int rowsAffected = ps.executeUpdate();
+71: 
+
+
+An error occurred at line: [69] in the jsp file: [/checkInOut.jsp]
+System.out cannot be resolved to a type
+66:         System.out.println("BookingN: " + BookingN);
+67:         System.out.println("CheckIn: " + CheckIn);
+68:         System.out.println("CheckOut: " + CheckOut);
+69:         System.out.println("Query: " + query);
+70:         int rowsAffected = ps.executeUpdate();
+71: 
+72:         if (rowsAffected > 0) {
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)

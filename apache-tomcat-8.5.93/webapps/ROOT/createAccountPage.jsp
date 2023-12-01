@@ -1,15 +1,33 @@
 <%@ page import="java.sql.*"%>
 <html>
-  <head>
-    <title>Create Employee Account</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-      <link rel="stylesheet" href="navbar.css"/>
-  </head>
+    <head>
+        <title>Create Employee Account</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <link rel="stylesheet" href="navbar.css"/>
+        <style>
+            .header-text{
+                background-color: lightblue;
+                font-size: 100px;
+                text-align: center;
+              }
+    
+            .hotel-location-text{
+                font-size: 24px;
+                text-align: start;
+                padding-bottom: 16px;
+            }
+            .table{
+                width: 100%;
+            }
+        </style>
+      </head>
+      <body>
+        <%@ include file="navbar.jspf" %>
+        <h1 class="header-text">Create Employee Account</h1>
   <body>
     <div class="page-wrap">
         <div class="content">
-        <h1>Create Employee Account</h1>
         <form method = "post">
         <table style="width: 50%">
 

@@ -5,10 +5,29 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="navbar.css"/>
+    <style>
+        .header-text{
+            background-color: lightblue;
+            font-size: 100px;
+            text-align: center;
+          }
+
+        .hotel-location-text{
+            font-size: 24px;
+            text-align: start;
+            padding-bottom: 16px;
+        }
+        .table{
+            width: 100%;
+        }
+    </style>
+  </head>
+  <body>
+    <%@ include file="navbar.jspf" %>
+    <h1 class="header-text">Create Reservation</h1>
   </head>
   <body>
     <div class="content">
-      <h1>Create Reservation</h1>
       <form method = "post">
         <table style="width: 50%">
             <tr>
@@ -28,17 +47,17 @@
 
             <tr>
                 <td>Start Date: (yyyy-mm-dd) </td>
-                <td><input type = "datetime-local" name = "startDate" required/></td>
+                <td><input type = "date" name = "startDate" required/></td>
             </tr>
 
             <tr>
                 <td>End Date: (yyyy-mm-dd)</td>
-                <td><input type = "datetime-local" name = "endDate" required/></td>
+                <td><input type = "date" name = "endDate" required/></td>
             </tr>
 
             <tr>
                 <td>Reservation Date: (yyyy-mm-dd)</td>
-                <td><input type = "datetime-local" name = "reserveDate" required/></td>
+                <td><input type = "date" name = "reserveDate" required/></td>
             </tr>
 
             <tr>
@@ -80,19 +99,19 @@
         if (startDateStr != null) {
             startDateStr = startDateStr.replace("T", " ");
         } else {
-            startDateStr = new SimpleDateFormat("yyyy-MM-dd HH:mm").format(new Date());
+            startDateStr = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
         }
 
         if (endDateStr != null) {
             endDateStr = endDateStr.replace("T", " ");
         } else {
-            endDateStr = new SimpleDateFormat("yyyy-MM-dd HH:mm").format(new Date());
+            endDateStr = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
         }
 
         if (reserveDateStr != null) {
             reserveDateStr = reserveDateStr.replace("T", " ");
         } else {
-            reserveDateStr = new SimpleDateFormat("yyyy-MM-dd HH:mm").format(new Date());
+            reserveDateStr = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
         }
 
         String specialRequest = request.getParameter("specialRequest");

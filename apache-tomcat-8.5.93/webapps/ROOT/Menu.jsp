@@ -374,6 +374,9 @@
           <a class="button is-light" href="makeReservation.jsp" style="margin-top: 2px;">
             Create Reservation
           </a>
+          <a class="button is-light" href="checkInOut.jsp" style="margin-top: 2px;">
+            Check In & Check Out
+          </a>
         </div>
 
         <div class="manage-reservation">
@@ -424,13 +427,15 @@
           </a>
         </div>
        <% 
-      }else if(!roleN.equals("3")) {
+      }else if(roleN.equals("5")) {
         %>
-        <h1>Employee Menu</h1>
-          <form action="shiftPage.jsp" method="post">
-          <label for="1. See my Shift">1. See my Shift</label>
-          <button type="submit" name="submitBtn" value="text1">Go</button><br>
-          </form>
+        <div class="manage-reservation">
+          <h2 class="reservation-title">Hotels</h2>
+          <hr class="solid" style="border-top: 1px solid; opacity: 0.2;">
+          <a class="button is-light" href="roomResponsibility.jsp" style="margin-top: 2px; margin-left: 24px;">
+            Assigned Room
+          </a>
+        </div>
           <%
         }
       {      
