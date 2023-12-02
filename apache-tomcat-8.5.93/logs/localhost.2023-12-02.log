@@ -1,0 +1,227 @@
+02-Dec-2023 10:19:00.454 SEVERE [http-nio-8080-exec-15] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [250] in the jsp file: [/editReservation.jsp]
+preparedStatement cannot be resolved to a variable
+247:             ps3.close();
+248: 
+249:             String changeRoom = "UPDATE Project.Room SET Availability = 'Yes' WHERE RoomNumber = ?";
+250:             preparedStatement = con.prepareStatement(changeRoom);
+251:             preparedStatement.setString(1, rNumber);
+252:             preparedStatement.executeUpdate();
+253: 
+
+
+An error occurred at line: [251] in the jsp file: [/editReservation.jsp]
+preparedStatement cannot be resolved
+248: 
+249:             String changeRoom = "UPDATE Project.Room SET Availability = 'Yes' WHERE RoomNumber = ?";
+250:             preparedStatement = con.prepareStatement(changeRoom);
+251:             preparedStatement.setString(1, rNumber);
+252:             preparedStatement.executeUpdate();
+253: 
+254:             String query4 = "SELECT * FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.BookingNumber = ?";
+
+
+An error occurred at line: [252] in the jsp file: [/editReservation.jsp]
+preparedStatement cannot be resolved
+249:             String changeRoom = "UPDATE Project.Room SET Availability = 'Yes' WHERE RoomNumber = ?";
+250:             preparedStatement = con.prepareStatement(changeRoom);
+251:             preparedStatement.setString(1, rNumber);
+252:             preparedStatement.executeUpdate();
+253: 
+254:             String query4 = "SELECT * FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.BookingNumber = ?";
+255:             PreparedStatement ps4 = con.prepareStatement(query4);
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [250] in the jsp file: [/editReservation.jsp]
+preparedStatement cannot be resolved to a variable
+247:             ps3.close();
+248: 
+249:             String changeRoom = "UPDATE Project.Room SET Availability = 'Yes' WHERE RoomNumber = ?";
+250:             preparedStatement = con.prepareStatement(changeRoom);
+251:             preparedStatement.setString(1, rNumber);
+252:             preparedStatement.executeUpdate();
+253: 
+
+
+An error occurred at line: [251] in the jsp file: [/editReservation.jsp]
+preparedStatement cannot be resolved
+248: 
+249:             String changeRoom = "UPDATE Project.Room SET Availability = 'Yes' WHERE RoomNumber = ?";
+250:             preparedStatement = con.prepareStatement(changeRoom);
+251:             preparedStatement.setString(1, rNumber);
+252:             preparedStatement.executeUpdate();
+253: 
+254:             String query4 = "SELECT * FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.BookingNumber = ?";
+
+
+An error occurred at line: [252] in the jsp file: [/editReservation.jsp]
+preparedStatement cannot be resolved
+249:             String changeRoom = "UPDATE Project.Room SET Availability = 'Yes' WHERE RoomNumber = ?";
+250:             preparedStatement = con.prepareStatement(changeRoom);
+251:             preparedStatement.setString(1, rNumber);
+252:             preparedStatement.executeUpdate();
+253: 
+254:             String query4 = "SELECT * FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.BookingNumber = ?";
+255:             PreparedStatement ps4 = con.prepareStatement(query4);
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+02-Dec-2023 10:20:11.564 SEVERE [http-nio-8080-exec-13] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [250] in the jsp file: [/editReservation.jsp]
+preparedStatement cannot be resolved to a type
+247:             ps3.close();
+248: 
+249:             String changeRoom = "UPDATE Project.Room SET Availability = 'Yes' WHERE RoomNumber = ?";
+250:             preparedStatement psc = con.prepareStatement(changeRoom);
+251:             psc.setString(1, rNumber);
+252:             psc.executeUpdate();
+253:             psc.close();
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [250] in the jsp file: [/editReservation.jsp]
+preparedStatement cannot be resolved to a type
+247:             ps3.close();
+248: 
+249:             String changeRoom = "UPDATE Project.Room SET Availability = 'Yes' WHERE RoomNumber = ?";
+250:             preparedStatement psc = con.prepareStatement(changeRoom);
+251:             psc.setString(1, rNumber);
+252:             psc.executeUpdate();
+253:             psc.close();
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+02-Dec-2023 10:30:58.585 SEVERE [http-nio-8080-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [131] in the jsp file: [/editReservation.jsp]
+Invalid character constant
+128:         ps0.setString(1, rNumber);
+129:         ResultSet rs = ps0.executeQuery();
+130: 
+131:         if (rs.getString("Availability").equals('No')) {
+132:             out.println("<h2 class='error-message'>Room is not available: " + rs.getString("RoomNumber") + "</h2>");
+133:         }
+134:             String query = "SELECT * FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.BookingNumber = ?";
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [131] in the jsp file: [/editReservation.jsp]
+Invalid character constant
+128:         ps0.setString(1, rNumber);
+129:         ResultSet rs = ps0.executeQuery();
+130: 
+131:         if (rs.getString("Availability").equals('No')) {
+132:             out.println("<h2 class='error-message'>Room is not available: " + rs.getString("RoomNumber") + "</h2>");
+133:         }
+134:             String query = "SELECT * FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.BookingNumber = ?";
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)

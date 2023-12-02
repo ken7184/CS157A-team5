@@ -122,17 +122,15 @@ if ("POST".equalsIgnoreCase(request.getMethod())) {
         Class.forName("com.mysql.cj.jdbc.Driver");
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Project?autoReconnect=true&useSSL=false", user, pass);
 
-        String checkQuery = "SELECT Availability FROM Project.Room WHERE RoomNumber = ?";
+        String checkQuery = "SELECT s.RoomNumber FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.EndDate >= ?  AND s.RoomNumber = ?";
         PreparedStatement ps0 = con.prepareStatement(checkQuery);
 
-        ps0.setString(1, rNumber);
+        ps0.setTimestamp(1, new Timestamp(startDate.getTime()));
+        ps0.setString(2, rNumber);
         ResultSet rs = ps0.executeQuery();
 
         if (rs.next()) {
-            String availability = rs.getString("Availability");
-            if ("No".equals(availability)) {
-                out.println("<h2 class='error-message'>Room is not available: " + rs.getString("RoomNumber") + "</h2>");
-            }
+            out.println("<h2 class='error-message'>Room is not available: " + rs.getString("RoomNumber") + "</h2>");
         }
         else {
             String query = "SELECT * FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.BookingNumber = ?";
@@ -245,6 +243,12 @@ if ("POST".equalsIgnoreCase(request.getMethod())) {
             ps3.setInt(1, BookingN);
             ps3.executeUpdate();
             ps3.close();
+
+            String changeRoom = "UPDATE Project.Room SET Availability = 'Yes' WHERE RoomNumber = ?";
+            PreparedStatement psc = con.prepareStatement(changeRoom);
+            psc.setString(1, rNumber);
+            psc.executeUpdate();
+            psc.close();
 
             String query4 = "SELECT * FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.BookingNumber = ?";
             PreparedStatement ps4 = con.prepareStatement(query4);

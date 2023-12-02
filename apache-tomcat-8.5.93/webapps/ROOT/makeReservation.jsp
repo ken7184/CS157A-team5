@@ -155,6 +155,11 @@
                     preparedStatement.setString(3, rNumber);
                     preparedStatement.executeUpdate();
 
+                    String sql3 = "UPDATE Project.Room SET Availability = 'No' WHERE RoomNumber = ?";
+                    preparedStatement = con.prepareStatement(sql3);
+                    preparedStatement.setString(1, rNumber);
+                    preparedStatement.executeUpdate();
+
                     con.close();
                     out.println("New Reservation is successfully saved.");
                 } catch (Exception e) {
