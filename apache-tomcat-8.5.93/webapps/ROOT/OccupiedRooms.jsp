@@ -107,6 +107,62 @@
             </div>
         </div>
 
+        <div class="dropdown" style="margin-left: 48px; margin-bottom: 16px;">
+            <div class="dropdown-trigger">
+            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                <%
+                    hotel = request.getParameter("hotel");
+                    type = request.getParameter("type");
+                    String sort = request.getParameter("sort");
+                    if(sort != null && !sort.isEmpty()) {
+                        out.println("<span>" + sort + "</span>");
+                    } else {
+                        out.println("<span>Sort By:</span>");
+                    }
+                %>
+                <span class="icon is-small">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                </span>
+            </button>
+            </div>
+            <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                <div class="dropdown-content">
+                    <%
+                        String sortType = "Low-High";
+                        if (hotel != null && !hotel.trim().isEmpty() && type != null && !type.trim().isEmpty()) {
+                            out.println("<a class='dropdown-item button is-white' href='OccupiedRooms.jsp?hotel=" + hotel + "&type=" + type + "&sort=" + sortType + "' >Low to High</a>");
+                        }
+                        else if (hotel != null && !hotel.trim().isEmpty() && (type == null || type.trim().isEmpty())){
+                            out.println("<a class='dropdown-item button is-white' href='OccupiedRooms.jsp?hotel=" + hotel + "&sort=" + sortType + "' >Low to High</a>");
+                        }
+                        else if ((hotel == null || hotel.trim().isEmpty()) && type != null && !type.trim().isEmpty()){
+                            out.println("<a class='dropdown-item button is-white' href='OccupiedRooms.jsp?type=" + type + "&sort=" + sortType + "' >Low to High</a>");
+                        }
+                        else{
+                            out.println("<a class='dropdown-item button is-white' href='OccupiedRooms.jsp?sort=" + sortType + "' >Low to High</a>");
+                        }
+                    %>
+                </div>
+                <div class="dropdown-content">
+                    <%
+                        String sortType2 = "High-Low";
+                        if (hotel != null && !hotel.trim().isEmpty() && type != null && !type.trim().isEmpty()) {
+                            out.println("<a class='dropdown-item button is-white' href='OccupiedRooms.jsp?hotel=" + hotel + "&type=" + type + "&sort=" + sortType2 + "' >HightoLow</a>");
+                        }
+                        else if (hotel != null && !hotel.trim().isEmpty() && (type == null || type.trim().isEmpty())){
+                            out.println("<a class='dropdown-item button is-white' href='OccupiedRooms.jsp?hotel=" + hotel + "&sort=" + sortType2 + "' >High to Low</a>");
+                        }
+                        else if ((hotel == null || hotel.trim().isEmpty()) && type != null && !type.trim().isEmpty()){
+                            out.println("<a class='dropdown-item button is-white' href='OccupiedRooms.jsp?type=" + type + "&sort=" + sortType2 + "' >High to Low</a>");
+                        }
+                        else{
+                            out.println("<a class='dropdown-item button is-white' href='OccupiedRooms.jsp?sort=" + sortType2 + "' >High to Low</a>");
+                        }
+                    %>
+                </div>
+            </div>
+        </div>
+
         <script>
             document.addEventListener('DOMContentLoaded', () => {
                 // Get all "dropdown-trigger" elements
@@ -124,6 +180,7 @@
         <%
             hotel = request.getParameter("hotel");
             type = request.getParameter("type");
+            sort = request.getParameter("sort");
             String roomQuery = "SELECT * FROM Room WHERE Availability='No'";
             int index = 1;
         
@@ -133,6 +190,15 @@
             if (type != null && !type.trim().isEmpty()) {
                 roomQuery += " AND TypeName = ?";
             }
+
+            if ("Low-High".equals(sort)){
+                roomQuery += " ORDER BY Price ASC";
+            }
+            
+            if ("High-Low".equals(sort)){
+                roomQuery += " ORDER BY Price DESC";
+            }
+
             ps = con.prepareStatement(roomQuery);
 
             if (hotel != null && !hotel.trim().isEmpty()) {
