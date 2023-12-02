@@ -57,7 +57,7 @@
       if (userName != null && userPassword != null) {
         String user;
         user = "root";
-        String password = "Ken30526296@";
+        String password = "password";
         try {
           java.sql.Connection con; 
           Class.forName("com.mysql.jdbc.Driver");

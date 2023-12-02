@@ -29,7 +29,7 @@
     String reservationNumberInput = request.getParameter("RN");
 
     String user = "root";
-    String pass = "Ken30526296@";
+    String pass = "password";
 
     try {
         java.sql.Connection con;
