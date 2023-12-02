@@ -374,7 +374,7 @@
           <a class="button is-light" href="makeReservation.jsp" style="margin-top: 2px;">
             Create Reservation
           </a>
-          <a class="button is-light" href="checkInOut.jsp" style="margin-top: 2px;">
+          <a class="button is-light" href="checkInOut.jsp" style="margin-top: 2px; margin-left: 24px;">
             Check In & Check Out
           </a>
         </div>
@@ -384,6 +384,9 @@
           <hr class="solid" style="border-top: 1px solid; opacity: 0.2;">
           <a class="button is-light" href="AvailableRooms.jsp" style="margin-top: 2px;">
             Available Rooms
+          </a>
+          <a class="button is-light" href="OccupiedRooms.jsp" style="margin-top: 2px; margin-left: 24px;">
+            Occupied Rooms
           </a>
         </div>
 
@@ -415,7 +418,7 @@
             <a class="button is-light" href="managerShift.jsp" style="margin-top: 2px;">
               Employee Shift
             </a>
-            <a class="button is-light" href="makeShift.jsp" style="margin-top: 2px;">
+            <a class="button is-light" href="makeShift.jsp" style="margin-top: 2px; margin-left: 24px;">
               Create Shift
             </a>
           </div>
