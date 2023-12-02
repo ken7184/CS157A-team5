@@ -97,3 +97,14 @@ CREATE TABLE `Stay` (
   `CheckOut` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`BookingNumber`,`HotelName`,`HotelLocation`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `roomInven` (
+  `Id` int NOT NULL AUTO_INCREMENT,
+  `HotelLocation` varchar(45) NOT NULL,
+  `HotelName` varchar(45) NOT NULL,
+  `roomNumber` varchar(45) NOT NULL,
+  `Juice` int,
+  `AppleJuice` int,
+  `Beer` int,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
