@@ -1,4 +1,4 @@
-<%@ page import="java.sql.*"%>
+<%@ page import="java.sql.*, java.text.SimpleDateFormat, java.util.Date"%>
 <%@ page import="java.io.PrintWriter"%>
 <html>
 <head>
@@ -83,6 +83,30 @@ if ("POST".equalsIgnoreCase(request.getMethod())) {
     String Nrooms = request.getParameter("Nrooms");
     String Nguests = request.getParameter("Nguests");
 
+    String startDateStr = request.getParameter("startDate");
+    String endDateStr = request.getParameter("endDate");
+
+    if (startDateStr != null) {
+        startDateStr = startDateStr.replace("T", " ");
+    } else {
+        startDateStr = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+    }
+
+    if (endDateStr != null) {
+        endDateStr = endDateStr.replace("T", " ");
+    } else {
+        endDateStr = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+    }
+
+    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+    Date startDate = dateFormat.parse(startDateStr);
+    Date endDate = dateFormat.parse(endDateStr);
+
+
+    String specialRequest = request.getParameter("specialRequest");
+    String hotelName = request.getParameter("hotelName");
+    String hotelLocation = request.getParameter("hotelLocation");
+    String rNumber = request.getParameter("roomNumber");
 
     String user = "root";
     String pass = "Ken30526296@";
@@ -94,23 +118,167 @@ if ("POST".equalsIgnoreCase(request.getMethod())) {
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Project?autoReconnect=true&useSSL=false", user, pass);
         PreparedStatement ps = con.prepareStatement(query);
         ps.setInt(1, BookingN);
-
-        int rowsAffected = ps.executeUpdate();
-
-        if (rowsAffected > 0) {
-            // Update successful
-            out.println("Update successful");
-        } else {
-            // No records were updated
-            out.println("No records were updated");
-        }
-        ps.close();
-        con.close();
-    } catch (SQLException | ClassNotFoundException e) {
-        e.printStackTrace();
-        out.println("Exception caught: " + e.getMessage());
-    }
-}
+        ResultSet rs = ps.executeQuery();
 %>
+        <table class = 'table'>
+            <thead>
+              <tr>
+                <td>Booking Number</td>
+                <td>Guest Id</td>
+                <td>Number of Rooms</td>
+                <td>Number of Guests</td>
+                <td>Start Date</td>
+                <td>End Date</td>
+                <td>Reservation Date</td>
+                <td>Booking Site</td>
+                <td>Special Request</td>
+                <td>Hotel Name</td>
+                <td>Hotel Location</td>
+                <td>Room Number</td>
+                <td>Check In</td>
+                <td>Check Out</td>
+              </tr>
+            </thead>
+            <tbody>
+              <% while(rs.next()) { %>
+              <tr>
+                <td><%= rs.getInt("BookingNumber") %></td>
+                <td><%= rs.getInt("GuestID") %></td>
+                <td><%= rs.getString("NumberOfRooms") %></td>
+                <td><%= rs.getString("NumberOfGuests") %></td>
+                <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("StartDate")) %></td>
+                <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("EndDate")) %></td>
+                <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("ReservationDate"))%></td>
+                <td><%= rs.getString("BookingSite") %></td>
+                <td><%= rs.getString("SpecialRequest") %></td>
+                <td><%= rs.getString("HotelName") %></td>
+                <td><%= rs.getString("HotelLocation") %></td>
+                <td><%= rs.getString("RoomNumber") %></td>
+                <td><%= rs.getString("CheckIn") %></td>
+                <td><%= rs.getString("CheckOut") %></td>
+              </tr>
+              <% } %>
+            </tbody>
+        </table>
+<%      ps.close();
+
+        String query2 = "UPDATE Project.ReservationInfo SET";
+
+        if (!Nrooms.isEmpty()) {
+            query2 += " NumberOfRooms='" + Nrooms + "'";
+        }
+    
+        if (!Nguests.isEmpty()) {
+            if (!Nrooms.isEmpty()) {
+                query2 += ",";
+            }
+            query2 += " NumberOfGuests='" + Nguests + "'";
+        }
+
+        if (!startDateStr.isEmpty()) {
+            if (!Nrooms.isEmpty() || !Nguests.isEmpty()) {
+                query2 += ",";
+            }
+            query2 += " StartDate='" + new Timestamp(startDate.getTime()) + "'";
+        }
+
+        if (!endDateStr.isEmpty()) {
+            if (!Nrooms.isEmpty() || !Nguests.isEmpty() || !startDateStr.isEmpty()) {
+                query2 += ",";
+            }
+            query2 += " EndDate='" + new Timestamp(endDate.getTime()) + "'";
+        }
+
+        if (!specialRequest.isEmpty()) {
+            if (!Nrooms.isEmpty() || !Nguests.isEmpty() || !startDateStr.isEmpty() || !endDateStr.isEmpty()) {
+                query2 += ",";
+            }
+            query2 += " SpecialRequest='" + specialRequest + "'";
+        }
+
+        query2 += " WHERE BookingNumber=?";
+        PreparedStatement ps2 = con.prepareStatement(query2);
+        ps2.setInt(1, BookingN);
+        ps2.executeUpdate();
+
+        String query3 = "UPDATE Project.Stay SET";
+
+        if (!hotelName.isEmpty()) {
+            query3 += " HotelName='" + hotelName + "'";
+        }
+
+        if (!hotelLocation.isEmpty()) {
+            if (!hotelName.isEmpty()) {
+                query3 += ",";
+            }
+            query3 += " HotelLocation='" + hotelLocation + "'";
+        }
+
+        if (!rNumber.isEmpty()) {
+            if (!hotelName.isEmpty() || !hotelLocation.isEmpty()) {
+                query3 += ",";
+            }
+            query3 += " RoomNumber='" + rNumber + "'";
+        }
+        query3 += " WHERE BookingNumber=?";
+        PreparedStatement ps3 = con.prepareStatement(query3);
+        ps3.setInt(1, BookingN);
+        ps3.executeUpdate();
+        ps3.close();
+
+        String query4 = "SELECT * FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.BookingNumber = ?";
+        PreparedStatement ps4 = con.prepareStatement(query4);
+        ps4.setInt(1, BookingN);
+        rs = ps4.executeQuery();
+%>
+<table class = 'table'>
+    <thead>
+      <tr>
+        <td>Booking Number</td>
+        <td>Guest Id</td>
+        <td>Number of Rooms</td>
+        <td>Number of Guests</td>
+        <td>Start Date</td>
+        <td>End Date</td>
+        <td>Reservation Date</td>
+        <td>Booking Site</td>
+        <td>Special Request</td>
+        <td>Hotel Name</td>
+        <td>Hotel Location</td>
+        <td>Room Number</td>
+        <td>Check In</td>
+        <td>Check Out</td>
+      </tr>
+    </thead>
+    <tbody>
+      <% while(rs.next()) { %>
+      <tr>
+        <td><%= rs.getInt("BookingNumber") %></td>
+        <td><%= rs.getInt("GuestID") %></td>
+        <td><%= rs.getString("NumberOfRooms") %></td>
+        <td><%= rs.getString("NumberOfGuests") %></td>
+        <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("StartDate")) %></td>
+        <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("EndDate")) %></td>
+        <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("ReservationDate"))%></td>
+        <td><%= rs.getString("BookingSite") %></td>
+        <td><%= rs.getString("SpecialRequest") %></td>
+        <td><%= rs.getString("HotelName") %></td>
+        <td><%= rs.getString("HotelLocation") %></td>
+        <td><%= rs.getString("RoomNumber") %></td>
+        <td><%= rs.getString("CheckIn") %></td>
+        <td><%= rs.getString("CheckOut") %></td>
+      </tr>
+      <% } %>
+    </tbody>
+</table>
+<%
+        ps4.close();
+        rs.close();
+        con.close();
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+    %>
 </body>
 </html>
