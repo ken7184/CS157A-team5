@@ -28,7 +28,7 @@
 <%@ include file="navbar.jspf" %>
 <h1 class="header-text">Check In & Out</h1>
 <form method="post">
-    <table style="width: 50%">
+    <table class = 'table'>
         <tr>
             <td>Booking Number: </td>
             <td><input type="text" name="BN" required/></td>
