@@ -146,9 +146,9 @@ if ("POST".equalsIgnoreCase(request.getMethod())) {
                 <td><%= rs.getInt("GuestID") %></td>
                 <td><%= rs.getString("NumberOfRooms") %></td>
                 <td><%= rs.getString("NumberOfGuests") %></td>
-                <td><%= new Date(rs.getTimestamp("StartDate").getTime()) %></td>
-                <td><%= new Date(rs.getTimestamp("EndDate").getTime()) %></td>
-                <td><%= new Date(rs.getTimestamp("ReservationDate").getTime()) %></td>
+                <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("StartDate")) %></td>
+                <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("EndDate")) %></td>
+                <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("ReservationDate"))%></td>
                 <td><%= rs.getString("BookingSite") %></td>
                 <td><%= rs.getString("SpecialRequest") %></td>
                 <td><%= rs.getString("HotelName") %></td>
@@ -257,9 +257,9 @@ if ("POST".equalsIgnoreCase(request.getMethod())) {
         <td><%= rs.getInt("GuestID") %></td>
         <td><%= rs.getString("NumberOfRooms") %></td>
         <td><%= rs.getString("NumberOfGuests") %></td>
-        <td><%= new Date(rs.getTimestamp("StartDate").getTime()) %></td>
-        <td><%= new Date(rs.getTimestamp("EndDate").getTime()) %></td>
-        <td><%= new Date(rs.getTimestamp("ReservationDate").getTime()) %></td>
+        <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("StartDate")) %></td>
+        <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("EndDate")) %></td>
+        <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("ReservationDate"))%></td>
         <td><%= rs.getString("BookingSite") %></td>
         <td><%= rs.getString("SpecialRequest") %></td>
         <td><%= rs.getString("HotelName") %></td>

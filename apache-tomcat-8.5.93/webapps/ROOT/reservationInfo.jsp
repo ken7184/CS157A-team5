@@ -41,7 +41,7 @@
     String reservationNumberInput = request.getParameter("RN");
 
     String user = "root";
-    String pass = "password";
+    String pass = "Ken30526296@";
     
     try {
         java.sql.Connection con;
@@ -91,7 +91,7 @@
                   <td><%= rs.getInt("GuestID") %></td>
                   <td><%= rs.getString("NumberOfRooms") %></td>
                   <td><%= rs.getString("NumberOfGuests") %></td>
-                  <td><%= new Date(rs.getTimestamp("StartDate").getTime()) %></td>
+                  <td><%= new Date(rs.getString("StartDate").getTime()) %></td>
                   <td><%= new Date(rs.getTimestamp("EndDate").getTime()) %></td>
                   <td><%= new Date(rs.getTimestamp("ReservationDate").getTime()) %></td>
                   <td><%= rs.getString("BookingSite") %></td>
