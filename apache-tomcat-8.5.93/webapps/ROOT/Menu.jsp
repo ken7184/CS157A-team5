@@ -377,6 +377,9 @@
           <a class="button is-light" href="checkInOut.jsp" style="margin-top: 2px; margin-left: 24px;">
             Check In & Check Out
           </a>
+          <a class="button is-light" href="editReservation.jsp" style="margin-top: 2px; margin-left: 24px;">
+            Edit Reservation
+          </a>
         </div>
 
         <div class="manage-reservation">
