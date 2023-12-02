@@ -20,6 +20,11 @@
             margin-left: 48px;
             color: red;
           }
+
+          .delete-message{
+            font-size: 16px;
+            margin-left: 48px;
+          }
       </style>
     </head>
     <body>
@@ -41,7 +46,7 @@
     String reservationNumberInput = request.getParameter("RN");
 
     String user = "root";
-    String pass = "Ken30526296@";
+    String pass = "password";
     
     try {
         java.sql.Connection con;
@@ -61,13 +66,31 @@
             ps = con.prepareStatement(query);
         }   
 
+        String bookingNumber = request.getParameter("deleteBookingNumber");
+
+          if (bookingNumber != null && !bookingNumber.isEmpty()) {
+            
+            String deleteQuery = "DELETE FROM Project.ReservationInfo WHERE BookingNumber = ?";
+            PreparedStatement psDelete = con.prepareStatement(deleteQuery);
+            psDelete.setInt(1, Integer.parseInt(bookingNumber));
+            int affectedRows = psDelete.executeUpdate();
+    
+            if (affectedRows > 0) {
+              // Record deleted successfully
+              out.println("<h2 class='delete-message'>Record deleted successfully.</h2>");
+            } else {
+              // Record not found or error in deletion
+              out.println("<h2 class='error-message'>Error: Unable to delete the record.</h2>");
+            }
+        }
+
         ResultSet rs = ps.executeQuery();
 
         if (!rs.isBeforeFirst()) { // Check if ResultSet is empty
           out.println("<h2 class='error-message'>No data found for reservation number: " + reservationNumberInput + "</h2>");
         } else {
         %>
-          <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth" style="width: 90%; margin-left: 48px; font-size: 14px;">
+          <table class="table is-bordered is-striped is-narrow is-hoverable" style="width: 95%; margin: 0px 48px; font-size: 14px;">
             <thead>
                 <th>Booking Number</th>
                 <th>Guest Id</th>
@@ -83,6 +106,7 @@
                 <th>Room Number</th>
                 <th>Check In</th>
                 <th>Check Out</th>
+                <th>Delete</th>
             </thead>
             <tbody>
             <% while(rs.next()) { %>
@@ -101,6 +125,16 @@
                   <td><%= rs.getString("RoomNumber") %></td>
                   <td><%= rs.getString("CheckIn") %></td>
                   <td><%= rs.getString("CheckOut") %></td>
+                  <td>
+                    <form method="post">
+                      <input type="hidden" name="deleteBookingNumber" value="<%= rs.getInt("BookingNumber") %>" />
+                      <button type="submit" class="button is-danger is-outlined">
+                          <span class="icon is-small">
+                              <i class="fas fa-times"></i>
+                          </span>
+                      </button>
+                    </form>
+                  </td>
                 </tr>
                 <% } %>
               </tbody>
