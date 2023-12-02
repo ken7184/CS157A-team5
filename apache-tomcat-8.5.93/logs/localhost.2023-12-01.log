@@ -5643,3 +5643,2419 @@ Stacktrace:
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 		at java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2023 21:24:25.523 SEVERE [http-nio-8080-exec-12] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [94] in the jsp file: [/reservationInfo.jsp]
+The method getTime() is undefined for the type String
+91:                   <td><%= rs.getInt("GuestID") %></td>
+92:                   <td><%= rs.getString("NumberOfRooms") %></td>
+93:                   <td><%= rs.getString("NumberOfGuests") %></td>
+94:                   <td><%= new Date(rs.getString("StartDate").getTime()) %></td>
+95:                   <td><%= new Date(rs.getTimestamp("EndDate").getTime()) %></td>
+96:                   <td><%= new Date(rs.getTimestamp("ReservationDate").getTime()) %></td>
+97:                   <td><%= rs.getString("BookingSite") %></td>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [94] in the jsp file: [/reservationInfo.jsp]
+The method getTime() is undefined for the type String
+91:                   <td><%= rs.getInt("GuestID") %></td>
+92:                   <td><%= rs.getString("NumberOfRooms") %></td>
+93:                   <td><%= rs.getString("NumberOfGuests") %></td>
+94:                   <td><%= new Date(rs.getString("StartDate").getTime()) %></td>
+95:                   <td><%= new Date(rs.getTimestamp("EndDate").getTime()) %></td>
+96:                   <td><%= new Date(rs.getTimestamp("ReservationDate").getTime()) %></td>
+97:                   <td><%= rs.getString("BookingSite") %></td>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2023 21:51:04.272 SEVERE [http-nio-8080-exec-12] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [125] in the jsp file: [/editReservation.jsp]
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+122:         Class.forName("com.mysql.cj.jdbc.Driver");
+123:         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Project?autoReconnect=true&useSSL=false", user, pass);
+124: 
+125:         String checkQuery = "SELECT RoomNumber FROM Project.Stay WHERE RoomNumber = ?"
+126:         PreparedStatement ps0 = con.prepareStatement(checkQuery);
+127:         ps0.setInt(1, rNumber);
+128:         ResultSet rs = ps0.executeQuery();
+
+
+An error occurred at line: [127] in the jsp file: [/editReservation.jsp]
+The method setInt(int, int) in the type PreparedStatement is not applicable for the arguments (int, String)
+124: 
+125:         String checkQuery = "SELECT RoomNumber FROM Project.Stay WHERE RoomNumber = ?"
+126:         PreparedStatement ps0 = con.prepareStatement(checkQuery);
+127:         ps0.setInt(1, rNumber);
+128:         ResultSet rs = ps0.executeQuery();
+129:         if (!rs.isBeforeFirst()) { // Check if ResultSet is empty
+130:             out.println("<h2 class='error-message'>Room is already Booked: " + rNumber) + "</h2>");
+
+
+An error occurred at line: [130] in the jsp file: [/editReservation.jsp]
+Syntax error on token ")", delete this token
+127:         ps0.setInt(1, rNumber);
+128:         ResultSet rs = ps0.executeQuery();
+129:         if (!rs.isBeforeFirst()) { // Check if ResultSet is empty
+130:             out.println("<h2 class='error-message'>Room is already Booked: " + rNumber) + "</h2>");
+131:         } 
+132: 
+133:         String query = "SELECT * FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.BookingNumber = ?";
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [125] in the jsp file: [/editReservation.jsp]
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+122:         Class.forName("com.mysql.cj.jdbc.Driver");
+123:         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Project?autoReconnect=true&useSSL=false", user, pass);
+124: 
+125:         String checkQuery = "SELECT RoomNumber FROM Project.Stay WHERE RoomNumber = ?"
+126:         PreparedStatement ps0 = con.prepareStatement(checkQuery);
+127:         ps0.setInt(1, rNumber);
+128:         ResultSet rs = ps0.executeQuery();
+
+
+An error occurred at line: [127] in the jsp file: [/editReservation.jsp]
+The method setInt(int, int) in the type PreparedStatement is not applicable for the arguments (int, String)
+124: 
+125:         String checkQuery = "SELECT RoomNumber FROM Project.Stay WHERE RoomNumber = ?"
+126:         PreparedStatement ps0 = con.prepareStatement(checkQuery);
+127:         ps0.setInt(1, rNumber);
+128:         ResultSet rs = ps0.executeQuery();
+129:         if (!rs.isBeforeFirst()) { // Check if ResultSet is empty
+130:             out.println("<h2 class='error-message'>Room is already Booked: " + rNumber) + "</h2>");
+
+
+An error occurred at line: [130] in the jsp file: [/editReservation.jsp]
+Syntax error on token ")", delete this token
+127:         ps0.setInt(1, rNumber);
+128:         ResultSet rs = ps0.executeQuery();
+129:         if (!rs.isBeforeFirst()) { // Check if ResultSet is empty
+130:             out.println("<h2 class='error-message'>Room is already Booked: " + rNumber) + "</h2>");
+131:         } 
+132: 
+133:         String query = "SELECT * FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.BookingNumber = ?";
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2023 21:51:20.190 SEVERE [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [127] in the jsp file: [/editReservation.jsp]
+The method setInt(int, int) in the type PreparedStatement is not applicable for the arguments (int, String)
+124: 
+125:         String checkQuery = "SELECT RoomNumber FROM Project.Stay WHERE RoomNumber = ?";
+126:         PreparedStatement ps0 = con.prepareStatement(checkQuery);
+127:         ps0.setInt(1, rNumber);
+128:         ResultSet rs = ps0.executeQuery();
+129:         if (!rs.isBeforeFirst()) { // Check if ResultSet is empty
+130:             out.println("<h2 class='error-message'>Room is already Booked: " + rNumber) + "</h2>");
+
+
+An error occurred at line: [130] in the jsp file: [/editReservation.jsp]
+Syntax error on token ")", delete this token
+127:         ps0.setInt(1, rNumber);
+128:         ResultSet rs = ps0.executeQuery();
+129:         if (!rs.isBeforeFirst()) { // Check if ResultSet is empty
+130:             out.println("<h2 class='error-message'>Room is already Booked: " + rNumber) + "</h2>");
+131:         } 
+132: 
+133:         String query = "SELECT * FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.BookingNumber = ?";
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [127] in the jsp file: [/editReservation.jsp]
+The method setInt(int, int) in the type PreparedStatement is not applicable for the arguments (int, String)
+124: 
+125:         String checkQuery = "SELECT RoomNumber FROM Project.Stay WHERE RoomNumber = ?";
+126:         PreparedStatement ps0 = con.prepareStatement(checkQuery);
+127:         ps0.setInt(1, rNumber);
+128:         ResultSet rs = ps0.executeQuery();
+129:         if (!rs.isBeforeFirst()) { // Check if ResultSet is empty
+130:             out.println("<h2 class='error-message'>Room is already Booked: " + rNumber) + "</h2>");
+
+
+An error occurred at line: [130] in the jsp file: [/editReservation.jsp]
+Syntax error on token ")", delete this token
+127:         ps0.setInt(1, rNumber);
+128:         ResultSet rs = ps0.executeQuery();
+129:         if (!rs.isBeforeFirst()) { // Check if ResultSet is empty
+130:             out.println("<h2 class='error-message'>Room is already Booked: " + rNumber) + "</h2>");
+131:         } 
+132: 
+133:         String query = "SELECT * FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.BookingNumber = ?";
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2023 21:51:35.804 SEVERE [http-nio-8080-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [130] in the jsp file: [/editReservation.jsp]
+Syntax error on token ")", delete this token
+127:         ps0.setString(1, rNumber);
+128:         ResultSet rs = ps0.executeQuery();
+129:         if (!rs.isBeforeFirst()) { // Check if ResultSet is empty
+130:             out.println("<h2 class='error-message'>Room is already Booked: " + rNumber) + "</h2>");
+131:         } 
+132: 
+133:         String query = "SELECT * FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.BookingNumber = ?";
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [130] in the jsp file: [/editReservation.jsp]
+Syntax error on token ")", delete this token
+127:         ps0.setString(1, rNumber);
+128:         ResultSet rs = ps0.executeQuery();
+129:         if (!rs.isBeforeFirst()) { // Check if ResultSet is empty
+130:             out.println("<h2 class='error-message'>Room is already Booked: " + rNumber) + "</h2>");
+131:         } 
+132: 
+133:         String query = "SELECT * FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.BookingNumber = ?";
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2023 22:04:35.056 SEVERE [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [125] in the jsp file: [/editReservation.jsp]
+String literal is not properly closed by a double-quote
+122:         Class.forName("com.mysql.cj.jdbc.Driver");
+123:         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Project?autoReconnect=true&useSSL=false", user, pass);
+124: 
+125:         String checkQuery = "SELECT s.RoomNumber FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber 
+126:         WHERE r.StartDate = ? AND r.EndDate = ? AND s.RoomNumber = ?";
+127:         PreparedStatement ps0 = con.prepareStatement(checkQuery);
+128: 
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [125] in the jsp file: [/editReservation.jsp]
+String literal is not properly closed by a double-quote
+122:         Class.forName("com.mysql.cj.jdbc.Driver");
+123:         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Project?autoReconnect=true&useSSL=false", user, pass);
+124: 
+125:         String checkQuery = "SELECT s.RoomNumber FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber 
+126:         WHERE r.StartDate = ? AND r.EndDate = ? AND s.RoomNumber = ?";
+127:         PreparedStatement ps0 = con.prepareStatement(checkQuery);
+128: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2023 22:06:03.953 SEVERE [http-nio-8080-exec-15] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [297] in the jsp file: [/editReservation.jsp]
+Syntax error, insert "}" to complete Block
+294:             ps4.close();
+295:             rs.close();
+296:             con.close();
+297:             } catch (SQLException | ClassNotFoundException e) {
+298:                 e.printStackTrace();
+299:             }
+300:         }
+
+
+An error occurred at line: [544] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/editReservation_jsp.java]
+Syntax error on token "}", delete this token
+
+An error occurred at line: [545] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/editReservation_jsp.java]
+Syntax error, insert "}" to complete ClassBody
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [297] in the jsp file: [/editReservation.jsp]
+Syntax error, insert "}" to complete Block
+294:             ps4.close();
+295:             rs.close();
+296:             con.close();
+297:             } catch (SQLException | ClassNotFoundException e) {
+298:                 e.printStackTrace();
+299:             }
+300:         }
+
+
+An error occurred at line: [544] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/editReservation_jsp.java]
+Syntax error on token "}", delete this token
+
+An error occurred at line: [545] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/editReservation_jsp.java]
+Syntax error, insert "}" to complete ClassBody
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2023 22:06:32.144 SEVERE [http-nio-8080-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [297] in the jsp file: [/editReservation.jsp]
+Syntax error, insert "}" to complete Block
+294:         ps4.close();
+295:         rs.close();
+296:         con.close();
+297:         } catch (SQLException | ClassNotFoundException e) {
+298:             e.printStackTrace();
+299:         }
+300:     }
+
+
+An error occurred at line: [543] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/editReservation_jsp.java]
+Syntax error on token "}", delete this token
+
+An error occurred at line: [544] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/editReservation_jsp.java]
+Syntax error, insert "}" to complete ClassBody
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [297] in the jsp file: [/editReservation.jsp]
+Syntax error, insert "}" to complete Block
+294:         ps4.close();
+295:         rs.close();
+296:         con.close();
+297:         } catch (SQLException | ClassNotFoundException e) {
+298:             e.printStackTrace();
+299:         }
+300:     }
+
+
+An error occurred at line: [543] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/editReservation_jsp.java]
+Syntax error on token "}", delete this token
+
+An error occurred at line: [544] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/editReservation_jsp.java]
+Syntax error, insert "}" to complete ClassBody
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2023 22:07:03.119 SEVERE [http-nio-8080-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [297] in the jsp file: [/editReservation.jsp]
+Syntax error, insert "}" to complete Block
+294:         ps4.close();
+295:         rs.close();
+296:         con.close();
+297:         } catch (SQLException | ClassNotFoundException e) {
+298:             e.printStackTrace();
+299:         }
+300:         }
+
+
+An error occurred at line: [544] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/editReservation_jsp.java]
+Syntax error on token "}", delete this token
+
+An error occurred at line: [545] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/editReservation_jsp.java]
+Syntax error, insert "}" to complete ClassBody
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [297] in the jsp file: [/editReservation.jsp]
+Syntax error, insert "}" to complete Block
+294:         ps4.close();
+295:         rs.close();
+296:         con.close();
+297:         } catch (SQLException | ClassNotFoundException e) {
+298:             e.printStackTrace();
+299:         }
+300:         }
+
+
+An error occurred at line: [544] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/editReservation_jsp.java]
+Syntax error on token "}", delete this token
+
+An error occurred at line: [545] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/editReservation_jsp.java]
+Syntax error, insert "}" to complete ClassBody
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2023 22:29:37.839 SEVERE [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [128] in the jsp file: [/editReservation.jsp]
+The method setTimestamp(int, Timestamp) in the type PreparedStatement is not applicable for the arguments (int, Date)
+125:         String checkQuery = "SELECT s.RoomNumber FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.StartDate = ? AND r.EndDate = ? AND s.RoomNumber = ?";
+126:         PreparedStatement ps0 = con.prepareStatement(checkQuery);
+127: 
+128:         ps0.setTimestamp(1, startDate);
+129:         ps0.setTimestamp(2, endDate);
+130:         ps0.setString(3, rNumber);
+131:         ResultSet rs = ps0.executeQuery();
+
+
+An error occurred at line: [129] in the jsp file: [/editReservation.jsp]
+The method setTimestamp(int, Timestamp) in the type PreparedStatement is not applicable for the arguments (int, Date)
+126:         PreparedStatement ps0 = con.prepareStatement(checkQuery);
+127: 
+128:         ps0.setTimestamp(1, startDate);
+129:         ps0.setTimestamp(2, endDate);
+130:         ps0.setString(3, rNumber);
+131:         ResultSet rs = ps0.executeQuery();
+132:         if (!rs.isBeforeFirst()) {
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [128] in the jsp file: [/editReservation.jsp]
+The method setTimestamp(int, Timestamp) in the type PreparedStatement is not applicable for the arguments (int, Date)
+125:         String checkQuery = "SELECT s.RoomNumber FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.StartDate = ? AND r.EndDate = ? AND s.RoomNumber = ?";
+126:         PreparedStatement ps0 = con.prepareStatement(checkQuery);
+127: 
+128:         ps0.setTimestamp(1, startDate);
+129:         ps0.setTimestamp(2, endDate);
+130:         ps0.setString(3, rNumber);
+131:         ResultSet rs = ps0.executeQuery();
+
+
+An error occurred at line: [129] in the jsp file: [/editReservation.jsp]
+The method setTimestamp(int, Timestamp) in the type PreparedStatement is not applicable for the arguments (int, Date)
+126:         PreparedStatement ps0 = con.prepareStatement(checkQuery);
+127: 
+128:         ps0.setTimestamp(1, startDate);
+129:         ps0.setTimestamp(2, endDate);
+130:         ps0.setString(3, rNumber);
+131:         ResultSet rs = ps0.executeQuery();
+132:         if (!rs.isBeforeFirst()) {
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+01-Dec-2023 23:12:44.798 SEVERE [http-nio-8080-exec-14] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [134] in the jsp file: [/editReservation.jsp]
+Syntax error, insert "}" to complete Block
+131:         if(rs.getString("Availability").equals("No")) {
+132:             out.println("<h2 class='error-message'>Room is already Booked: " + rs.getString("RoomNumber")+ "</h2>");
+133:         }
+134:         ps0.close();
+135:         else {
+136:             String query = "SELECT * FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.BookingNumber = ?";
+137:             PreparedStatement ps = con.prepareStatement(query);
+
+
+An error occurred at line: [134] in the jsp file: [/editReservation.jsp]
+Syntax error, insert "Finally" to complete TryStatement
+131:         if(rs.getString("Availability").equals("No")) {
+132:             out.println("<h2 class='error-message'>Room is already Booked: " + rs.getString("RoomNumber")+ "</h2>");
+133:         }
+134:         ps0.close();
+135:         else {
+136:             String query = "SELECT * FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.BookingNumber = ?";
+137:             PreparedStatement ps = con.prepareStatement(query);
+
+
+An error occurred at line: [134] in the jsp file: [/editReservation.jsp]
+Syntax error, insert "}" to complete Statement
+131:         if(rs.getString("Availability").equals("No")) {
+132:             out.println("<h2 class='error-message'>Room is already Booked: " + rs.getString("RoomNumber")+ "</h2>");
+133:         }
+134:         ps0.close();
+135:         else {
+136:             String query = "SELECT * FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.BookingNumber = ?";
+137:             PreparedStatement ps = con.prepareStatement(query);
+
+
+An error occurred at line: [137] in the jsp file: [/editReservation.jsp]
+con cannot be resolved
+134:         ps0.close();
+135:         else {
+136:             String query = "SELECT * FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.BookingNumber = ?";
+137:             PreparedStatement ps = con.prepareStatement(query);
+138:             ps.setInt(1, BookingN);
+139:             rs = ps.executeQuery();
+140: %>
+
+
+An error occurred at line: [138] in the jsp file: [/editReservation.jsp]
+BookingN cannot be resolved to a variable
+135:         else {
+136:             String query = "SELECT * FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.BookingNumber = ?";
+137:             PreparedStatement ps = con.prepareStatement(query);
+138:             ps.setInt(1, BookingN);
+139:             rs = ps.executeQuery();
+140: %>
+141:             <table class = 'table'>
+
+
+An error occurred at line: [139] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved to a variable
+136:             String query = "SELECT * FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.BookingNumber = ?";
+137:             PreparedStatement ps = con.prepareStatement(query);
+138:             ps.setInt(1, BookingN);
+139:             rs = ps.executeQuery();
+140: %>
+141:             <table class = 'table'>
+142:                 <thead>
+
+
+An error occurred at line: [161] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+158:                 </tr>
+159:                 </thead>
+160:             <tbody>
+161:             <% while(rs.next()) { %>
+162:               <tr>
+163:                 <td><%= rs.getInt("BookingNumber") %></td>
+164:                 <td><%= rs.getInt("GuestID") %></td>
+
+
+An error occurred at line: [163] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+160:             <tbody>
+161:             <% while(rs.next()) { %>
+162:               <tr>
+163:                 <td><%= rs.getInt("BookingNumber") %></td>
+164:                 <td><%= rs.getInt("GuestID") %></td>
+165:                 <td><%= rs.getString("NumberOfRooms") %></td>
+166:                 <td><%= rs.getString("NumberOfGuests") %></td>
+
+
+An error occurred at line: [164] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+161:             <% while(rs.next()) { %>
+162:               <tr>
+163:                 <td><%= rs.getInt("BookingNumber") %></td>
+164:                 <td><%= rs.getInt("GuestID") %></td>
+165:                 <td><%= rs.getString("NumberOfRooms") %></td>
+166:                 <td><%= rs.getString("NumberOfGuests") %></td>
+167:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("StartDate")) %></td>
+
+
+An error occurred at line: [165] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+162:               <tr>
+163:                 <td><%= rs.getInt("BookingNumber") %></td>
+164:                 <td><%= rs.getInt("GuestID") %></td>
+165:                 <td><%= rs.getString("NumberOfRooms") %></td>
+166:                 <td><%= rs.getString("NumberOfGuests") %></td>
+167:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("StartDate")) %></td>
+168:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("EndDate")) %></td>
+
+
+An error occurred at line: [166] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+163:                 <td><%= rs.getInt("BookingNumber") %></td>
+164:                 <td><%= rs.getInt("GuestID") %></td>
+165:                 <td><%= rs.getString("NumberOfRooms") %></td>
+166:                 <td><%= rs.getString("NumberOfGuests") %></td>
+167:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("StartDate")) %></td>
+168:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("EndDate")) %></td>
+169:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("ReservationDate"))%></td>
+
+
+An error occurred at line: [167] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+164:                 <td><%= rs.getInt("GuestID") %></td>
+165:                 <td><%= rs.getString("NumberOfRooms") %></td>
+166:                 <td><%= rs.getString("NumberOfGuests") %></td>
+167:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("StartDate")) %></td>
+168:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("EndDate")) %></td>
+169:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("ReservationDate"))%></td>
+170:                 <td><%= rs.getString("BookingSite") %></td>
+
+
+An error occurred at line: [168] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+165:                 <td><%= rs.getString("NumberOfRooms") %></td>
+166:                 <td><%= rs.getString("NumberOfGuests") %></td>
+167:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("StartDate")) %></td>
+168:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("EndDate")) %></td>
+169:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("ReservationDate"))%></td>
+170:                 <td><%= rs.getString("BookingSite") %></td>
+171:                 <td><%= rs.getString("SpecialRequest") %></td>
+
+
+An error occurred at line: [169] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+166:                 <td><%= rs.getString("NumberOfGuests") %></td>
+167:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("StartDate")) %></td>
+168:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("EndDate")) %></td>
+169:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("ReservationDate"))%></td>
+170:                 <td><%= rs.getString("BookingSite") %></td>
+171:                 <td><%= rs.getString("SpecialRequest") %></td>
+172:                 <td><%= rs.getString("HotelName") %></td>
+
+
+An error occurred at line: [170] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+167:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("StartDate")) %></td>
+168:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("EndDate")) %></td>
+169:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("ReservationDate"))%></td>
+170:                 <td><%= rs.getString("BookingSite") %></td>
+171:                 <td><%= rs.getString("SpecialRequest") %></td>
+172:                 <td><%= rs.getString("HotelName") %></td>
+173:                 <td><%= rs.getString("HotelLocation") %></td>
+
+
+An error occurred at line: [171] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+168:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("EndDate")) %></td>
+169:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("ReservationDate"))%></td>
+170:                 <td><%= rs.getString("BookingSite") %></td>
+171:                 <td><%= rs.getString("SpecialRequest") %></td>
+172:                 <td><%= rs.getString("HotelName") %></td>
+173:                 <td><%= rs.getString("HotelLocation") %></td>
+174:                 <td><%= rs.getString("RoomNumber") %></td>
+
+
+An error occurred at line: [172] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+169:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("ReservationDate"))%></td>
+170:                 <td><%= rs.getString("BookingSite") %></td>
+171:                 <td><%= rs.getString("SpecialRequest") %></td>
+172:                 <td><%= rs.getString("HotelName") %></td>
+173:                 <td><%= rs.getString("HotelLocation") %></td>
+174:                 <td><%= rs.getString("RoomNumber") %></td>
+175:                 <td><%= rs.getString("CheckIn") %></td>
+
+
+An error occurred at line: [173] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+170:                 <td><%= rs.getString("BookingSite") %></td>
+171:                 <td><%= rs.getString("SpecialRequest") %></td>
+172:                 <td><%= rs.getString("HotelName") %></td>
+173:                 <td><%= rs.getString("HotelLocation") %></td>
+174:                 <td><%= rs.getString("RoomNumber") %></td>
+175:                 <td><%= rs.getString("CheckIn") %></td>
+176:                 <td><%= rs.getString("CheckOut") %></td>
+
+
+An error occurred at line: [174] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+171:                 <td><%= rs.getString("SpecialRequest") %></td>
+172:                 <td><%= rs.getString("HotelName") %></td>
+173:                 <td><%= rs.getString("HotelLocation") %></td>
+174:                 <td><%= rs.getString("RoomNumber") %></td>
+175:                 <td><%= rs.getString("CheckIn") %></td>
+176:                 <td><%= rs.getString("CheckOut") %></td>
+177:               </tr>
+
+
+An error occurred at line: [175] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+172:                 <td><%= rs.getString("HotelName") %></td>
+173:                 <td><%= rs.getString("HotelLocation") %></td>
+174:                 <td><%= rs.getString("RoomNumber") %></td>
+175:                 <td><%= rs.getString("CheckIn") %></td>
+176:                 <td><%= rs.getString("CheckOut") %></td>
+177:               </tr>
+178:               <% } %>
+
+
+An error occurred at line: [176] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+173:                 <td><%= rs.getString("HotelLocation") %></td>
+174:                 <td><%= rs.getString("RoomNumber") %></td>
+175:                 <td><%= rs.getString("CheckIn") %></td>
+176:                 <td><%= rs.getString("CheckOut") %></td>
+177:               </tr>
+178:               <% } %>
+179:             </tbody>
+
+
+An error occurred at line: [185] in the jsp file: [/editReservation.jsp]
+Nrooms cannot be resolved
+182: 
+183:             String query2 = "UPDATE Project.ReservationInfo SET";
+184: 
+185:             if (!Nrooms.isEmpty()) {
+186:                 query2 += " NumberOfRooms='" + Nrooms + "'";
+187:             }
+188:     
+
+
+An error occurred at line: [186] in the jsp file: [/editReservation.jsp]
+Nrooms cannot be resolved to a variable
+183:             String query2 = "UPDATE Project.ReservationInfo SET";
+184: 
+185:             if (!Nrooms.isEmpty()) {
+186:                 query2 += " NumberOfRooms='" + Nrooms + "'";
+187:             }
+188:     
+189:             if (!Nguests.isEmpty()) {
+
+
+An error occurred at line: [189] in the jsp file: [/editReservation.jsp]
+Nguests cannot be resolved
+186:                 query2 += " NumberOfRooms='" + Nrooms + "'";
+187:             }
+188:     
+189:             if (!Nguests.isEmpty()) {
+190:                 if (!Nrooms.isEmpty()) {
+191:                     query2 += ",";
+192:                 }
+
+
+An error occurred at line: [190] in the jsp file: [/editReservation.jsp]
+Nrooms cannot be resolved
+187:             }
+188:     
+189:             if (!Nguests.isEmpty()) {
+190:                 if (!Nrooms.isEmpty()) {
+191:                     query2 += ",";
+192:                 }
+193:                 query2 += " NumberOfGuests='" + Nguests + "'";
+
+
+An error occurred at line: [193] in the jsp file: [/editReservation.jsp]
+Nguests cannot be resolved to a variable
+190:                 if (!Nrooms.isEmpty()) {
+191:                     query2 += ",";
+192:                 }
+193:                 query2 += " NumberOfGuests='" + Nguests + "'";
+194:             }
+195: 
+196:             if (!startDateStr.isEmpty()) {
+
+
+An error occurred at line: [196] in the jsp file: [/editReservation.jsp]
+startDateStr cannot be resolved
+193:                 query2 += " NumberOfGuests='" + Nguests + "'";
+194:             }
+195: 
+196:             if (!startDateStr.isEmpty()) {
+197:                 if (!Nrooms.isEmpty() || !Nguests.isEmpty()) {
+198:                     query2 += ",";
+199:                 }
+
+
+An error occurred at line: [197] in the jsp file: [/editReservation.jsp]
+Nrooms cannot be resolved
+194:             }
+195: 
+196:             if (!startDateStr.isEmpty()) {
+197:                 if (!Nrooms.isEmpty() || !Nguests.isEmpty()) {
+198:                     query2 += ",";
+199:                 }
+200:                 query2 += " StartDate='" + new Timestamp(startDate.getTime()) + "'";
+
+
+An error occurred at line: [197] in the jsp file: [/editReservation.jsp]
+Nguests cannot be resolved
+194:             }
+195: 
+196:             if (!startDateStr.isEmpty()) {
+197:                 if (!Nrooms.isEmpty() || !Nguests.isEmpty()) {
+198:                     query2 += ",";
+199:                 }
+200:                 query2 += " StartDate='" + new Timestamp(startDate.getTime()) + "'";
+
+
+An error occurred at line: [200] in the jsp file: [/editReservation.jsp]
+startDate cannot be resolved
+197:                 if (!Nrooms.isEmpty() || !Nguests.isEmpty()) {
+198:                     query2 += ",";
+199:                 }
+200:                 query2 += " StartDate='" + new Timestamp(startDate.getTime()) + "'";
+201:             }
+202: 
+203:             if (!endDateStr.isEmpty()) {
+
+
+An error occurred at line: [203] in the jsp file: [/editReservation.jsp]
+endDateStr cannot be resolved
+200:                 query2 += " StartDate='" + new Timestamp(startDate.getTime()) + "'";
+201:             }
+202: 
+203:             if (!endDateStr.isEmpty()) {
+204:                 if (!Nrooms.isEmpty() || !Nguests.isEmpty() || !startDateStr.isEmpty()) {
+205:                     query2 += ",";
+206:                 }
+
+
+An error occurred at line: [204] in the jsp file: [/editReservation.jsp]
+Nrooms cannot be resolved
+201:             }
+202: 
+203:             if (!endDateStr.isEmpty()) {
+204:                 if (!Nrooms.isEmpty() || !Nguests.isEmpty() || !startDateStr.isEmpty()) {
+205:                     query2 += ",";
+206:                 }
+207:                 query2 += " EndDate='" + new Timestamp(endDate.getTime()) + "'";
+
+
+An error occurred at line: [204] in the jsp file: [/editReservation.jsp]
+Nguests cannot be resolved
+201:             }
+202: 
+203:             if (!endDateStr.isEmpty()) {
+204:                 if (!Nrooms.isEmpty() || !Nguests.isEmpty() || !startDateStr.isEmpty()) {
+205:                     query2 += ",";
+206:                 }
+207:                 query2 += " EndDate='" + new Timestamp(endDate.getTime()) + "'";
+
+
+An error occurred at line: [204] in the jsp file: [/editReservation.jsp]
+startDateStr cannot be resolved
+201:             }
+202: 
+203:             if (!endDateStr.isEmpty()) {
+204:                 if (!Nrooms.isEmpty() || !Nguests.isEmpty() || !startDateStr.isEmpty()) {
+205:                     query2 += ",";
+206:                 }
+207:                 query2 += " EndDate='" + new Timestamp(endDate.getTime()) + "'";
+
+
+An error occurred at line: [207] in the jsp file: [/editReservation.jsp]
+endDate cannot be resolved
+204:                 if (!Nrooms.isEmpty() || !Nguests.isEmpty() || !startDateStr.isEmpty()) {
+205:                     query2 += ",";
+206:                 }
+207:                 query2 += " EndDate='" + new Timestamp(endDate.getTime()) + "'";
+208:             }
+209: 
+210:             if (!specialRequest.isEmpty()) {
+
+
+An error occurred at line: [210] in the jsp file: [/editReservation.jsp]
+specialRequest cannot be resolved
+207:                 query2 += " EndDate='" + new Timestamp(endDate.getTime()) + "'";
+208:             }
+209: 
+210:             if (!specialRequest.isEmpty()) {
+211:                 if (!Nrooms.isEmpty() || !Nguests.isEmpty() || !startDateStr.isEmpty() || !endDateStr.isEmpty()) {
+212:                     query2 += ",";
+213:                 }
+
+
+An error occurred at line: [211] in the jsp file: [/editReservation.jsp]
+Nrooms cannot be resolved
+208:             }
+209: 
+210:             if (!specialRequest.isEmpty()) {
+211:                 if (!Nrooms.isEmpty() || !Nguests.isEmpty() || !startDateStr.isEmpty() || !endDateStr.isEmpty()) {
+212:                     query2 += ",";
+213:                 }
+214:                 query2 += " SpecialRequest='" + specialRequest + "'";
+
+
+An error occurred at line: [211] in the jsp file: [/editReservation.jsp]
+Nguests cannot be resolved
+208:             }
+209: 
+210:             if (!specialRequest.isEmpty()) {
+211:                 if (!Nrooms.isEmpty() || !Nguests.isEmpty() || !startDateStr.isEmpty() || !endDateStr.isEmpty()) {
+212:                     query2 += ",";
+213:                 }
+214:                 query2 += " SpecialRequest='" + specialRequest + "'";
+
+
+An error occurred at line: [211] in the jsp file: [/editReservation.jsp]
+startDateStr cannot be resolved
+208:             }
+209: 
+210:             if (!specialRequest.isEmpty()) {
+211:                 if (!Nrooms.isEmpty() || !Nguests.isEmpty() || !startDateStr.isEmpty() || !endDateStr.isEmpty()) {
+212:                     query2 += ",";
+213:                 }
+214:                 query2 += " SpecialRequest='" + specialRequest + "'";
+
+
+An error occurred at line: [211] in the jsp file: [/editReservation.jsp]
+endDateStr cannot be resolved
+208:             }
+209: 
+210:             if (!specialRequest.isEmpty()) {
+211:                 if (!Nrooms.isEmpty() || !Nguests.isEmpty() || !startDateStr.isEmpty() || !endDateStr.isEmpty()) {
+212:                     query2 += ",";
+213:                 }
+214:                 query2 += " SpecialRequest='" + specialRequest + "'";
+
+
+An error occurred at line: [214] in the jsp file: [/editReservation.jsp]
+specialRequest cannot be resolved to a variable
+211:                 if (!Nrooms.isEmpty() || !Nguests.isEmpty() || !startDateStr.isEmpty() || !endDateStr.isEmpty()) {
+212:                     query2 += ",";
+213:                 }
+214:                 query2 += " SpecialRequest='" + specialRequest + "'";
+215:             }
+216: 
+217:             query2 += " WHERE BookingNumber=?";
+
+
+An error occurred at line: [218] in the jsp file: [/editReservation.jsp]
+con cannot be resolved
+215:             }
+216: 
+217:             query2 += " WHERE BookingNumber=?";
+218:             PreparedStatement ps2 = con.prepareStatement(query2);
+219:             ps2.setInt(1, BookingN);
+220:             ps2.executeUpdate();
+221: 
+
+
+An error occurred at line: [219] in the jsp file: [/editReservation.jsp]
+BookingN cannot be resolved to a variable
+216: 
+217:             query2 += " WHERE BookingNumber=?";
+218:             PreparedStatement ps2 = con.prepareStatement(query2);
+219:             ps2.setInt(1, BookingN);
+220:             ps2.executeUpdate();
+221: 
+222:             String query3 = "UPDATE Project.Stay SET";
+
+
+An error occurred at line: [224] in the jsp file: [/editReservation.jsp]
+hotelName cannot be resolved
+221: 
+222:             String query3 = "UPDATE Project.Stay SET";
+223: 
+224:             if (!hotelName.isEmpty()) {
+225:                 query3 += " HotelName='" + hotelName + "'";
+226:             }
+227: 
+
+
+An error occurred at line: [225] in the jsp file: [/editReservation.jsp]
+hotelName cannot be resolved to a variable
+222:             String query3 = "UPDATE Project.Stay SET";
+223: 
+224:             if (!hotelName.isEmpty()) {
+225:                 query3 += " HotelName='" + hotelName + "'";
+226:             }
+227: 
+228:             if (!hotelLocation.isEmpty()) {
+
+
+An error occurred at line: [228] in the jsp file: [/editReservation.jsp]
+hotelLocation cannot be resolved
+225:                 query3 += " HotelName='" + hotelName + "'";
+226:             }
+227: 
+228:             if (!hotelLocation.isEmpty()) {
+229:                 if (!hotelName.isEmpty()) {
+230:                     query3 += ",";
+231:                 }
+
+
+An error occurred at line: [229] in the jsp file: [/editReservation.jsp]
+hotelName cannot be resolved
+226:             }
+227: 
+228:             if (!hotelLocation.isEmpty()) {
+229:                 if (!hotelName.isEmpty()) {
+230:                     query3 += ",";
+231:                 }
+232:                 query3 += " HotelLocation='" + hotelLocation + "'";
+
+
+An error occurred at line: [232] in the jsp file: [/editReservation.jsp]
+hotelLocation cannot be resolved to a variable
+229:                 if (!hotelName.isEmpty()) {
+230:                     query3 += ",";
+231:                 }
+232:                 query3 += " HotelLocation='" + hotelLocation + "'";
+233:             }
+234: 
+235:             if (!rNumber.isEmpty()) {
+
+
+An error occurred at line: [235] in the jsp file: [/editReservation.jsp]
+rNumber cannot be resolved
+232:                 query3 += " HotelLocation='" + hotelLocation + "'";
+233:             }
+234: 
+235:             if (!rNumber.isEmpty()) {
+236:                 if (!hotelName.isEmpty() || !hotelLocation.isEmpty()) {
+237:                     query3 += ",";
+238:                 }
+
+
+An error occurred at line: [236] in the jsp file: [/editReservation.jsp]
+hotelName cannot be resolved
+233:             }
+234: 
+235:             if (!rNumber.isEmpty()) {
+236:                 if (!hotelName.isEmpty() || !hotelLocation.isEmpty()) {
+237:                     query3 += ",";
+238:                 }
+239:                 query3 += " RoomNumber='" + rNumber + "'";
+
+
+An error occurred at line: [236] in the jsp file: [/editReservation.jsp]
+hotelLocation cannot be resolved
+233:             }
+234: 
+235:             if (!rNumber.isEmpty()) {
+236:                 if (!hotelName.isEmpty() || !hotelLocation.isEmpty()) {
+237:                     query3 += ",";
+238:                 }
+239:                 query3 += " RoomNumber='" + rNumber + "'";
+
+
+An error occurred at line: [239] in the jsp file: [/editReservation.jsp]
+rNumber cannot be resolved to a variable
+236:                 if (!hotelName.isEmpty() || !hotelLocation.isEmpty()) {
+237:                     query3 += ",";
+238:                 }
+239:                 query3 += " RoomNumber='" + rNumber + "'";
+240:             }
+241:             query3 += " WHERE BookingNumber=?";
+242:             PreparedStatement ps3 = con.prepareStatement(query3);
+
+
+An error occurred at line: [242] in the jsp file: [/editReservation.jsp]
+con cannot be resolved
+239:                 query3 += " RoomNumber='" + rNumber + "'";
+240:             }
+241:             query3 += " WHERE BookingNumber=?";
+242:             PreparedStatement ps3 = con.prepareStatement(query3);
+243:             ps3.setInt(1, BookingN);
+244:             ps3.executeUpdate();
+245:             ps3.close();
+
+
+An error occurred at line: [243] in the jsp file: [/editReservation.jsp]
+BookingN cannot be resolved to a variable
+240:             }
+241:             query3 += " WHERE BookingNumber=?";
+242:             PreparedStatement ps3 = con.prepareStatement(query3);
+243:             ps3.setInt(1, BookingN);
+244:             ps3.executeUpdate();
+245:             ps3.close();
+246: 
+
+
+An error occurred at line: [248] in the jsp file: [/editReservation.jsp]
+con cannot be resolved
+245:             ps3.close();
+246: 
+247:             String query4 = "SELECT * FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.BookingNumber = ?";
+248:             PreparedStatement ps4 = con.prepareStatement(query4);
+249:             ps4.setInt(1, BookingN);
+250:             rs = ps4.executeQuery();
+251: %>
+
+
+An error occurred at line: [249] in the jsp file: [/editReservation.jsp]
+BookingN cannot be resolved to a variable
+246: 
+247:             String query4 = "SELECT * FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.BookingNumber = ?";
+248:             PreparedStatement ps4 = con.prepareStatement(query4);
+249:             ps4.setInt(1, BookingN);
+250:             rs = ps4.executeQuery();
+251: %>
+252:     <table class = 'table'>
+
+
+An error occurred at line: [250] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved to a variable
+247:             String query4 = "SELECT * FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.BookingNumber = ?";
+248:             PreparedStatement ps4 = con.prepareStatement(query4);
+249:             ps4.setInt(1, BookingN);
+250:             rs = ps4.executeQuery();
+251: %>
+252:     <table class = 'table'>
+253:         <thead>
+
+
+An error occurred at line: [272] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+269:         </tr>
+270:         </thead>
+271:     <tbody>
+272:         <% while(rs.next()) { %>
+273:       <tr>
+274:         <td><%= rs.getInt("BookingNumber") %></td>
+275:         <td><%= rs.getInt("GuestID") %></td>
+
+
+An error occurred at line: [274] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+271:     <tbody>
+272:         <% while(rs.next()) { %>
+273:       <tr>
+274:         <td><%= rs.getInt("BookingNumber") %></td>
+275:         <td><%= rs.getInt("GuestID") %></td>
+276:         <td><%= rs.getString("NumberOfRooms") %></td>
+277:         <td><%= rs.getString("NumberOfGuests") %></td>
+
+
+An error occurred at line: [275] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+272:         <% while(rs.next()) { %>
+273:       <tr>
+274:         <td><%= rs.getInt("BookingNumber") %></td>
+275:         <td><%= rs.getInt("GuestID") %></td>
+276:         <td><%= rs.getString("NumberOfRooms") %></td>
+277:         <td><%= rs.getString("NumberOfGuests") %></td>
+278:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("StartDate")) %></td>
+
+
+An error occurred at line: [276] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+273:       <tr>
+274:         <td><%= rs.getInt("BookingNumber") %></td>
+275:         <td><%= rs.getInt("GuestID") %></td>
+276:         <td><%= rs.getString("NumberOfRooms") %></td>
+277:         <td><%= rs.getString("NumberOfGuests") %></td>
+278:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("StartDate")) %></td>
+279:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("EndDate")) %></td>
+
+
+An error occurred at line: [277] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+274:         <td><%= rs.getInt("BookingNumber") %></td>
+275:         <td><%= rs.getInt("GuestID") %></td>
+276:         <td><%= rs.getString("NumberOfRooms") %></td>
+277:         <td><%= rs.getString("NumberOfGuests") %></td>
+278:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("StartDate")) %></td>
+279:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("EndDate")) %></td>
+280:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("ReservationDate"))%></td>
+
+
+An error occurred at line: [278] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+275:         <td><%= rs.getInt("GuestID") %></td>
+276:         <td><%= rs.getString("NumberOfRooms") %></td>
+277:         <td><%= rs.getString("NumberOfGuests") %></td>
+278:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("StartDate")) %></td>
+279:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("EndDate")) %></td>
+280:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("ReservationDate"))%></td>
+281:         <td><%= rs.getString("BookingSite") %></td>
+
+
+An error occurred at line: [279] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+276:         <td><%= rs.getString("NumberOfRooms") %></td>
+277:         <td><%= rs.getString("NumberOfGuests") %></td>
+278:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("StartDate")) %></td>
+279:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("EndDate")) %></td>
+280:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("ReservationDate"))%></td>
+281:         <td><%= rs.getString("BookingSite") %></td>
+282:         <td><%= rs.getString("SpecialRequest") %></td>
+
+
+An error occurred at line: [280] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+277:         <td><%= rs.getString("NumberOfGuests") %></td>
+278:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("StartDate")) %></td>
+279:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("EndDate")) %></td>
+280:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("ReservationDate"))%></td>
+281:         <td><%= rs.getString("BookingSite") %></td>
+282:         <td><%= rs.getString("SpecialRequest") %></td>
+283:         <td><%= rs.getString("HotelName") %></td>
+
+
+An error occurred at line: [281] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+278:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("StartDate")) %></td>
+279:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("EndDate")) %></td>
+280:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("ReservationDate"))%></td>
+281:         <td><%= rs.getString("BookingSite") %></td>
+282:         <td><%= rs.getString("SpecialRequest") %></td>
+283:         <td><%= rs.getString("HotelName") %></td>
+284:         <td><%= rs.getString("HotelLocation") %></td>
+
+
+An error occurred at line: [282] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+279:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("EndDate")) %></td>
+280:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("ReservationDate"))%></td>
+281:         <td><%= rs.getString("BookingSite") %></td>
+282:         <td><%= rs.getString("SpecialRequest") %></td>
+283:         <td><%= rs.getString("HotelName") %></td>
+284:         <td><%= rs.getString("HotelLocation") %></td>
+285:         <td><%= rs.getString("RoomNumber") %></td>
+
+
+An error occurred at line: [283] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+280:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("ReservationDate"))%></td>
+281:         <td><%= rs.getString("BookingSite") %></td>
+282:         <td><%= rs.getString("SpecialRequest") %></td>
+283:         <td><%= rs.getString("HotelName") %></td>
+284:         <td><%= rs.getString("HotelLocation") %></td>
+285:         <td><%= rs.getString("RoomNumber") %></td>
+286:         <td><%= rs.getString("CheckIn") %></td>
+
+
+An error occurred at line: [284] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+281:         <td><%= rs.getString("BookingSite") %></td>
+282:         <td><%= rs.getString("SpecialRequest") %></td>
+283:         <td><%= rs.getString("HotelName") %></td>
+284:         <td><%= rs.getString("HotelLocation") %></td>
+285:         <td><%= rs.getString("RoomNumber") %></td>
+286:         <td><%= rs.getString("CheckIn") %></td>
+287:         <td><%= rs.getString("CheckOut") %></td>
+
+
+An error occurred at line: [285] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+282:         <td><%= rs.getString("SpecialRequest") %></td>
+283:         <td><%= rs.getString("HotelName") %></td>
+284:         <td><%= rs.getString("HotelLocation") %></td>
+285:         <td><%= rs.getString("RoomNumber") %></td>
+286:         <td><%= rs.getString("CheckIn") %></td>
+287:         <td><%= rs.getString("CheckOut") %></td>
+288:       </tr>
+
+
+An error occurred at line: [286] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+283:         <td><%= rs.getString("HotelName") %></td>
+284:         <td><%= rs.getString("HotelLocation") %></td>
+285:         <td><%= rs.getString("RoomNumber") %></td>
+286:         <td><%= rs.getString("CheckIn") %></td>
+287:         <td><%= rs.getString("CheckOut") %></td>
+288:       </tr>
+289:       <% } %>
+
+
+An error occurred at line: [287] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+284:         <td><%= rs.getString("HotelLocation") %></td>
+285:         <td><%= rs.getString("RoomNumber") %></td>
+286:         <td><%= rs.getString("CheckIn") %></td>
+287:         <td><%= rs.getString("CheckOut") %></td>
+288:       </tr>
+289:       <% } %>
+290:     </tbody>
+
+
+An error occurred at line: [294] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+291:     </table>
+292: <%
+293:         ps4.close();
+294:         rs.close();
+295:         con.close();
+296:     }
+297: }   catch (SQLException | ClassNotFoundException e) {
+
+
+An error occurred at line: [295] in the jsp file: [/editReservation.jsp]
+con cannot be resolved
+292: <%
+293:         ps4.close();
+294:         rs.close();
+295:         con.close();
+296:     }
+297: }   catch (SQLException | ClassNotFoundException e) {
+298:             e.printStackTrace();
+
+
+An error occurred at line: [300] in the jsp file: [/editReservation.jsp]
+Syntax error on token "}", delete this token
+297: }   catch (SQLException | ClassNotFoundException e) {
+298:             e.printStackTrace();
+299:     }
+300: }
+301:     %>
+302:         
+303: </body>
+
+
+An error occurred at line: [525] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/editReservation_jsp.java]
+Syntax error on tokens, delete these tokens
+
+An error occurred at line: [525] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/editReservation_jsp.java]
+Syntax error on token(s), misplaced construct(s)
+
+An error occurred at line: [525] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/editReservation_jsp.java]
+t cannot be resolved to a variable
+
+An error occurred at line: [525] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/editReservation_jsp.java]
+Syntax error, insert "AssignmentOperator Expression" to complete Assignment
+
+An error occurred at line: [525] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/editReservation_jsp.java]
+Syntax error, insert ";" to complete Statement
+
+An error occurred at line: [526] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/editReservation_jsp.java]
+t cannot be resolved to a variable
+
+An error occurred at line: [536] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/editReservation_jsp.java]
+t cannot be resolved to a variable
+
+An error occurred at line: [537] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/editReservation_jsp.java]
+t cannot be resolved to a variable
+
+An error occurred at line: [539] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/editReservation_jsp.java]
+Syntax error on token "finally", delete this token
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [134] in the jsp file: [/editReservation.jsp]
+Syntax error, insert "}" to complete Block
+131:         if(rs.getString("Availability").equals("No")) {
+132:             out.println("<h2 class='error-message'>Room is already Booked: " + rs.getString("RoomNumber")+ "</h2>");
+133:         }
+134:         ps0.close();
+135:         else {
+136:             String query = "SELECT * FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.BookingNumber = ?";
+137:             PreparedStatement ps = con.prepareStatement(query);
+
+
+An error occurred at line: [134] in the jsp file: [/editReservation.jsp]
+Syntax error, insert "Finally" to complete TryStatement
+131:         if(rs.getString("Availability").equals("No")) {
+132:             out.println("<h2 class='error-message'>Room is already Booked: " + rs.getString("RoomNumber")+ "</h2>");
+133:         }
+134:         ps0.close();
+135:         else {
+136:             String query = "SELECT * FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.BookingNumber = ?";
+137:             PreparedStatement ps = con.prepareStatement(query);
+
+
+An error occurred at line: [134] in the jsp file: [/editReservation.jsp]
+Syntax error, insert "}" to complete Statement
+131:         if(rs.getString("Availability").equals("No")) {
+132:             out.println("<h2 class='error-message'>Room is already Booked: " + rs.getString("RoomNumber")+ "</h2>");
+133:         }
+134:         ps0.close();
+135:         else {
+136:             String query = "SELECT * FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.BookingNumber = ?";
+137:             PreparedStatement ps = con.prepareStatement(query);
+
+
+An error occurred at line: [137] in the jsp file: [/editReservation.jsp]
+con cannot be resolved
+134:         ps0.close();
+135:         else {
+136:             String query = "SELECT * FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.BookingNumber = ?";
+137:             PreparedStatement ps = con.prepareStatement(query);
+138:             ps.setInt(1, BookingN);
+139:             rs = ps.executeQuery();
+140: %>
+
+
+An error occurred at line: [138] in the jsp file: [/editReservation.jsp]
+BookingN cannot be resolved to a variable
+135:         else {
+136:             String query = "SELECT * FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.BookingNumber = ?";
+137:             PreparedStatement ps = con.prepareStatement(query);
+138:             ps.setInt(1, BookingN);
+139:             rs = ps.executeQuery();
+140: %>
+141:             <table class = 'table'>
+
+
+An error occurred at line: [139] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved to a variable
+136:             String query = "SELECT * FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.BookingNumber = ?";
+137:             PreparedStatement ps = con.prepareStatement(query);
+138:             ps.setInt(1, BookingN);
+139:             rs = ps.executeQuery();
+140: %>
+141:             <table class = 'table'>
+142:                 <thead>
+
+
+An error occurred at line: [161] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+158:                 </tr>
+159:                 </thead>
+160:             <tbody>
+161:             <% while(rs.next()) { %>
+162:               <tr>
+163:                 <td><%= rs.getInt("BookingNumber") %></td>
+164:                 <td><%= rs.getInt("GuestID") %></td>
+
+
+An error occurred at line: [163] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+160:             <tbody>
+161:             <% while(rs.next()) { %>
+162:               <tr>
+163:                 <td><%= rs.getInt("BookingNumber") %></td>
+164:                 <td><%= rs.getInt("GuestID") %></td>
+165:                 <td><%= rs.getString("NumberOfRooms") %></td>
+166:                 <td><%= rs.getString("NumberOfGuests") %></td>
+
+
+An error occurred at line: [164] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+161:             <% while(rs.next()) { %>
+162:               <tr>
+163:                 <td><%= rs.getInt("BookingNumber") %></td>
+164:                 <td><%= rs.getInt("GuestID") %></td>
+165:                 <td><%= rs.getString("NumberOfRooms") %></td>
+166:                 <td><%= rs.getString("NumberOfGuests") %></td>
+167:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("StartDate")) %></td>
+
+
+An error occurred at line: [165] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+162:               <tr>
+163:                 <td><%= rs.getInt("BookingNumber") %></td>
+164:                 <td><%= rs.getInt("GuestID") %></td>
+165:                 <td><%= rs.getString("NumberOfRooms") %></td>
+166:                 <td><%= rs.getString("NumberOfGuests") %></td>
+167:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("StartDate")) %></td>
+168:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("EndDate")) %></td>
+
+
+An error occurred at line: [166] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+163:                 <td><%= rs.getInt("BookingNumber") %></td>
+164:                 <td><%= rs.getInt("GuestID") %></td>
+165:                 <td><%= rs.getString("NumberOfRooms") %></td>
+166:                 <td><%= rs.getString("NumberOfGuests") %></td>
+167:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("StartDate")) %></td>
+168:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("EndDate")) %></td>
+169:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("ReservationDate"))%></td>
+
+
+An error occurred at line: [167] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+164:                 <td><%= rs.getInt("GuestID") %></td>
+165:                 <td><%= rs.getString("NumberOfRooms") %></td>
+166:                 <td><%= rs.getString("NumberOfGuests") %></td>
+167:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("StartDate")) %></td>
+168:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("EndDate")) %></td>
+169:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("ReservationDate"))%></td>
+170:                 <td><%= rs.getString("BookingSite") %></td>
+
+
+An error occurred at line: [168] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+165:                 <td><%= rs.getString("NumberOfRooms") %></td>
+166:                 <td><%= rs.getString("NumberOfGuests") %></td>
+167:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("StartDate")) %></td>
+168:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("EndDate")) %></td>
+169:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("ReservationDate"))%></td>
+170:                 <td><%= rs.getString("BookingSite") %></td>
+171:                 <td><%= rs.getString("SpecialRequest") %></td>
+
+
+An error occurred at line: [169] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+166:                 <td><%= rs.getString("NumberOfGuests") %></td>
+167:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("StartDate")) %></td>
+168:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("EndDate")) %></td>
+169:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("ReservationDate"))%></td>
+170:                 <td><%= rs.getString("BookingSite") %></td>
+171:                 <td><%= rs.getString("SpecialRequest") %></td>
+172:                 <td><%= rs.getString("HotelName") %></td>
+
+
+An error occurred at line: [170] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+167:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("StartDate")) %></td>
+168:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("EndDate")) %></td>
+169:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("ReservationDate"))%></td>
+170:                 <td><%= rs.getString("BookingSite") %></td>
+171:                 <td><%= rs.getString("SpecialRequest") %></td>
+172:                 <td><%= rs.getString("HotelName") %></td>
+173:                 <td><%= rs.getString("HotelLocation") %></td>
+
+
+An error occurred at line: [171] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+168:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("EndDate")) %></td>
+169:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("ReservationDate"))%></td>
+170:                 <td><%= rs.getString("BookingSite") %></td>
+171:                 <td><%= rs.getString("SpecialRequest") %></td>
+172:                 <td><%= rs.getString("HotelName") %></td>
+173:                 <td><%= rs.getString("HotelLocation") %></td>
+174:                 <td><%= rs.getString("RoomNumber") %></td>
+
+
+An error occurred at line: [172] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+169:                 <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("ReservationDate"))%></td>
+170:                 <td><%= rs.getString("BookingSite") %></td>
+171:                 <td><%= rs.getString("SpecialRequest") %></td>
+172:                 <td><%= rs.getString("HotelName") %></td>
+173:                 <td><%= rs.getString("HotelLocation") %></td>
+174:                 <td><%= rs.getString("RoomNumber") %></td>
+175:                 <td><%= rs.getString("CheckIn") %></td>
+
+
+An error occurred at line: [173] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+170:                 <td><%= rs.getString("BookingSite") %></td>
+171:                 <td><%= rs.getString("SpecialRequest") %></td>
+172:                 <td><%= rs.getString("HotelName") %></td>
+173:                 <td><%= rs.getString("HotelLocation") %></td>
+174:                 <td><%= rs.getString("RoomNumber") %></td>
+175:                 <td><%= rs.getString("CheckIn") %></td>
+176:                 <td><%= rs.getString("CheckOut") %></td>
+
+
+An error occurred at line: [174] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+171:                 <td><%= rs.getString("SpecialRequest") %></td>
+172:                 <td><%= rs.getString("HotelName") %></td>
+173:                 <td><%= rs.getString("HotelLocation") %></td>
+174:                 <td><%= rs.getString("RoomNumber") %></td>
+175:                 <td><%= rs.getString("CheckIn") %></td>
+176:                 <td><%= rs.getString("CheckOut") %></td>
+177:               </tr>
+
+
+An error occurred at line: [175] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+172:                 <td><%= rs.getString("HotelName") %></td>
+173:                 <td><%= rs.getString("HotelLocation") %></td>
+174:                 <td><%= rs.getString("RoomNumber") %></td>
+175:                 <td><%= rs.getString("CheckIn") %></td>
+176:                 <td><%= rs.getString("CheckOut") %></td>
+177:               </tr>
+178:               <% } %>
+
+
+An error occurred at line: [176] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+173:                 <td><%= rs.getString("HotelLocation") %></td>
+174:                 <td><%= rs.getString("RoomNumber") %></td>
+175:                 <td><%= rs.getString("CheckIn") %></td>
+176:                 <td><%= rs.getString("CheckOut") %></td>
+177:               </tr>
+178:               <% } %>
+179:             </tbody>
+
+
+An error occurred at line: [185] in the jsp file: [/editReservation.jsp]
+Nrooms cannot be resolved
+182: 
+183:             String query2 = "UPDATE Project.ReservationInfo SET";
+184: 
+185:             if (!Nrooms.isEmpty()) {
+186:                 query2 += " NumberOfRooms='" + Nrooms + "'";
+187:             }
+188:     
+
+
+An error occurred at line: [186] in the jsp file: [/editReservation.jsp]
+Nrooms cannot be resolved to a variable
+183:             String query2 = "UPDATE Project.ReservationInfo SET";
+184: 
+185:             if (!Nrooms.isEmpty()) {
+186:                 query2 += " NumberOfRooms='" + Nrooms + "'";
+187:             }
+188:     
+189:             if (!Nguests.isEmpty()) {
+
+
+An error occurred at line: [189] in the jsp file: [/editReservation.jsp]
+Nguests cannot be resolved
+186:                 query2 += " NumberOfRooms='" + Nrooms + "'";
+187:             }
+188:     
+189:             if (!Nguests.isEmpty()) {
+190:                 if (!Nrooms.isEmpty()) {
+191:                     query2 += ",";
+192:                 }
+
+
+An error occurred at line: [190] in the jsp file: [/editReservation.jsp]
+Nrooms cannot be resolved
+187:             }
+188:     
+189:             if (!Nguests.isEmpty()) {
+190:                 if (!Nrooms.isEmpty()) {
+191:                     query2 += ",";
+192:                 }
+193:                 query2 += " NumberOfGuests='" + Nguests + "'";
+
+
+An error occurred at line: [193] in the jsp file: [/editReservation.jsp]
+Nguests cannot be resolved to a variable
+190:                 if (!Nrooms.isEmpty()) {
+191:                     query2 += ",";
+192:                 }
+193:                 query2 += " NumberOfGuests='" + Nguests + "'";
+194:             }
+195: 
+196:             if (!startDateStr.isEmpty()) {
+
+
+An error occurred at line: [196] in the jsp file: [/editReservation.jsp]
+startDateStr cannot be resolved
+193:                 query2 += " NumberOfGuests='" + Nguests + "'";
+194:             }
+195: 
+196:             if (!startDateStr.isEmpty()) {
+197:                 if (!Nrooms.isEmpty() || !Nguests.isEmpty()) {
+198:                     query2 += ",";
+199:                 }
+
+
+An error occurred at line: [197] in the jsp file: [/editReservation.jsp]
+Nrooms cannot be resolved
+194:             }
+195: 
+196:             if (!startDateStr.isEmpty()) {
+197:                 if (!Nrooms.isEmpty() || !Nguests.isEmpty()) {
+198:                     query2 += ",";
+199:                 }
+200:                 query2 += " StartDate='" + new Timestamp(startDate.getTime()) + "'";
+
+
+An error occurred at line: [197] in the jsp file: [/editReservation.jsp]
+Nguests cannot be resolved
+194:             }
+195: 
+196:             if (!startDateStr.isEmpty()) {
+197:                 if (!Nrooms.isEmpty() || !Nguests.isEmpty()) {
+198:                     query2 += ",";
+199:                 }
+200:                 query2 += " StartDate='" + new Timestamp(startDate.getTime()) + "'";
+
+
+An error occurred at line: [200] in the jsp file: [/editReservation.jsp]
+startDate cannot be resolved
+197:                 if (!Nrooms.isEmpty() || !Nguests.isEmpty()) {
+198:                     query2 += ",";
+199:                 }
+200:                 query2 += " StartDate='" + new Timestamp(startDate.getTime()) + "'";
+201:             }
+202: 
+203:             if (!endDateStr.isEmpty()) {
+
+
+An error occurred at line: [203] in the jsp file: [/editReservation.jsp]
+endDateStr cannot be resolved
+200:                 query2 += " StartDate='" + new Timestamp(startDate.getTime()) + "'";
+201:             }
+202: 
+203:             if (!endDateStr.isEmpty()) {
+204:                 if (!Nrooms.isEmpty() || !Nguests.isEmpty() || !startDateStr.isEmpty()) {
+205:                     query2 += ",";
+206:                 }
+
+
+An error occurred at line: [204] in the jsp file: [/editReservation.jsp]
+Nrooms cannot be resolved
+201:             }
+202: 
+203:             if (!endDateStr.isEmpty()) {
+204:                 if (!Nrooms.isEmpty() || !Nguests.isEmpty() || !startDateStr.isEmpty()) {
+205:                     query2 += ",";
+206:                 }
+207:                 query2 += " EndDate='" + new Timestamp(endDate.getTime()) + "'";
+
+
+An error occurred at line: [204] in the jsp file: [/editReservation.jsp]
+Nguests cannot be resolved
+201:             }
+202: 
+203:             if (!endDateStr.isEmpty()) {
+204:                 if (!Nrooms.isEmpty() || !Nguests.isEmpty() || !startDateStr.isEmpty()) {
+205:                     query2 += ",";
+206:                 }
+207:                 query2 += " EndDate='" + new Timestamp(endDate.getTime()) + "'";
+
+
+An error occurred at line: [204] in the jsp file: [/editReservation.jsp]
+startDateStr cannot be resolved
+201:             }
+202: 
+203:             if (!endDateStr.isEmpty()) {
+204:                 if (!Nrooms.isEmpty() || !Nguests.isEmpty() || !startDateStr.isEmpty()) {
+205:                     query2 += ",";
+206:                 }
+207:                 query2 += " EndDate='" + new Timestamp(endDate.getTime()) + "'";
+
+
+An error occurred at line: [207] in the jsp file: [/editReservation.jsp]
+endDate cannot be resolved
+204:                 if (!Nrooms.isEmpty() || !Nguests.isEmpty() || !startDateStr.isEmpty()) {
+205:                     query2 += ",";
+206:                 }
+207:                 query2 += " EndDate='" + new Timestamp(endDate.getTime()) + "'";
+208:             }
+209: 
+210:             if (!specialRequest.isEmpty()) {
+
+
+An error occurred at line: [210] in the jsp file: [/editReservation.jsp]
+specialRequest cannot be resolved
+207:                 query2 += " EndDate='" + new Timestamp(endDate.getTime()) + "'";
+208:             }
+209: 
+210:             if (!specialRequest.isEmpty()) {
+211:                 if (!Nrooms.isEmpty() || !Nguests.isEmpty() || !startDateStr.isEmpty() || !endDateStr.isEmpty()) {
+212:                     query2 += ",";
+213:                 }
+
+
+An error occurred at line: [211] in the jsp file: [/editReservation.jsp]
+Nrooms cannot be resolved
+208:             }
+209: 
+210:             if (!specialRequest.isEmpty()) {
+211:                 if (!Nrooms.isEmpty() || !Nguests.isEmpty() || !startDateStr.isEmpty() || !endDateStr.isEmpty()) {
+212:                     query2 += ",";
+213:                 }
+214:                 query2 += " SpecialRequest='" + specialRequest + "'";
+
+
+An error occurred at line: [211] in the jsp file: [/editReservation.jsp]
+Nguests cannot be resolved
+208:             }
+209: 
+210:             if (!specialRequest.isEmpty()) {
+211:                 if (!Nrooms.isEmpty() || !Nguests.isEmpty() || !startDateStr.isEmpty() || !endDateStr.isEmpty()) {
+212:                     query2 += ",";
+213:                 }
+214:                 query2 += " SpecialRequest='" + specialRequest + "'";
+
+
+An error occurred at line: [211] in the jsp file: [/editReservation.jsp]
+startDateStr cannot be resolved
+208:             }
+209: 
+210:             if (!specialRequest.isEmpty()) {
+211:                 if (!Nrooms.isEmpty() || !Nguests.isEmpty() || !startDateStr.isEmpty() || !endDateStr.isEmpty()) {
+212:                     query2 += ",";
+213:                 }
+214:                 query2 += " SpecialRequest='" + specialRequest + "'";
+
+
+An error occurred at line: [211] in the jsp file: [/editReservation.jsp]
+endDateStr cannot be resolved
+208:             }
+209: 
+210:             if (!specialRequest.isEmpty()) {
+211:                 if (!Nrooms.isEmpty() || !Nguests.isEmpty() || !startDateStr.isEmpty() || !endDateStr.isEmpty()) {
+212:                     query2 += ",";
+213:                 }
+214:                 query2 += " SpecialRequest='" + specialRequest + "'";
+
+
+An error occurred at line: [214] in the jsp file: [/editReservation.jsp]
+specialRequest cannot be resolved to a variable
+211:                 if (!Nrooms.isEmpty() || !Nguests.isEmpty() || !startDateStr.isEmpty() || !endDateStr.isEmpty()) {
+212:                     query2 += ",";
+213:                 }
+214:                 query2 += " SpecialRequest='" + specialRequest + "'";
+215:             }
+216: 
+217:             query2 += " WHERE BookingNumber=?";
+
+
+An error occurred at line: [218] in the jsp file: [/editReservation.jsp]
+con cannot be resolved
+215:             }
+216: 
+217:             query2 += " WHERE BookingNumber=?";
+218:             PreparedStatement ps2 = con.prepareStatement(query2);
+219:             ps2.setInt(1, BookingN);
+220:             ps2.executeUpdate();
+221: 
+
+
+An error occurred at line: [219] in the jsp file: [/editReservation.jsp]
+BookingN cannot be resolved to a variable
+216: 
+217:             query2 += " WHERE BookingNumber=?";
+218:             PreparedStatement ps2 = con.prepareStatement(query2);
+219:             ps2.setInt(1, BookingN);
+220:             ps2.executeUpdate();
+221: 
+222:             String query3 = "UPDATE Project.Stay SET";
+
+
+An error occurred at line: [224] in the jsp file: [/editReservation.jsp]
+hotelName cannot be resolved
+221: 
+222:             String query3 = "UPDATE Project.Stay SET";
+223: 
+224:             if (!hotelName.isEmpty()) {
+225:                 query3 += " HotelName='" + hotelName + "'";
+226:             }
+227: 
+
+
+An error occurred at line: [225] in the jsp file: [/editReservation.jsp]
+hotelName cannot be resolved to a variable
+222:             String query3 = "UPDATE Project.Stay SET";
+223: 
+224:             if (!hotelName.isEmpty()) {
+225:                 query3 += " HotelName='" + hotelName + "'";
+226:             }
+227: 
+228:             if (!hotelLocation.isEmpty()) {
+
+
+An error occurred at line: [228] in the jsp file: [/editReservation.jsp]
+hotelLocation cannot be resolved
+225:                 query3 += " HotelName='" + hotelName + "'";
+226:             }
+227: 
+228:             if (!hotelLocation.isEmpty()) {
+229:                 if (!hotelName.isEmpty()) {
+230:                     query3 += ",";
+231:                 }
+
+
+An error occurred at line: [229] in the jsp file: [/editReservation.jsp]
+hotelName cannot be resolved
+226:             }
+227: 
+228:             if (!hotelLocation.isEmpty()) {
+229:                 if (!hotelName.isEmpty()) {
+230:                     query3 += ",";
+231:                 }
+232:                 query3 += " HotelLocation='" + hotelLocation + "'";
+
+
+An error occurred at line: [232] in the jsp file: [/editReservation.jsp]
+hotelLocation cannot be resolved to a variable
+229:                 if (!hotelName.isEmpty()) {
+230:                     query3 += ",";
+231:                 }
+232:                 query3 += " HotelLocation='" + hotelLocation + "'";
+233:             }
+234: 
+235:             if (!rNumber.isEmpty()) {
+
+
+An error occurred at line: [235] in the jsp file: [/editReservation.jsp]
+rNumber cannot be resolved
+232:                 query3 += " HotelLocation='" + hotelLocation + "'";
+233:             }
+234: 
+235:             if (!rNumber.isEmpty()) {
+236:                 if (!hotelName.isEmpty() || !hotelLocation.isEmpty()) {
+237:                     query3 += ",";
+238:                 }
+
+
+An error occurred at line: [236] in the jsp file: [/editReservation.jsp]
+hotelName cannot be resolved
+233:             }
+234: 
+235:             if (!rNumber.isEmpty()) {
+236:                 if (!hotelName.isEmpty() || !hotelLocation.isEmpty()) {
+237:                     query3 += ",";
+238:                 }
+239:                 query3 += " RoomNumber='" + rNumber + "'";
+
+
+An error occurred at line: [236] in the jsp file: [/editReservation.jsp]
+hotelLocation cannot be resolved
+233:             }
+234: 
+235:             if (!rNumber.isEmpty()) {
+236:                 if (!hotelName.isEmpty() || !hotelLocation.isEmpty()) {
+237:                     query3 += ",";
+238:                 }
+239:                 query3 += " RoomNumber='" + rNumber + "'";
+
+
+An error occurred at line: [239] in the jsp file: [/editReservation.jsp]
+rNumber cannot be resolved to a variable
+236:                 if (!hotelName.isEmpty() || !hotelLocation.isEmpty()) {
+237:                     query3 += ",";
+238:                 }
+239:                 query3 += " RoomNumber='" + rNumber + "'";
+240:             }
+241:             query3 += " WHERE BookingNumber=?";
+242:             PreparedStatement ps3 = con.prepareStatement(query3);
+
+
+An error occurred at line: [242] in the jsp file: [/editReservation.jsp]
+con cannot be resolved
+239:                 query3 += " RoomNumber='" + rNumber + "'";
+240:             }
+241:             query3 += " WHERE BookingNumber=?";
+242:             PreparedStatement ps3 = con.prepareStatement(query3);
+243:             ps3.setInt(1, BookingN);
+244:             ps3.executeUpdate();
+245:             ps3.close();
+
+
+An error occurred at line: [243] in the jsp file: [/editReservation.jsp]
+BookingN cannot be resolved to a variable
+240:             }
+241:             query3 += " WHERE BookingNumber=?";
+242:             PreparedStatement ps3 = con.prepareStatement(query3);
+243:             ps3.setInt(1, BookingN);
+244:             ps3.executeUpdate();
+245:             ps3.close();
+246: 
+
+
+An error occurred at line: [248] in the jsp file: [/editReservation.jsp]
+con cannot be resolved
+245:             ps3.close();
+246: 
+247:             String query4 = "SELECT * FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.BookingNumber = ?";
+248:             PreparedStatement ps4 = con.prepareStatement(query4);
+249:             ps4.setInt(1, BookingN);
+250:             rs = ps4.executeQuery();
+251: %>
+
+
+An error occurred at line: [249] in the jsp file: [/editReservation.jsp]
+BookingN cannot be resolved to a variable
+246: 
+247:             String query4 = "SELECT * FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.BookingNumber = ?";
+248:             PreparedStatement ps4 = con.prepareStatement(query4);
+249:             ps4.setInt(1, BookingN);
+250:             rs = ps4.executeQuery();
+251: %>
+252:     <table class = 'table'>
+
+
+An error occurred at line: [250] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved to a variable
+247:             String query4 = "SELECT * FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.BookingNumber = ?";
+248:             PreparedStatement ps4 = con.prepareStatement(query4);
+249:             ps4.setInt(1, BookingN);
+250:             rs = ps4.executeQuery();
+251: %>
+252:     <table class = 'table'>
+253:         <thead>
+
+
+An error occurred at line: [272] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+269:         </tr>
+270:         </thead>
+271:     <tbody>
+272:         <% while(rs.next()) { %>
+273:       <tr>
+274:         <td><%= rs.getInt("BookingNumber") %></td>
+275:         <td><%= rs.getInt("GuestID") %></td>
+
+
+An error occurred at line: [274] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+271:     <tbody>
+272:         <% while(rs.next()) { %>
+273:       <tr>
+274:         <td><%= rs.getInt("BookingNumber") %></td>
+275:         <td><%= rs.getInt("GuestID") %></td>
+276:         <td><%= rs.getString("NumberOfRooms") %></td>
+277:         <td><%= rs.getString("NumberOfGuests") %></td>
+
+
+An error occurred at line: [275] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+272:         <% while(rs.next()) { %>
+273:       <tr>
+274:         <td><%= rs.getInt("BookingNumber") %></td>
+275:         <td><%= rs.getInt("GuestID") %></td>
+276:         <td><%= rs.getString("NumberOfRooms") %></td>
+277:         <td><%= rs.getString("NumberOfGuests") %></td>
+278:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("StartDate")) %></td>
+
+
+An error occurred at line: [276] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+273:       <tr>
+274:         <td><%= rs.getInt("BookingNumber") %></td>
+275:         <td><%= rs.getInt("GuestID") %></td>
+276:         <td><%= rs.getString("NumberOfRooms") %></td>
+277:         <td><%= rs.getString("NumberOfGuests") %></td>
+278:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("StartDate")) %></td>
+279:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("EndDate")) %></td>
+
+
+An error occurred at line: [277] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+274:         <td><%= rs.getInt("BookingNumber") %></td>
+275:         <td><%= rs.getInt("GuestID") %></td>
+276:         <td><%= rs.getString("NumberOfRooms") %></td>
+277:         <td><%= rs.getString("NumberOfGuests") %></td>
+278:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("StartDate")) %></td>
+279:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("EndDate")) %></td>
+280:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("ReservationDate"))%></td>
+
+
+An error occurred at line: [278] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+275:         <td><%= rs.getInt("GuestID") %></td>
+276:         <td><%= rs.getString("NumberOfRooms") %></td>
+277:         <td><%= rs.getString("NumberOfGuests") %></td>
+278:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("StartDate")) %></td>
+279:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("EndDate")) %></td>
+280:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("ReservationDate"))%></td>
+281:         <td><%= rs.getString("BookingSite") %></td>
+
+
+An error occurred at line: [279] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+276:         <td><%= rs.getString("NumberOfRooms") %></td>
+277:         <td><%= rs.getString("NumberOfGuests") %></td>
+278:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("StartDate")) %></td>
+279:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("EndDate")) %></td>
+280:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("ReservationDate"))%></td>
+281:         <td><%= rs.getString("BookingSite") %></td>
+282:         <td><%= rs.getString("SpecialRequest") %></td>
+
+
+An error occurred at line: [280] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+277:         <td><%= rs.getString("NumberOfGuests") %></td>
+278:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("StartDate")) %></td>
+279:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("EndDate")) %></td>
+280:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("ReservationDate"))%></td>
+281:         <td><%= rs.getString("BookingSite") %></td>
+282:         <td><%= rs.getString("SpecialRequest") %></td>
+283:         <td><%= rs.getString("HotelName") %></td>
+
+
+An error occurred at line: [281] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+278:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("StartDate")) %></td>
+279:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("EndDate")) %></td>
+280:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("ReservationDate"))%></td>
+281:         <td><%= rs.getString("BookingSite") %></td>
+282:         <td><%= rs.getString("SpecialRequest") %></td>
+283:         <td><%= rs.getString("HotelName") %></td>
+284:         <td><%= rs.getString("HotelLocation") %></td>
+
+
+An error occurred at line: [282] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+279:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("EndDate")) %></td>
+280:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("ReservationDate"))%></td>
+281:         <td><%= rs.getString("BookingSite") %></td>
+282:         <td><%= rs.getString("SpecialRequest") %></td>
+283:         <td><%= rs.getString("HotelName") %></td>
+284:         <td><%= rs.getString("HotelLocation") %></td>
+285:         <td><%= rs.getString("RoomNumber") %></td>
+
+
+An error occurred at line: [283] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+280:         <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("ReservationDate"))%></td>
+281:         <td><%= rs.getString("BookingSite") %></td>
+282:         <td><%= rs.getString("SpecialRequest") %></td>
+283:         <td><%= rs.getString("HotelName") %></td>
+284:         <td><%= rs.getString("HotelLocation") %></td>
+285:         <td><%= rs.getString("RoomNumber") %></td>
+286:         <td><%= rs.getString("CheckIn") %></td>
+
+
+An error occurred at line: [284] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+281:         <td><%= rs.getString("BookingSite") %></td>
+282:         <td><%= rs.getString("SpecialRequest") %></td>
+283:         <td><%= rs.getString("HotelName") %></td>
+284:         <td><%= rs.getString("HotelLocation") %></td>
+285:         <td><%= rs.getString("RoomNumber") %></td>
+286:         <td><%= rs.getString("CheckIn") %></td>
+287:         <td><%= rs.getString("CheckOut") %></td>
+
+
+An error occurred at line: [285] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+282:         <td><%= rs.getString("SpecialRequest") %></td>
+283:         <td><%= rs.getString("HotelName") %></td>
+284:         <td><%= rs.getString("HotelLocation") %></td>
+285:         <td><%= rs.getString("RoomNumber") %></td>
+286:         <td><%= rs.getString("CheckIn") %></td>
+287:         <td><%= rs.getString("CheckOut") %></td>
+288:       </tr>
+
+
+An error occurred at line: [286] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+283:         <td><%= rs.getString("HotelName") %></td>
+284:         <td><%= rs.getString("HotelLocation") %></td>
+285:         <td><%= rs.getString("RoomNumber") %></td>
+286:         <td><%= rs.getString("CheckIn") %></td>
+287:         <td><%= rs.getString("CheckOut") %></td>
+288:       </tr>
+289:       <% } %>
+
+
+An error occurred at line: [287] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+284:         <td><%= rs.getString("HotelLocation") %></td>
+285:         <td><%= rs.getString("RoomNumber") %></td>
+286:         <td><%= rs.getString("CheckIn") %></td>
+287:         <td><%= rs.getString("CheckOut") %></td>
+288:       </tr>
+289:       <% } %>
+290:     </tbody>
+
+
+An error occurred at line: [294] in the jsp file: [/editReservation.jsp]
+rs cannot be resolved
+291:     </table>
+292: <%
+293:         ps4.close();
+294:         rs.close();
+295:         con.close();
+296:     }
+297: }   catch (SQLException | ClassNotFoundException e) {
+
+
+An error occurred at line: [295] in the jsp file: [/editReservation.jsp]
+con cannot be resolved
+292: <%
+293:         ps4.close();
+294:         rs.close();
+295:         con.close();
+296:     }
+297: }   catch (SQLException | ClassNotFoundException e) {
+298:             e.printStackTrace();
+
+
+An error occurred at line: [300] in the jsp file: [/editReservation.jsp]
+Syntax error on token "}", delete this token
+297: }   catch (SQLException | ClassNotFoundException e) {
+298:             e.printStackTrace();
+299:     }
+300: }
+301:     %>
+302:         
+303: </body>
+
+
+An error occurred at line: [525] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/editReservation_jsp.java]
+Syntax error on tokens, delete these tokens
+
+An error occurred at line: [525] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/editReservation_jsp.java]
+Syntax error on token(s), misplaced construct(s)
+
+An error occurred at line: [525] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/editReservation_jsp.java]
+t cannot be resolved to a variable
+
+An error occurred at line: [525] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/editReservation_jsp.java]
+Syntax error, insert "AssignmentOperator Expression" to complete Assignment
+
+An error occurred at line: [525] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/editReservation_jsp.java]
+Syntax error, insert ";" to complete Statement
+
+An error occurred at line: [526] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/editReservation_jsp.java]
+t cannot be resolved to a variable
+
+An error occurred at line: [536] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/editReservation_jsp.java]
+t cannot be resolved to a variable
+
+An error occurred at line: [537] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/editReservation_jsp.java]
+t cannot be resolved to a variable
+
+An error occurred at line: [539] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/editReservation_jsp.java]
+Syntax error on token "finally", delete this token
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
