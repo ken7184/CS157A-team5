@@ -22,6 +22,11 @@
         .table {
             width: 100%;
         }
+        .error-message{
+            font-size: 16px;
+            margin-left: 48px;
+            color: red;
+          }
     </style>
 </head>
 <body>
@@ -110,37 +115,52 @@ if ("POST".equalsIgnoreCase(request.getMethod())) {
 
     String user = "root";
     String pass = "Ken30526296@";
-    String query = "SELECT * FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.BookingNumber = ?";
+   
 
     try {
         java.sql.Connection con;
         Class.forName("com.mysql.cj.jdbc.Driver");
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Project?autoReconnect=true&useSSL=false", user, pass);
-        PreparedStatement ps = con.prepareStatement(query);
-        ps.setInt(1, BookingN);
-        ResultSet rs = ps.executeQuery();
+
+        String checkQuery = "SELECT Availability FROM Project.Room WHERE RoomNumber = ?";
+        PreparedStatement ps0 = con.prepareStatement(checkQuery);
+
+        ps0.setString(1, rNumber);
+        ResultSet rs = ps0.executeQuery();
+
+        if (rs.next()) {
+            String availability = rs.getString("Availability");
+            if ("No".equals(availability)) {
+                out.println("<h2 class='error-message'>Room is not available: " + rs.getString("RoomNumber") + "</h2>");
+            }
+        }
+        else {
+            String query = "SELECT * FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.BookingNumber = ?";
+            PreparedStatement ps = con.prepareStatement(query);
+            ps.setInt(1, BookingN);
+            rs = ps.executeQuery();
 %>
-        <table class = 'table'>
-            <thead>
-              <tr>
-                <td>Booking Number</td>
-                <td>Guest Id</td>
-                <td>Number of Rooms</td>
-                <td>Number of Guests</td>
-                <td>Start Date</td>
-                <td>End Date</td>
-                <td>Reservation Date</td>
-                <td>Booking Site</td>
-                <td>Special Request</td>
-                <td>Hotel Name</td>
-                <td>Hotel Location</td>
-                <td>Room Number</td>
-                <td>Check In</td>
-                <td>Check Out</td>
-              </tr>
-            </thead>
+            <table class = 'table'>
+                <thead>
+                <tr>
+                    <td>Booking Number</td>
+                    <td>Guest Id</td>
+                    <td>Number of Rooms</td>
+                    <td>Number of Guests</td>
+                    <td>Start Date</td>
+                    <td>End Date</td>
+                    <td>Reservation Date</td>
+                    <td>Booking Site</td>
+                    <td>Special Request</td>
+                    <td>Hotel Name</td>
+                    <td>Hotel Location</td>
+                    <td>Room Number</td>
+                    <td>Check In</td>
+                    <td>Check Out</td>
+                </tr>
+                </thead>
             <tbody>
-              <% while(rs.next()) { %>
+            <% while(rs.next()) { %>
               <tr>
                 <td><%= rs.getInt("BookingNumber") %></td>
                 <td><%= rs.getInt("GuestID") %></td>
@@ -160,98 +180,98 @@ if ("POST".equalsIgnoreCase(request.getMethod())) {
               <% } %>
             </tbody>
         </table>
-<%      ps.close();
+<%          ps.close();
 
-        String query2 = "UPDATE Project.ReservationInfo SET";
+            String query2 = "UPDATE Project.ReservationInfo SET";
 
-        if (!Nrooms.isEmpty()) {
-            query2 += " NumberOfRooms='" + Nrooms + "'";
-        }
-    
-        if (!Nguests.isEmpty()) {
             if (!Nrooms.isEmpty()) {
-                query2 += ",";
+                query2 += " NumberOfRooms='" + Nrooms + "'";
             }
-            query2 += " NumberOfGuests='" + Nguests + "'";
-        }
-
-        if (!startDateStr.isEmpty()) {
-            if (!Nrooms.isEmpty() || !Nguests.isEmpty()) {
-                query2 += ",";
+    
+            if (!Nguests.isEmpty()) {
+                if (!Nrooms.isEmpty()) {
+                    query2 += ",";
+                }
+                query2 += " NumberOfGuests='" + Nguests + "'";
             }
-            query2 += " StartDate='" + new Timestamp(startDate.getTime()) + "'";
-        }
 
-        if (!endDateStr.isEmpty()) {
-            if (!Nrooms.isEmpty() || !Nguests.isEmpty() || !startDateStr.isEmpty()) {
-                query2 += ",";
+            if (!startDateStr.isEmpty()) {
+                if (!Nrooms.isEmpty() || !Nguests.isEmpty()) {
+                    query2 += ",";
+                }
+                query2 += " StartDate='" + new Timestamp(startDate.getTime()) + "'";
             }
-            query2 += " EndDate='" + new Timestamp(endDate.getTime()) + "'";
-        }
 
-        if (!specialRequest.isEmpty()) {
-            if (!Nrooms.isEmpty() || !Nguests.isEmpty() || !startDateStr.isEmpty() || !endDateStr.isEmpty()) {
-                query2 += ",";
+            if (!endDateStr.isEmpty()) {
+                if (!Nrooms.isEmpty() || !Nguests.isEmpty() || !startDateStr.isEmpty()) {
+                    query2 += ",";
+                }
+                query2 += " EndDate='" + new Timestamp(endDate.getTime()) + "'";
             }
-            query2 += " SpecialRequest='" + specialRequest + "'";
-        }
 
-        query2 += " WHERE BookingNumber=?";
-        PreparedStatement ps2 = con.prepareStatement(query2);
-        ps2.setInt(1, BookingN);
-        ps2.executeUpdate();
+            if (!specialRequest.isEmpty()) {
+                if (!Nrooms.isEmpty() || !Nguests.isEmpty() || !startDateStr.isEmpty() || !endDateStr.isEmpty()) {
+                    query2 += ",";
+                }
+                query2 += " SpecialRequest='" + specialRequest + "'";
+            }
 
-        String query3 = "UPDATE Project.Stay SET";
+            query2 += " WHERE BookingNumber=?";
+            PreparedStatement ps2 = con.prepareStatement(query2);
+            ps2.setInt(1, BookingN);
+            ps2.executeUpdate();
 
-        if (!hotelName.isEmpty()) {
-            query3 += " HotelName='" + hotelName + "'";
-        }
+            String query3 = "UPDATE Project.Stay SET";
 
-        if (!hotelLocation.isEmpty()) {
             if (!hotelName.isEmpty()) {
-                query3 += ",";
+                query3 += " HotelName='" + hotelName + "'";
             }
-            query3 += " HotelLocation='" + hotelLocation + "'";
-        }
 
-        if (!rNumber.isEmpty()) {
-            if (!hotelName.isEmpty() || !hotelLocation.isEmpty()) {
-                query3 += ",";
+            if (!hotelLocation.isEmpty()) {
+                if (!hotelName.isEmpty()) {
+                    query3 += ",";
+                }
+                query3 += " HotelLocation='" + hotelLocation + "'";
             }
-            query3 += " RoomNumber='" + rNumber + "'";
-        }
-        query3 += " WHERE BookingNumber=?";
-        PreparedStatement ps3 = con.prepareStatement(query3);
-        ps3.setInt(1, BookingN);
-        ps3.executeUpdate();
-        ps3.close();
 
-        String query4 = "SELECT * FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.BookingNumber = ?";
-        PreparedStatement ps4 = con.prepareStatement(query4);
-        ps4.setInt(1, BookingN);
-        rs = ps4.executeQuery();
+            if (!rNumber.isEmpty()) {
+                if (!hotelName.isEmpty() || !hotelLocation.isEmpty()) {
+                    query3 += ",";
+                }
+                query3 += " RoomNumber='" + rNumber + "'";
+            }
+            query3 += " WHERE BookingNumber=?";
+            PreparedStatement ps3 = con.prepareStatement(query3);
+            ps3.setInt(1, BookingN);
+            ps3.executeUpdate();
+            ps3.close();
+
+            String query4 = "SELECT * FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.BookingNumber = ?";
+            PreparedStatement ps4 = con.prepareStatement(query4);
+            ps4.setInt(1, BookingN);
+            rs = ps4.executeQuery();
 %>
-<table class = 'table'>
-    <thead>
-      <tr>
-        <td>Booking Number</td>
-        <td>Guest Id</td>
-        <td>Number of Rooms</td>
-        <td>Number of Guests</td>
-        <td>Start Date</td>
-        <td>End Date</td>
-        <td>Reservation Date</td>
-        <td>Booking Site</td>
-        <td>Special Request</td>
-        <td>Hotel Name</td>
-        <td>Hotel Location</td>
-        <td>Room Number</td>
-        <td>Check In</td>
-        <td>Check Out</td>
-      </tr>
-    </thead>
+    <table class = 'table'>
+        <thead>
+        <tr>
+            <td>Booking Number</td>
+            <td>Guest Id</td>
+            <td>Number of Rooms</td>
+            <td>Number of Guests</td>
+            <td>Start Date</td>
+            <td>End Date</td>
+            <td>Reservation Date</td>
+            <td>Booking Site</td>
+            <td>Special Request</td>
+            <td>Hotel Name</td>
+            <td>Hotel Location</td>
+            <td>Room Number</td>
+            <td>Check In</td>
+            <td>Check Out</td>
+        </tr>
+        </thead>
     <tbody>
-      <% while(rs.next()) { %>
+        <% while(rs.next()) { %>
       <tr>
         <td><%= rs.getInt("BookingNumber") %></td>
         <td><%= rs.getInt("GuestID") %></td>
@@ -270,15 +290,17 @@ if ("POST".equalsIgnoreCase(request.getMethod())) {
       </tr>
       <% } %>
     </tbody>
-</table>
+    </table>
 <%
         ps4.close();
         rs.close();
         con.close();
-        } catch (SQLException | ClassNotFoundException e) {
-            e.printStackTrace();
-        }
     }
+}   catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+    }
+}
     %>
+        
 </body>
 </html>
