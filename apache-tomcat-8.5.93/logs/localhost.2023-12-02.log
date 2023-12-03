@@ -225,3 +225,713 @@ Stacktrace:
 		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 		at java.base/java.lang.Thread.run(Thread.java:1583)
+02-Dec-2023 12:00:57.015 SEVERE [http-nio-8080-exec-14] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [123] in the jsp file: [/makeShift.jsp]
+rs cannot be resolved
+120:                     preparedStatement.setString(8, assignedRoom);
+121:                     preparedStatement.executeUpdate();
+122:                     con.close();
+123:                     out.println("<h2>Room is not available: " + rs.getString("RoomNumber") + "</h2>");
+124:                 } catch (Exception e) {
+125:                     out.println("Exception caught: " + e.getMessage());
+126:                 } finally {
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [123] in the jsp file: [/makeShift.jsp]
+rs cannot be resolved
+120:                     preparedStatement.setString(8, assignedRoom);
+121:                     preparedStatement.executeUpdate();
+122:                     con.close();
+123:                     out.println("<h2>Room is not available: " + rs.getString("RoomNumber") + "</h2>");
+124:                 } catch (Exception e) {
+125:                     out.println("Exception caught: " + e.getMessage());
+126:                 } finally {
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+02-Dec-2023 12:01:29.951 SEVERE [http-nio-8080-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [122] in the jsp file: [/makeShift.jsp]
+rs cannot be resolved
+119:                     preparedStatement.setString(7, task);
+120:                     preparedStatement.setString(8, assignedRoom);
+121:                     preparedStatement.executeUpdate();
+122:                     out.println("<h2>Room is not available: " + rs.getString("RoomNumber") + "</h2>");
+123:                     con.close();
+124:                 } catch (Exception e) {
+125:                     out.println("Exception caught: " + e.getMessage());
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [122] in the jsp file: [/makeShift.jsp]
+rs cannot be resolved
+119:                     preparedStatement.setString(7, task);
+120:                     preparedStatement.setString(8, assignedRoom);
+121:                     preparedStatement.executeUpdate();
+122:                     out.println("<h2>Room is not available: " + rs.getString("RoomNumber") + "</h2>");
+123:                     con.close();
+124:                 } catch (Exception e) {
+125:                     out.println("Exception caught: " + e.getMessage());
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+02-Dec-2023 12:02:53.324 SEVERE [http-nio-8080-exec-13] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [122] in the jsp file: [/makeShift.jsp]
+rs cannot be resolved
+119:                     preparedStatement.setString(7, task);
+120:                     preparedStatement.setString(8, assignedRoom);
+121:                     preparedStatement.executeUpdate();
+122:                     out.println("<h2>Room is not available: " + rs.getString("RoomNumber") + "</h2>");
+123:                     preparedStatement.close();
+124:                     con.close();
+125:                 } catch (Exception e) {
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [122] in the jsp file: [/makeShift.jsp]
+rs cannot be resolved
+119:                     preparedStatement.setString(7, task);
+120:                     preparedStatement.setString(8, assignedRoom);
+121:                     preparedStatement.executeUpdate();
+122:                     out.println("<h2>Room is not available: " + rs.getString("RoomNumber") + "</h2>");
+123:                     preparedStatement.close();
+124:                     con.close();
+125:                 } catch (Exception e) {
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+02-Dec-2023 16:07:35.220 SEVERE [http-nio-8080-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [157] in the jsp file: [/editShift.jsp]
+query2 cannot be resolved to a variable
+154: 
+155:                     if (!hotelName.isEmpty()) {
+156:                         if (!hotelLocation.isEmpty()) {
+157:                             query2 += ",";
+158:                         }
+159:                         sql1 += " HotelName='" + hotelName + "'";
+160:                     }
+
+
+An error occurred at line: [164] in the jsp file: [/editShift.jsp]
+query2 cannot be resolved to a variable
+161: 
+162:                     if (!dateStr.isEmpty()) {
+163:                         if (!hotelLocation.isEmpty() || !hotelName.isEmpty()) {
+164:                             query2 += ",";
+165:                         }
+166:                         sql1 += " Date='" + new Timestamp(date.getTime()) + "'";
+167:                     }
+
+
+An error occurred at line: [171] in the jsp file: [/editShift.jsp]
+query2 cannot be resolved to a variable
+168: 
+169:                     if (!startTimeStr.isEmpty()) {
+170:                         if (!hotelLocation.isEmpty() || !hotelName.isEmpty() || !dateStr.isEmpty()) {
+171:                             query2 += ",";
+172:                         }
+173:                         sql1 += " StartTime='" + new Timestamp(startTime.getTime()) + "'";
+174:                     }
+
+
+An error occurred at line: [178] in the jsp file: [/editShift.jsp]
+query2 cannot be resolved to a variable
+175: 
+176:                     if (!endTimeStr.isEmpty()) {
+177:                         if (!hotelLocation.isEmpty() || !hotelName.isEmpty() || !dateStr.isEmpty() || !startTimeStr.isEmpty()) {
+178:                             query2 += ",";
+179:                         }
+180:                         sql1 += " endTime='" + new Timestamp(endTime.getTime()) + "'";
+181:                     }
+
+
+An error occurred at line: [185] in the jsp file: [/editShift.jsp]
+query2 cannot be resolved to a variable
+182: 
+183:                     if (!task.isEmpty()) {
+184:                         if (!hotelLocation.isEmpty() || !hotelName.isEmpty() || !dateStr.isEmpty() || !startTimeStr.isEmpty() || !endTimeStr.isEmpty()) {
+185:                             query2 += ",";
+186:                         }
+187:                         sql1 += " Task='" + task + "'";
+188:                     }
+
+
+An error occurred at line: [192] in the jsp file: [/editShift.jsp]
+query2 cannot be resolved to a variable
+189: 
+190:                     if (!assignedRoom.isEmpty()) {
+191:                         if (!hotelLocation.isEmpty() || !hotelName.isEmpty() || !dateStr.isEmpty() || !startTimeStr.isEmpty() || !endTimeStr.isEmpty() || !task.isEmpty()) {
+192:                             query2 += ",";
+193:                         }
+194:                         sql1 += " AssignedRoom='" + assignedRoom + "'";
+195:                     }
+
+
+An error occurred at line: [200] in the jsp file: [/editShift.jsp]
+Syntax error, insert ";" to complete Statement
+197:                     PreparedStatement ps2 = con.prepareStatement(sql1);
+198:                     ps2.setInt(1, employeeIDInt);
+199:                     ps2.executeUpdate();
+200:                     ps2.close()
+201: 
+202:                     
+203: 
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [157] in the jsp file: [/editShift.jsp]
+query2 cannot be resolved to a variable
+154: 
+155:                     if (!hotelName.isEmpty()) {
+156:                         if (!hotelLocation.isEmpty()) {
+157:                             query2 += ",";
+158:                         }
+159:                         sql1 += " HotelName='" + hotelName + "'";
+160:                     }
+
+
+An error occurred at line: [164] in the jsp file: [/editShift.jsp]
+query2 cannot be resolved to a variable
+161: 
+162:                     if (!dateStr.isEmpty()) {
+163:                         if (!hotelLocation.isEmpty() || !hotelName.isEmpty()) {
+164:                             query2 += ",";
+165:                         }
+166:                         sql1 += " Date='" + new Timestamp(date.getTime()) + "'";
+167:                     }
+
+
+An error occurred at line: [171] in the jsp file: [/editShift.jsp]
+query2 cannot be resolved to a variable
+168: 
+169:                     if (!startTimeStr.isEmpty()) {
+170:                         if (!hotelLocation.isEmpty() || !hotelName.isEmpty() || !dateStr.isEmpty()) {
+171:                             query2 += ",";
+172:                         }
+173:                         sql1 += " StartTime='" + new Timestamp(startTime.getTime()) + "'";
+174:                     }
+
+
+An error occurred at line: [178] in the jsp file: [/editShift.jsp]
+query2 cannot be resolved to a variable
+175: 
+176:                     if (!endTimeStr.isEmpty()) {
+177:                         if (!hotelLocation.isEmpty() || !hotelName.isEmpty() || !dateStr.isEmpty() || !startTimeStr.isEmpty()) {
+178:                             query2 += ",";
+179:                         }
+180:                         sql1 += " endTime='" + new Timestamp(endTime.getTime()) + "'";
+181:                     }
+
+
+An error occurred at line: [185] in the jsp file: [/editShift.jsp]
+query2 cannot be resolved to a variable
+182: 
+183:                     if (!task.isEmpty()) {
+184:                         if (!hotelLocation.isEmpty() || !hotelName.isEmpty() || !dateStr.isEmpty() || !startTimeStr.isEmpty() || !endTimeStr.isEmpty()) {
+185:                             query2 += ",";
+186:                         }
+187:                         sql1 += " Task='" + task + "'";
+188:                     }
+
+
+An error occurred at line: [192] in the jsp file: [/editShift.jsp]
+query2 cannot be resolved to a variable
+189: 
+190:                     if (!assignedRoom.isEmpty()) {
+191:                         if (!hotelLocation.isEmpty() || !hotelName.isEmpty() || !dateStr.isEmpty() || !startTimeStr.isEmpty() || !endTimeStr.isEmpty() || !task.isEmpty()) {
+192:                             query2 += ",";
+193:                         }
+194:                         sql1 += " AssignedRoom='" + assignedRoom + "'";
+195:                     }
+
+
+An error occurred at line: [200] in the jsp file: [/editShift.jsp]
+Syntax error, insert ";" to complete Statement
+197:                     PreparedStatement ps2 = con.prepareStatement(sql1);
+198:                     ps2.setInt(1, employeeIDInt);
+199:                     ps2.executeUpdate();
+200:                     ps2.close()
+201: 
+202:                     
+203: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+02-Dec-2023 16:08:28.742 SEVERE [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [200] in the jsp file: [/editShift.jsp]
+Syntax error, insert ";" to complete Statement
+197:                     PreparedStatement ps2 = con.prepareStatement(sql1);
+198:                     ps2.setInt(1, employeeIDInt);
+199:                     ps2.executeUpdate();
+200:                     ps2.close()
+201: 
+202: 
+203: 
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [200] in the jsp file: [/editShift.jsp]
+Syntax error, insert ";" to complete Statement
+197:                     PreparedStatement ps2 = con.prepareStatement(sql1);
+198:                     ps2.setInt(1, employeeIDInt);
+199:                     ps2.executeUpdate();
+200:                     ps2.close()
+201: 
+202: 
+203: 
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+02-Dec-2023 16:14:29.189 SEVERE [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [83] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/editShift_jsp.java]
+Syntax error, insert "}" to complete ClassBody
+
+An error occurred at line: [208] in the jsp file: [/editShift.jsp]
+Duplicate local variable rs
+205:                     String query2 = "SELECT EmployeeID, HotelLocation, HotelName, Date, StartTime, EndTime, Task, AssignedRoom FROM Shift WHERE EmployeeID = ?";
+206:                     PreparedStatement ps3 = con.prepareStatement(query);
+207:                     ps3.setInt(1, employeeIDInt);
+208:                     ResultSet rs = ps.executeQuery();
+209: %>
+210:                     <table class = 'table'>
+211:                         <thead>
+
+
+An error occurred at line: [241] in the jsp file: [/editShift.jsp]
+Syntax error, insert "}" to complete Block
+238: 
+239: 
+240:                     
+241:                 } catch (Exception e) {
+242:                     out.println("Exception caught: " + e.getMessage());
+243:                 } finally {
+244:                     try {
+
+
+An error occurred at line: [241] in the jsp file: [/editShift.jsp]
+Syntax error, insert "}" to complete Block
+238: 
+239: 
+240:                     
+241:                 } catch (Exception e) {
+242:                     out.println("Exception caught: " + e.getMessage());
+243:                 } finally {
+244:                     try {
+
+
+An error occurred at line: [440] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/editShift_jsp.java]
+Syntax error on token "}", delete this token
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [83] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/editShift_jsp.java]
+Syntax error, insert "}" to complete ClassBody
+
+An error occurred at line: [208] in the jsp file: [/editShift.jsp]
+Duplicate local variable rs
+205:                     String query2 = "SELECT EmployeeID, HotelLocation, HotelName, Date, StartTime, EndTime, Task, AssignedRoom FROM Shift WHERE EmployeeID = ?";
+206:                     PreparedStatement ps3 = con.prepareStatement(query);
+207:                     ps3.setInt(1, employeeIDInt);
+208:                     ResultSet rs = ps.executeQuery();
+209: %>
+210:                     <table class = 'table'>
+211:                         <thead>
+
+
+An error occurred at line: [241] in the jsp file: [/editShift.jsp]
+Syntax error, insert "}" to complete Block
+238: 
+239: 
+240:                     
+241:                 } catch (Exception e) {
+242:                     out.println("Exception caught: " + e.getMessage());
+243:                 } finally {
+244:                     try {
+
+
+An error occurred at line: [241] in the jsp file: [/editShift.jsp]
+Syntax error, insert "}" to complete Block
+238: 
+239: 
+240:                     
+241:                 } catch (Exception e) {
+242:                     out.println("Exception caught: " + e.getMessage());
+243:                 } finally {
+244:                     try {
+
+
+An error occurred at line: [440] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/editShift_jsp.java]
+Syntax error on token "}", delete this token
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+02-Dec-2023 16:14:41.998 SEVERE [http-nio-8080-exec-13] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [208] in the jsp file: [/editShift.jsp]
+Duplicate local variable rs
+205:                     String query2 = "SELECT EmployeeID, HotelLocation, HotelName, Date, StartTime, EndTime, Task, AssignedRoom FROM Shift WHERE EmployeeID = ?";
+206:                     PreparedStatement ps3 = con.prepareStatement(query);
+207:                     ps3.setInt(1, employeeIDInt);
+208:                     ResultSet rs = ps.executeQuery();
+209: %>
+210:                     <table class = 'table'>
+211:                         <thead>
+
+
+An error occurred at line: [241] in the jsp file: [/editShift.jsp]
+Syntax error, insert "}" to complete Block
+238: 
+239: 
+240:                     
+241:                 } catch (Exception e) {
+242:                     out.println("Exception caught: " + e.getMessage());
+243:                 } finally {
+244:                     try {
+
+
+An error occurred at line: [439] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/editShift_jsp.java]
+Syntax error on token "}", delete this token
+
+An error occurred at line: [440] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/editShift_jsp.java]
+Syntax error, insert "}" to complete ClassBody
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [208] in the jsp file: [/editShift.jsp]
+Duplicate local variable rs
+205:                     String query2 = "SELECT EmployeeID, HotelLocation, HotelName, Date, StartTime, EndTime, Task, AssignedRoom FROM Shift WHERE EmployeeID = ?";
+206:                     PreparedStatement ps3 = con.prepareStatement(query);
+207:                     ps3.setInt(1, employeeIDInt);
+208:                     ResultSet rs = ps.executeQuery();
+209: %>
+210:                     <table class = 'table'>
+211:                         <thead>
+
+
+An error occurred at line: [241] in the jsp file: [/editShift.jsp]
+Syntax error, insert "}" to complete Block
+238: 
+239: 
+240:                     
+241:                 } catch (Exception e) {
+242:                     out.println("Exception caught: " + e.getMessage());
+243:                 } finally {
+244:                     try {
+
+
+An error occurred at line: [439] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/editShift_jsp.java]
+Syntax error on token "}", delete this token
+
+An error occurred at line: [440] in the generated java file: [/Users/kimhyunkyunkim/Desktop/fall2023/CS157a/finalProjectCode/apache-tomcat-8.5.93/work/Catalina/localhost/ROOT/org/apache/jsp/editShift_jsp.java]
+Syntax error, insert "}" to complete ClassBody
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+02-Dec-2023 16:16:03.706 SEVERE [http-nio-8080-exec-15] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: [240] in the jsp file: [/editShift.jsp]
+p3 cannot be resolved
+237:                     <%
+238:                     }
+239:                     rs.close();
+240:                     p3.close();
+241: 
+242: 
+243:                     
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [240] in the jsp file: [/editShift.jsp]
+p3 cannot be resolved
+237:                     <%
+238:                     }
+239:                     rs.close();
+240:                     p3.close();
+241: 
+242: 
+243:                     
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:102)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:600)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:351)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:335)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:583)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:212)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:181)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:156)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:168)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:679)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:617)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:932)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1694)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:1583)

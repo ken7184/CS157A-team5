@@ -424,6 +424,9 @@
             <a class="button is-light" href="makeShift.jsp" style="margin-top: 2px; margin-left: 24px;">
               Create Shift
             </a>
+            <a class="button is-light" href="editShift.jsp" style="margin-top: 2px; margin-left: 24px;">
+              Edit Shift
+            </a>
           </div>
 
           <div class="manage-reservation">

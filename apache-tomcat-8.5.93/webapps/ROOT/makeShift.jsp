@@ -7,8 +7,32 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="navbar.css"/>
+    <style>
+        .header-text {
+            background-color: lightblue;
+            font-size: 100px;
+            text-align: center;
+        }
+
+        .hotel-location-text {
+            font-size: 24px;
+            text-align: start;
+            padding-bottom: 16px;
+        }
+
+        .table {
+            width: 100%;
+        }
+        .error-message{
+            font-size: 16px;
+            margin-left: 48px;
+            color: red;
+          }
+    </style>
+
+    <%@ include file="navbar.jspf" %>
+    <h1 class="header-text">Create Shift</h1>
     <div class="content">
-      <h1>Create Shift</h1>
       <form method = "post">
         <table style="width: 50%">
             <tr>
@@ -119,22 +143,13 @@
                     preparedStatement.setString(7, task);
                     preparedStatement.setString(8, assignedRoom);
                     preparedStatement.executeUpdate();
-
+                    preparedStatement.close();
                     con.close();
+                    out.println("<h2>New Shift is created</h2>");
                 } catch (Exception e) {
                     out.println("Exception caught: " + e.getMessage());
-                } finally {
-                    try {
-                        if (preparedStatement != null) {
-                            preparedStatement.close();
-                        }
-                        if (con != null) {
-                            con.close();
-                        }
-                    } catch (SQLException e) {
-                        out.println("SQLException caught: " + e.getMessage());
-                    }
                 }
+                   
             } catch (NumberFormatException e) {
                 out.println("Invalid EmployeetId format");
             }
