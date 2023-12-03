@@ -99,3 +99,6 @@
 0:0:0:0:0:0:0:1 - - [03/Dec/2023:12:44:47 -0800] "POST /editReservation.jsp HTTP/1.1" 200 5252
 0:0:0:0:0:0:0:1 - - [03/Dec/2023:12:47:00 -0800] "POST /editReservation.jsp HTTP/1.1" 200 5252
 0:0:0:0:0:0:0:1 - - [03/Dec/2023:12:47:16 -0800] "POST /editReservation.jsp HTTP/1.1" 200 3082
+0:0:0:0:0:0:0:1 - - [03/Dec/2023:13:09:33 -0800] "GET /Menu.jsp HTTP/1.1" 200 3166
+0:0:0:0:0:0:0:1 - - [03/Dec/2023:13:09:33 -0800] "GET /Menu.jsp?employeeIDon=1&employeeRoleon=null HTTP/1.1" 200 18737
+0:0:0:0:0:0:0:1 - - [03/Dec/2023:13:09:39 -0800] "GET /billingInfo.jsp HTTP/1.1" 200 3614
