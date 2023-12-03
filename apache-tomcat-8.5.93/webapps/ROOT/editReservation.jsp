@@ -51,12 +51,12 @@
 
         <tr>
             <td>Start Date: (yyyy-mm-dd) </td>
-            <td><input type = "date" name = "startDate"/></td>
+            <td><input type = "date" name = "startDate" required/></td>
         </tr>
 
         <tr>
             <td>End Date: (yyyy-mm-dd)</td>
-            <td><input type = "date" name = "endDate"/></td>
+            <td><input type = "date" name = "endDate" required/></td>
         </tr>
 
         <tr>
@@ -244,16 +244,37 @@ if ("POST".equalsIgnoreCase(request.getMethod())) {
             ps3.executeUpdate();
             ps3.close();
 
-            String changeRoom = "UPDATE Project.Room SET Availability = 'Yes' WHERE RoomNumber = ?";
-            PreparedStatement psc = con.prepareStatement(changeRoom);
-            psc.setString(1, rNumber);
-            psc.executeUpdate();
-            psc.close();
 
+            if (!rNumber.isEmpty()) {
+                String getCurrentRoomQuery = "SELECT RoomNumber FROM Project.Stay WHERE BookingNumber = ?";
+                PreparedStatement getCurrentRoomPS = con.prepareStatement(getCurrentRoomQuery);
+                getCurrentRoomPS.setInt(1, BookingN);
+                ResultSet currentRoomRS = getCurrentRoomPS.executeQuery();
+            
+                if (currentRoomRS.next()) {
+                    String currentRoomNumber = currentRoomRS.getString("RoomNumber");
+            
+                    String updateCurrentRoomQuery = "UPDATE Project.Room SET Availability = 'Yes' WHERE RoomNumber = ?";
+                    PreparedStatement updateCurrentRoomPS = con.prepareStatement(updateCurrentRoomQuery);
+                    updateCurrentRoomPS.setString(1, currentRoomNumber);
+                    updateCurrentRoomPS.executeUpdate();
+                    updateCurrentRoomPS.close();
+                }
+        
+                String updateNewRoomQuery = "UPDATE Project.Room SET Availability = 'No' WHERE RoomNumber = ?";
+                PreparedStatement updateNewRoomPS = con.prepareStatement(updateNewRoomQuery);
+                updateNewRoomPS.setString(1, rNumber);
+                updateNewRoomPS.executeUpdate();
+                updateNewRoomPS.close();
+                
+                currentRoomRS.close();
+                getCurrentRoomPS.close();
+            }
+            
             String query4 = "SELECT * FROM Project.ReservationInfo r JOIN Project.Stay s ON r.BookingNumber = s.BookingNumber WHERE r.BookingNumber = ?";
             PreparedStatement ps4 = con.prepareStatement(query4);
             ps4.setInt(1, BookingN);
-            rs = ps4.executeQuery();
+            ResultSet rs1 = ps4.executeQuery();
 %>
     <table class = 'table'>
         <thead>
@@ -275,29 +296,29 @@ if ("POST".equalsIgnoreCase(request.getMethod())) {
         </tr>
         </thead>
     <tbody>
-        <% while(rs.next()) { %>
+        <% while(rs1.next()) { %>
       <tr>
-        <td><%= rs.getInt("BookingNumber") %></td>
-        <td><%= rs.getInt("GuestID") %></td>
-        <td><%= rs.getString("NumberOfRooms") %></td>
-        <td><%= rs.getString("NumberOfGuests") %></td>
-        <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("StartDate")) %></td>
-        <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("EndDate")) %></td>
-        <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs.getTimestamp("ReservationDate"))%></td>
-        <td><%= rs.getString("BookingSite") %></td>
-        <td><%= rs.getString("SpecialRequest") %></td>
-        <td><%= rs.getString("HotelName") %></td>
-        <td><%= rs.getString("HotelLocation") %></td>
-        <td><%= rs.getString("RoomNumber") %></td>
-        <td><%= rs.getString("CheckIn") %></td>
-        <td><%= rs.getString("CheckOut") %></td>
+        <td><%= rs1.getInt("BookingNumber") %></td>
+        <td><%= rs1.getInt("GuestID") %></td>
+        <td><%= rs1.getString("NumberOfRooms") %></td>
+        <td><%= rs1.getString("NumberOfGuests") %></td>
+        <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs1.getTimestamp("StartDate")) %></td>
+        <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs1.getTimestamp("EndDate")) %></td>
+        <td><%= new SimpleDateFormat("yyyy-MM-dd").format(rs1.getTimestamp("ReservationDate"))%></td>
+        <td><%= rs1.getString("BookingSite") %></td>
+        <td><%= rs1.getString("SpecialRequest") %></td>
+        <td><%= rs1.getString("HotelName") %></td>
+        <td><%= rs1.getString("HotelLocation") %></td>
+        <td><%= rs1.getString("RoomNumber") %></td>
+        <td><%= rs1.getString("CheckIn") %></td>
+        <td><%= rs1.getString("CheckOut") %></td>
       </tr>
       <% } %>
     </tbody>
     </table>
 <%
         ps4.close();
-        rs.close();
+        rs1.close();
         con.close();
     }
 }   catch (SQLException | ClassNotFoundException e) {

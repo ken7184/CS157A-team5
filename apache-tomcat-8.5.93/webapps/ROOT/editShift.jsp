@@ -41,12 +41,12 @@
         
             <tr>
                 <td>Hotel Location: </td>
-                <td><input type = "text" name = "hotelLocation" /></td>
+                <td><input type = "text" name = "hotelLocation" required/></td>
             </tr>
         
             <tr>
                 <td>Hotel Name: </td>
-                <td><input type = "text" name = "hotelName" /></td>
+                <td><input type = "text" name = "hotelName" required/></td>
             </tr>
 
             <tr>
@@ -133,9 +133,11 @@
                     Class.forName("com.mysql.cj.jdbc.Driver");
                     con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Project?autoReconnect=true&useSSL=false", user, password);
 
-                    String query = "SELECT EmployeeID, HotelLocation, HotelName, Date, StartTime, EndTime, Task, AssignedRoom FROM Shift WHERE EmployeeID = ?";
+                    String query = "SELECT EmployeeID, HotelLocation, HotelName, Date, StartTime, EndTime, Task, AssignedRoom FROM Shift WHERE EmployeeID = ? AND HotelName = ? AND HotelLocation = ?";
                     PreparedStatement ps = con.prepareStatement(query);
                     ps.setInt(1, employeeIDInt);
+                    ps.setString(2, hotelName);
+                    ps.setString(3, hotelLocation);
                     ResultSet rs = ps.executeQuery();
     %>
                     <table class = 'table'>
@@ -218,16 +220,20 @@
                         }
                         sql1 += " AssignedRoom='" + assignedRoom + "'";
                     }
-                    sql1 += " WHERE EmployeeID = ?";
+                    sql1 += " WHERE EmployeeID = ? AND HotelName = ? AND HotelLocation = ?";
                     PreparedStatement ps2 = con.prepareStatement(sql1);
                     ps2.setInt(1, employeeIDInt);
+                    ps2.setString(2, hotelName);
+                    ps2.setString(3, hotelLocation);
                     ps2.executeUpdate();
                     ps2.close();
 
 
-                    String query2 = "SELECT EmployeeID, HotelLocation, HotelName, Date, StartTime, EndTime, Task, AssignedRoom FROM Shift WHERE EmployeeID = ?";
+                    String query2 = "SELECT EmployeeID, HotelLocation, HotelName, Date, StartTime, EndTime, Task, AssignedRoom FROM Shift WHERE EmployeeID = ? AND HotelName = ? AND HotelLocation = ?";
                     PreparedStatement ps3 = con.prepareStatement(query2);
                     ps3.setInt(1, employeeIDInt);
+                    ps3.setString(2, hotelName);
+                    ps3.setString(3, hotelLocation);
                     ResultSet rs1 = ps3.executeQuery();
 %>
                     <table class = 'table'>
