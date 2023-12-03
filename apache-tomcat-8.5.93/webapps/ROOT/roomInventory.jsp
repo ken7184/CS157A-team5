@@ -38,7 +38,7 @@
     String query = "SELECT * FROM Project.roomInven";
 
     if ("Check".equalsIgnoreCase(buttonClicked)) {
-        query = "SELECT * FROM Project.roomInven WHERE Juice < 2 OR AppleJuice < 2 or Beer < 2";
+        query = "SELECT * FROM Project.room WHERE Juice < 2 OR AppleJuice < 2 or Beer < 2";
     }
 
     try {
