@@ -6,40 +6,46 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="navbar.css"/>
     <style>
-        .header-text{
-            background-color: lightblue;
-            font-size: 100px;
-            text-align: center;
-          }
-
-        .hotel-location-text{
-            font-size: 24px;
-            text-align: start;
-            padding-bottom: 16px;
+        .title-section{
+          padding: 24px 48px 0px 48px;
         }
-        .table{
-            width: 100%;
+
+        .title{
+          font-size: 24px;
+          font-weight: 400;
+        }
+        .error-message{
+          font-size: 16px;
+          margin-left: 48px;
+          color: red;
         }
     </style>
   </head>
   <body>
   
     <%@ include file="navbar.jspf" %>
-    <h1 class="header-text">Check Assigned Room</h1>
-    <form method="post" action="">
-      <input type="text" name="roomNumberInput" placeholder="Enter Room Number">
-      <input type="submit" name="roomNumber" value="Show by room number">
-    </form>
+    <div class="title-section">
+      <h2 class="title">Check Assigned Room</h2>
+      <hr class="solid" style="border-top: 1px solid; opacity: 0.2;">
+    </div>
+
+    <div style="width: 50%; margin: 16px 48px; height: 24px;">
+      <form method="post" action="">
+        <input type="text" name="roomNumberInput" placeholder="Enter Room Number" style="width: 45%; height: 100%;">
+        <input type="submit" name="roomNumber" value="Search" style="width: 10%; height: 100%;">
+      </form>
+    </div>
+
     <%
     String buttonClicked = request.getParameter("roomNumber");
     String roomNumberInput = request.getParameter("roomNumberInput");
 
     String user = "root";
-    String pass = "Ken30526296@";
+    String pass = "password";
 
     String query = "SELECT * FROM Project.Shift s JOIN Project.Employee e on e.id = s.EmployeeID WHERE AssignedRoom IS NOT NULL";
 
-    if ("Show by room number".equalsIgnoreCase(buttonClicked) && roomNumberInput != null && !roomNumberInput.isEmpty()) {
+    if ("Search".equalsIgnoreCase(buttonClicked) && roomNumberInput != null && !roomNumberInput.isEmpty()) {
         query = "SELECT * FROM Project.Shift s JOIN Project.Employee e on e.id = s.EmployeeID WHERE AssignedRoom = ?";
     }
 
@@ -49,25 +55,27 @@
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Project?autoReconnect=true&useSSL=false", user, pass);
         PreparedStatement ps = con.prepareStatement(query);
         
-        if ("Show by room number".equalsIgnoreCase(buttonClicked)) {
+        if ("Search".equalsIgnoreCase(buttonClicked)) {
             ps.setString(1, roomNumberInput);
         }
 
         ResultSet rs = ps.executeQuery();
+
+        if (!rs.isBeforeFirst()) { // Check if ResultSet is empty
+          out.println("<h2 class='error-message'>No data found for room number: " + roomNumberInput + "</h2>");
+        } else {
     %>
-    <table class = 'table'>
+    <table class="table is-bordered is-striped is-narrow is-hoverable" style="width: 95%; margin: 0px 48px;">
       <thead>
-        <tr>
-          <td>Employee Id</td>
-          <td>Employee Name</td>
-          <td>Hotel Location</td>
-          <td>Hotel Name</td>
-          <td>Date</td>
-          <td>Start Time</td>
-          <td>End Time</td>
-          <td>Task</td>
-          <td>Assigned Room</td>
-        </tr>
+          <th>Employee Id</th>
+          <th>Employee Name</th>
+          <th>Hotel Location</th>
+          <th>Hotel Name</th>
+          <th>Date</th>
+          <th>Start Time</th>
+          <th>End Time</th>
+          <th>Task</th>
+          <th>Assigned Room</th>
       </thead>
       <tbody>
         <% while(rs.next()) { %>
@@ -86,6 +94,7 @@
       </tbody>
     </table>
     <%
+      }
         rs.close();
         ps.close();
         con.close();
