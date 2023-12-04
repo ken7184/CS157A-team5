@@ -219,31 +219,32 @@ if ("POST".equalsIgnoreCase(request.getMethod())) {
             ps2.setInt(1, BookingN);
             ps2.executeUpdate();
 
-            String query3 = "UPDATE Project.Stay SET";
-
-            if (!hotelName.isEmpty()) {
-                query3 += " HotelName='" + hotelName + "'";
-            }
-
-            if (!hotelLocation.isEmpty()) {
+            if (!(hotelName.isEmpty() && hotelLocation.isEmpty() && rNumber.isEmpty())) {
+                String query3 = "UPDATE Project.Stay SET";
                 if (!hotelName.isEmpty()) {
-                    query3 += ",";
+                    query3 += " HotelName='" + hotelName + "'";
                 }
-                query3 += " HotelLocation='" + hotelLocation + "'";
-            }
 
-            if (!rNumber.isEmpty()) {
-                if (!hotelName.isEmpty() || !hotelLocation.isEmpty()) {
-                    query3 += ",";
+                if (!hotelLocation.isEmpty()) {
+                    if (!hotelName.isEmpty()) {
+                        query3 += ",";
+                    }
+                    query3 += " HotelLocation='" + hotelLocation + "'";
                 }
-                query3 += " RoomNumber='" + rNumber + "'";
-            }
-            query3 += " WHERE BookingNumber=?";
-            PreparedStatement ps3 = con.prepareStatement(query3);
-            ps3.setInt(1, BookingN);
-            ps3.executeUpdate();
-            ps3.close();
 
+                if (!rNumber.isEmpty()) {
+                    if (!hotelName.isEmpty() || !hotelLocation.isEmpty()) {
+                        query3 += ",";
+                    }
+                    query3 += " RoomNumber='" + rNumber + "'";
+                }
+                query3 += " WHERE BookingNumber=?";
+                PreparedStatement ps3 = con.prepareStatement(query3);
+                ps3.setInt(1, BookingN);
+                ps3.executeUpdate();
+                ps3.close();
+            }
+            
 
             if (!rNumber.isEmpty()) {
                 String getCurrentRoomQuery = "SELECT RoomNumber FROM Project.Stay WHERE BookingNumber = ?";
