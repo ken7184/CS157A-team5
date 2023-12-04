@@ -6,17 +6,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="navbar.css"/>
     <style>
-        .header-text{
-            background-color: lightblue;
-            font-size: 80px;
-            text-align: center;
-          }
-
-        .hotel-location-text{
-            font-size: 24px;
-            text-align: start;
-            padding-bottom: 16px;
+        .title-section{
+          padding: 24px 48px 0px 48px;
         }
+
+        .title{
+          font-size: 24px;
+          font-weight: 400;
+        }
+        
         .table{
             width: 100%;
         }
@@ -25,19 +23,28 @@
   <body>
   
     <%@ include file="navbar.jspf" %>
-    <h1 class="header-text">Check Room Inven(Full quantity = 2)</h1>
+    <div class="title-section">
+      <h2 class="title">Room Inventory</h2>
+      <hr class="solid" style="border-top: 1px solid; opacity: 0.2;">
+    </div>
     <form method="post" action="">
-      <input type="submit" name="Check" value="Check">
+      <input class="button" type="submit" name="Check" value="Show All Rooms" style="margin-left: 48px;">
+      <input class="button" type="submit" name="Check" value="Room Needs Restocking" style="margin-left: 48px;">
     </form>  
+
     <%
     String buttonClicked = request.getParameter("Check");
 
     String user = "root";
-    String pass = "Ken30526296@";
+    String pass = "password";
 
-    String query = "SELECT * FROM Project.roomInven";
+    String query = "SELECT * FROM Room";
 
-    if ("Check".equalsIgnoreCase(buttonClicked)) {
+    if ("Show All Rooms".equalsIgnoreCase(buttonClicked)) {
+      query = "SELECT * FROM Room";
+  }
+
+    if ("Room Needs Restocking".equalsIgnoreCase(buttonClicked)) {
         query = "SELECT * FROM Project.room WHERE Juice < 2 OR AppleJuice < 2 or Beer < 2";
     }
 
@@ -46,19 +53,17 @@
         Class.forName("com.mysql.jdbc.Driver");
         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Project?autoReconnect=true&useSSL=false", user, pass);
         PreparedStatement ps = con.prepareStatement(query);
-
+        
         ResultSet rs = ps.executeQuery();
     %>
-    <table class = 'table'>
+    <table class="table is-bordered is-striped is-narrow is-hoverable" style="width: 95%; margin: 0px 48px;">
       <thead>
-        <tr>
-          <td>Hotel Location</td>
-          <td>Hotel Name</td>
-          <td>Room Number</td>
-          <td>Juice</td>
-          <td>Apple Juice</td>
-          <td>Beer</td>
-        </tr>
+          <th>Hotel Location</th>
+          <th>Hotel Name</th>
+          <th>Room Number</th>
+          <th>Juice</th>
+          <th>Apple Juice</th>
+          <th>Beer</th>
       </thead>
       <tbody>
         <% while(rs.next()) { %>
