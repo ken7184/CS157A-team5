@@ -2,9 +2,9 @@
 -- Query: SELECT * FROM Project.Shift
 LIMIT 0, 200
 
--- Date: 2023-12-03 12:55
+-- Date: 2023-12-05 15:35
 */
-INSERT INTO `` (`ID`,`EmployeeID`,`HotelLocation`,`HotelName`,`Date`,`StartTime`,`EndTime`,`Task`,`AssignedRoom`) VALUES (1,1,'SanJose','Parkside','2023-12-03 12:05:00','2023-12-04 12:05:00','2023-12-05 12:05:00','meeting','null');
+INSERT INTO `` (`ID`,`EmployeeID`,`HotelLocation`,`HotelName`,`Date`,`StartTime`,`EndTime`,`Task`,`AssignedRoom`) VALUES (1,1,'SanJose','Parkside','2023-12-03 12:05:00','2023-12-04 12:05:00','2023-12-05 12:05:00','meeting','');
 INSERT INTO `` (`ID`,`EmployeeID`,`HotelLocation`,`HotelName`,`Date`,`StartTime`,`EndTime`,`Task`,`AssignedRoom`) VALUES (2,2,'SanJose','Parkside','2023-10-02 00:00:00','2023-10-02 09:00:00','2023-10-02 17:00:00','Front Desk',NULL);
 INSERT INTO `` (`ID`,`EmployeeID`,`HotelLocation`,`HotelName`,`Date`,`StartTime`,`EndTime`,`Task`,`AssignedRoom`) VALUES (3,3,'SanJose','Parkside','2023-10-02 00:00:00','2023-10-02 09:00:00','2023-10-02 17:00:00','Clean the room','405');
 INSERT INTO `` (`ID`,`EmployeeID`,`HotelLocation`,`HotelName`,`Date`,`StartTime`,`EndTime`,`Task`,`AssignedRoom`) VALUES (4,4,'SanJose','Parkside','2023-10-02 00:00:00','2023-10-02 09:00:00','2023-10-02 17:00:00','Fix the pool','A2');

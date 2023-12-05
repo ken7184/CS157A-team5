@@ -67,3 +67,6 @@
 0:0:0:0:0:0:0:1 - - [05/Dec/2023:15:29:14 -0800] "GET /roomResponsibility.jsp HTTP/1.1" 200 5899
 0:0:0:0:0:0:0:1 - - [05/Dec/2023:15:31:50 -0800] "GET /roomResponsibility.jsp HTTP/1.1" 200 5899
 0:0:0:0:0:0:0:1 - - [05/Dec/2023:15:32:04 -0800] "GET /roomResponsibility.jsp HTTP/1.1" 200 5595
+0:0:0:0:0:0:0:1 - - [05/Dec/2023:15:33:52 -0800] "GET /checkInOut.jsp HTTP/1.1" 200 2081
+0:0:0:0:0:0:0:1 - - [05/Dec/2023:15:34:27 -0800] "GET /Menu.jsp HTTP/1.1" 200 3166
+0:0:0:0:0:0:0:1 - - [05/Dec/2023:15:34:28 -0800] "GET /Menu.jsp?employeeIDon=1&employeeRoleon=null HTTP/1.1" 200 20101
