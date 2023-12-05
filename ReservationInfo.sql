@@ -2,9 +2,9 @@
 -- Query: SELECT * FROM Project.ReservationInfo
 LIMIT 0, 200
 
--- Date: 2023-12-03 12:57
+-- Date: 2023-12-05 15:22
 */
-INSERT INTO `` (`BookingNumber`,`GuestID`,`NumberOfRooms`,`NumberOfGuests`,`StartDate`,`EndDate`,`ReservationDate`,`BookingSite`,`SpecialRequest`) VALUES (1,1,'1','2','2023-12-10','2023-12-11','2023-10-03','Main','No');
+INSERT INTO `` (`BookingNumber`,`GuestID`,`NumberOfRooms`,`NumberOfGuests`,`StartDate`,`EndDate`,`ReservationDate`,`BookingSite`,`SpecialRequest`) VALUES (1,1,'1','2','2023-12-13','2023-12-14','2023-10-03','Main','No');
 INSERT INTO `` (`BookingNumber`,`GuestID`,`NumberOfRooms`,`NumberOfGuests`,`StartDate`,`EndDate`,`ReservationDate`,`BookingSite`,`SpecialRequest`) VALUES (2,2,'1','2','2023-10-04','2023-10-05','2023-10-03','Main','None');
 INSERT INTO `` (`BookingNumber`,`GuestID`,`NumberOfRooms`,`NumberOfGuests`,`StartDate`,`EndDate`,`ReservationDate`,`BookingSite`,`SpecialRequest`) VALUES (3,3,'1','6','2023-10-05','2023-10-07','2023-10-03','Main','More towels');
 INSERT INTO `` (`BookingNumber`,`GuestID`,`NumberOfRooms`,`NumberOfGuests`,`StartDate`,`EndDate`,`ReservationDate`,`BookingSite`,`SpecialRequest`) VALUES (4,4,'1','1','2023-10-06','2023-10-09','2023-10-04','Expedia','None');
@@ -22,3 +22,6 @@ INSERT INTO `` (`BookingNumber`,`GuestID`,`NumberOfRooms`,`NumberOfGuests`,`Star
 INSERT INTO `` (`BookingNumber`,`GuestID`,`NumberOfRooms`,`NumberOfGuests`,`StartDate`,`EndDate`,`ReservationDate`,`BookingSite`,`SpecialRequest`) VALUES (16,3,'1','2','2023-12-07','2023-12-09','2023-11-25','Phone Call','No');
 INSERT INTO `` (`BookingNumber`,`GuestID`,`NumberOfRooms`,`NumberOfGuests`,`StartDate`,`EndDate`,`ReservationDate`,`BookingSite`,`SpecialRequest`) VALUES (17,1,'1','2','2023-12-02','2023-12-03','2023-11-30','Phone Call','Towel');
 INSERT INTO `` (`BookingNumber`,`GuestID`,`NumberOfRooms`,`NumberOfGuests`,`StartDate`,`EndDate`,`ReservationDate`,`BookingSite`,`SpecialRequest`) VALUES (18,2,'1','2','2023-12-14','2023-12-16','2023-12-02','Phone Call','No');
+INSERT INTO `` (`BookingNumber`,`GuestID`,`NumberOfRooms`,`NumberOfGuests`,`StartDate`,`EndDate`,`ReservationDate`,`BookingSite`,`SpecialRequest`) VALUES (19,3,'1','2','2023-12-04','2023-12-07','2023-12-04','Phone Call','Towel');
+INSERT INTO `` (`BookingNumber`,`GuestID`,`NumberOfRooms`,`NumberOfGuests`,`StartDate`,`EndDate`,`ReservationDate`,`BookingSite`,`SpecialRequest`) VALUES (20,1,'1','1','2023-12-05','2023-12-08','2023-12-05','Phone Call','No');
+INSERT INTO `` (`BookingNumber`,`GuestID`,`NumberOfRooms`,`NumberOfGuests`,`StartDate`,`EndDate`,`ReservationDate`,`BookingSite`,`SpecialRequest`) VALUES (21,2,'1','3','2023-12-03','2023-12-05','2023-12-01','Phone Call','No');
