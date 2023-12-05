@@ -53,3 +53,17 @@
 0:0:0:0:0:0:0:1 - - [05/Dec/2023:15:20:13 -0800] "POST /makeReservation.jsp HTTP/1.1" 200 3456
 0:0:0:0:0:0:0:1 - - [05/Dec/2023:15:20:15 -0800] "GET /Menu.jsp HTTP/1.1" 200 3166
 0:0:0:0:0:0:0:1 - - [05/Dec/2023:15:20:15 -0800] "GET /Menu.jsp?employeeIDon=1&employeeRoleon=null HTTP/1.1" 200 20101
+0:0:0:0:0:0:0:1 - - [05/Dec/2023:15:25:54 -0800] "GET /editShift.jsp HTTP/1.1" 200 3185
+0:0:0:0:0:0:0:1 - - [05/Dec/2023:15:25:56 -0800] "GET /Menu.jsp HTTP/1.1" 200 3166
+0:0:0:0:0:0:0:1 - - [05/Dec/2023:15:25:56 -0800] "GET /Menu.jsp?employeeIDon=1&employeeRoleon=null HTTP/1.1" 200 20101
+0:0:0:0:0:0:0:1 - - [05/Dec/2023:15:26:33 -0800] "GET /editReservation.jsp HTTP/1.1" 200 3024
+0:0:0:0:0:0:0:1 - - [05/Dec/2023:15:26:35 -0800] "GET /Menu.jsp HTTP/1.1" 200 3166
+0:0:0:0:0:0:0:1 - - [05/Dec/2023:15:26:35 -0800] "GET /Menu.jsp?employeeIDon=1&employeeRoleon=null HTTP/1.1" 200 20101
+0:0:0:0:0:0:0:1 - - [05/Dec/2023:15:26:44 -0800] "GET /billingInfo.jsp HTTP/1.1" 200 4622
+0:0:0:0:0:0:0:1 - - [05/Dec/2023:15:27:02 -0800] "GET /roomResponsibility.jsp HTTP/1.1" 200 5899
+0:0:0:0:0:0:0:1 - - [05/Dec/2023:15:28:43 -0800] "GET /Menu.jsp HTTP/1.1" 200 3166
+0:0:0:0:0:0:0:1 - - [05/Dec/2023:15:28:43 -0800] "GET /Menu.jsp?employeeIDon=1&employeeRoleon=null HTTP/1.1" 200 20101
+0:0:0:0:0:0:0:1 - - [05/Dec/2023:15:28:48 -0800] "GET /roomResponsibility.jsp HTTP/1.1" 200 5895
+0:0:0:0:0:0:0:1 - - [05/Dec/2023:15:29:14 -0800] "GET /roomResponsibility.jsp HTTP/1.1" 200 5899
+0:0:0:0:0:0:0:1 - - [05/Dec/2023:15:31:50 -0800] "GET /roomResponsibility.jsp HTTP/1.1" 200 5899
+0:0:0:0:0:0:0:1 - - [05/Dec/2023:15:32:04 -0800] "GET /roomResponsibility.jsp HTTP/1.1" 200 5595

@@ -43,7 +43,7 @@
     String user = "root";
     String pass = "Ken30526296@";
 
-    String query = "SELECT * FROM Project.Shift s JOIN Project.Employee e on e.id = s.EmployeeID WHERE AssignedRoom IS NOT NULL";
+    String query = "SELECT * FROM Project.Shift s JOIN Project.Employee e on e.id = s.EmployeeID WHERE AssignedRoom IS NOT NULL AND AssignedRoom <> ''";
 
     if ("Search".equalsIgnoreCase(buttonClicked) && roomNumberInput != null && !roomNumberInput.isEmpty()) {
         query = "SELECT * FROM Project.Shift s JOIN Project.Employee e on e.id = s.EmployeeID WHERE AssignedRoom = ?";
