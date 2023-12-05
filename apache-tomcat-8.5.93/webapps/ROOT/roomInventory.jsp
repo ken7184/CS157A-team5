@@ -36,7 +36,7 @@
     String buttonClicked = request.getParameter("Check");
 
     String user = "root";
-    String pass = "password";
+    String pass = "Ken30526296@";
 
     String query = "SELECT * FROM Room";
 

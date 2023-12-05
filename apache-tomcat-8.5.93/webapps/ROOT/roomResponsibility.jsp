@@ -41,7 +41,7 @@
     String roomNumberInput = request.getParameter("roomNumberInput");
 
     String user = "root";
-    String pass = "password";
+    String pass = "Ken30526296@";
 
     String query = "SELECT * FROM Project.Shift s JOIN Project.Employee e on e.id = s.EmployeeID WHERE AssignedRoom IS NOT NULL";
 

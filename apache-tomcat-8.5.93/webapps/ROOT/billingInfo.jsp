@@ -41,7 +41,7 @@
     String reservationNumberInput = request.getParameter("RN");
 
     String user = "root";
-    String pass = "password";
+    String pass = "Ken30526296@";
 
     String query = "SELECT b.BookingNumber, b.price + b.CleaningFee + COALESCE(s.sum_price, 0) AS 'TotalPrice', b.price AS 'RoomPrice', b.CleaningFee AS 'CleaningFee', COALESCE(s.sum_price, 0) AS 'ServicePrice' " +
     "FROM Project.Billing b " +

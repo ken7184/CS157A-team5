@@ -47,7 +47,7 @@
     String employeeIDInput = request.getParameter("employeeIDInput");
 
     String user = "root";
-    String pass = "password";
+    String pass = "Ken30526296@";
 
     try {
         java.sql.Connection con;

@@ -20,6 +20,11 @@
             .table{
                 width: 100%;
             }
+            .error-message{
+                font-size: 16px;
+                margin-left: 48px;
+                color: red;
+          }
         </style>
       </head>
       <body>
@@ -94,42 +99,45 @@
             int roleN = Integer.parseInt(role);
             if (roleN >= 1 && roleN <= 6) {
     %>
-                <p>Your account is created</p>
     <% 
             String user;
             user = "root";
             String password = "Ken30526296@";
-            PreparedStatement preparedStatement = null;
             try {
-        
-            java.sql.Connection con; 
-            Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Project?autoReconnect=true&useSSL=false",user, password);
-
-            String sql = "INSERT INTO Employee (HotelLocation, HotelName, Name, Role, Username, Password) VALUES (?, ?, ?, ?, ?, ?)";
-            preparedStatement = con.prepareStatement(sql);
-            preparedStatement.setString(1, hotelLocation);
-            preparedStatement.setString(2, hotelName);
-            preparedStatement.setString(3, name);
-            preparedStatement.setString(4, role);
-            preparedStatement.setString(5, userName);    
-            preparedStatement.setString(6, userPassword);
-
-            preparedStatement.executeUpdate();
-        
-            out.println("Initial entries in table \"Employee\": <br/>");
-            Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM Employee");
-            while (rs.next()) {
-                out.println(rs.getInt(1) + "    " + rs.getString(2) + "    " + rs.getString(3) + "    " + rs.getString(4) + "    " + 
-                rs.getString(5) + "    " + rs.getString(6) + "    " + rs.getString(7) +
-                "<br/><br/>");
-            }
-            rs.close();
-            stmt.close();
-            con.close();
-            out.println("New Account is successfully created.");
-        } 
+                java.sql.Connection con; 
+                Class.forName("com.mysql.cj.jdbc.Driver"); 
+                con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Project?autoReconnect=true&useSSL=false", user, password);
+            
+                String checkId = "SELECT UserName FROM Employee WHERE UserName = ?";
+                PreparedStatement ps = con.prepareStatement(checkId);
+                ps.setString(1, userName);
+                ResultSet rs2 = ps.executeQuery();    
+                if (rs2.next()) {
+                    out.println("<h2 class='error-message'>Username already exists: " + userName + "</h2>");
+                } else {
+                    String checkPs = "SELECT Password FROM Employee WHERE Password = ?";
+                    PreparedStatement ps1 = con.prepareStatement(checkPs);
+                    ps1.setString(1, userPassword);
+                    ResultSet rs1 = ps1.executeQuery();
+                    if (rs1.next()) {
+                        out.println("<h2 class='error-message'>Password already in use</h2>");
+                    } else {
+                        String sql = "INSERT INTO Employee (HotelLocation, HotelName, Name, Role, Username, Password) VALUES (?, ?, ?, ?, ?, ?)";
+                        PreparedStatement preparedStatement = con.prepareStatement(sql);
+                        preparedStatement.setString(1, hotelLocation);
+                        preparedStatement.setString(2, hotelName);
+                        preparedStatement.setString(3, name);
+                        preparedStatement.setString(4, role);
+                        preparedStatement.setString(5, userName);    
+                        preparedStatement.setString(6, userPassword);
+            
+                        preparedStatement.executeUpdate();
+                        preparedStatement.close();
+                        con.close();
+                        out.println("<h2 class = 'error-message'>New Account is successfully created.</h2>");
+                    } 
+                }
+            }  
         catch(SQLException e) { 
             out.println("SQLException caught: " + e.getMessage()); 
         }
