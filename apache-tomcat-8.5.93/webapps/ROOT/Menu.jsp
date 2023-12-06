@@ -432,8 +432,8 @@
           <div class="manage-reservation">
             <h2 class="reservation-title">Revenue</h2>
             <hr class="solid" style="border-top: 1px solid; opacity: 0.2;">
-            <a class="button is-light" href="income.jsp" style="margin-top: 2px;">
-              Income Statement
+            <a class="button is-light" href="revenuePage.jsp" style="margin-top: 2px;">
+              Revenue Statement
             </a>
           </div>
 

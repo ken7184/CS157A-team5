@@ -19,9 +19,6 @@
           <a class="navbar-item" href="shiftPage.jsp">
             Shift
           </a>
-          <a class="navbar-item">
-            Account
-          </a>
           <a class="button is-light" onclick="logOut()">
             Log Out
           </a>
